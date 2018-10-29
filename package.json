@@ -1,7 +1,8 @@
 {
-  "name": "react-test",
+  "name": "dehli-react-test",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "build/index.js",
   "dependencies": {
     "node-sass": "^4.9.4",
     "prop-types": "^15.6.2",
