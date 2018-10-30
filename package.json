@@ -22,7 +22,9 @@
     "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
     "windows-build": "rm -rf dist && SET NODE_ENV=production&& babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -34,6 +36,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@babel/cli": "^7.0.0"
+    "@babel/cli": "^7.0.0",
+    "react-styleguidist": "^8.0.2"
   }
 }
