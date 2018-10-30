@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import List from './components/List';
-import Button from './components/Button';
-import './index.css';
+import List from './lib/components/List';
+import Button from './lib/components/Button';
 
 
 ReactDOM.render(

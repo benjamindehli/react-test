@@ -25,8 +25,8 @@ class List extends React.Component {
 			</div>
 			)
 	}
-
 }
+
 List.propTypes = {
 	listItems: PropTypes.array
 }
@@ -36,5 +36,3 @@ List.defaultProps = {
 }
 
 export default List;
-
-
