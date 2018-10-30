@@ -2,6 +2,8 @@
 import WebFont from 'webfontloader';
 import Button from './components/Button';
 import List from './components/List';
+import NavigationBar from './components/NavigationBar';
+
 
 WebFont.load({
   google: {
@@ -9,4 +11,4 @@ WebFont.load({
   }
 });
 
-export {List, Button}
+export {Button, List, NavigationBar}

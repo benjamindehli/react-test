@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import WebFont from 'webfontloader';
+import NavigationBar from './lib/components/NavigationBar';
 import List from './lib/components/List';
 import Button from './lib/components/Button';
 import Colors from './lib/components/Colors';
@@ -10,6 +11,12 @@ WebFont.load({
     families: ['Open Sans:300,400,700', 'sans-serif']
   }
 });
+
+
+ReactDOM.render(
+  <NavigationBar primaryListItems={[{name: 'Primary item 1', listItems:['Sub item 1', 'Sub item 2']}, 'Primary item 2', {name: 'Primary item 3', href: 'test.no'}]} secondaryListItems={['Secondary item 1', 'Secondary item 2']} />,
+  document.getElementById('navigation-bar')
+);
 
 ReactDOM.render(
   <List listItems={['item 1', 'item 2']} />,

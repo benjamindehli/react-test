@@ -1,0 +1,61 @@
+@import "../style/global.scss";
+
+:local(.navigationBarSmall){
+	background-color: $dark-blue;
+	height: 54px;
+}
+:local(.dropdown){
+	background-color: $dark-blue;
+	padding: 20px;
+	>:local(ul.primaryList){
+		list-style: none;
+		padding: 0;
+		li{
+			a, span{
+				color: #fff;
+				text-transform: uppercase;
+				text-decoration: none;
+				font-family: "Altis";
+				padding: 10px 0;
+				display: block;
+				border-bottom: 1px solid $primary;
+				font-size: 14px;
+				line-height: 1.6;
+			}
+			>:local(ul.primaryList){
+				list-style: none;
+				padding: 0;
+				li{
+					a, span{
+						color: #fff;
+						text-transform: none;
+						text-decoration: none;
+						font-family: "Altis";
+						padding: 10px 0;
+						margin-left: 20px;
+						display: block;
+						border-bottom: 1px solid $primary;
+						border-bottom: 1px solid #1b3a48;
+						font-size: 14px;
+						line-height: 1.6;
+					}
+				}
+			}
+			
+		}
+	}
+	>:local(ul.secondaryList){
+		list-style: none;
+		padding: 0;
+		li {
+			a, span{
+				color: #fff;
+				text-decoration: underline;
+				font-family: "Arial";
+				font-size: 14px;
+				padding: 10px 0;
+				line-height: 1;
+			}
+		}
+	}
+}
