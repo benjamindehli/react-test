@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import List from './lib/components/List';
 import Button from './lib/components/Button';
+import Colors from './lib/components/Colors';
 
 
 ReactDOM.render(
@@ -12,4 +13,9 @@ ReactDOM.render(
 ReactDOM.render(
   <Button content="dummy button"/>,
   document.getElementById('button')
+);
+
+ReactDOM.render(
+  <Colors/>,
+  document.getElementById('colors')
 );
