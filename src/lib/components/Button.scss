@@ -7,30 +7,51 @@
     border-style: solid;
     border-width: 0;
     cursor: pointer;
-    font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
-    font-weight: light;
     line-height: normal;
-    margin: 0 0 1.25rem;
     position: relative;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    padding: 1rem 2rem 1.0625rem 2rem;
-    font-size: 1rem;
-    border-color: #007095;
-    color: #fff;
     transition: background-color 300ms ease-out;
-
     display: inline-block;
-    font-size: 1rem;
     padding: 15px 20px;
     margin-right: 5px;
     margin-bottom: 5px;
-    background-color: #00757f;
-    font-family: "Open Sans";
+    font-family: $default-font;
     font-size: 18px;
     font-weight: normal;
-    &.primary {
+    &:local(.default) {
+        background-color: $default;
+        color: $primary;
+        &:hover{
+            background-color: $default-hover;
+        }
+    }
+    &:local(.primary) {
         background-color: $primary;
+        color: #fff;
+        &:hover{
+            background-color: $primary-hover;
+        }
+    }
+    &:local(.info) {
+        background-color: $info;
+        color: $primary;
+        &:hover{
+            background-color: $info-hover;
+        }
+    }
+    &:local(.warning) {
+        background-color: $warning;
+        color: $primary;
+        &:hover{
+            background-color: $warning-hover;
+        }
+    }
+    &:local(.success) {
+        background-color: $success;
+        color: $primary;
+        &:hover{
+            background-color: $success-hover;
+        }
     }
 }

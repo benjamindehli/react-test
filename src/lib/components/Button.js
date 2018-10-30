@@ -4,7 +4,7 @@ import style from './Button.scss';
 
 class Button extends React.Component {
 	render () {
-		let className = style.button;
+		let className = style.button + " " + style[this.props.color];
 		return (
 			<button className={className}>{this.props.content}</button>
 			)
@@ -12,11 +12,14 @@ class Button extends React.Component {
 }
 
 Button.propTypes = {
-	content: PropTypes.string
+	/** Text content inside button */
+	content: PropTypes.string,
+	color: PropTypes.string
 }
 
 Button.defaultProps = {
-	content: 'knapp'
+	content: 'button',
+	color: 'default'
 }
 
 export default Button;
