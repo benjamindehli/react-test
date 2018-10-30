@@ -6,7 +6,6 @@
   "module": "dist/index.js",
   "files": [
     "dist",
-    "dist/components/Button.js",
     "README.md"
   ],
   "dependencies": {
