@@ -18,6 +18,25 @@ class PrimaryListItem extends React.Component {
 }
 
 class NavigationBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      active: false
+    };
+  }
+
+  handleClickOutside() {
+    this.setState({
+      active: false
+    });
+  }
+
+  toggleList() {
+    this.setState(prevState => ({
+      active: !prevState.active
+    }));
+  }
+
   renderPrimaryList(items = this.props.primaryListItems, iteration = 0) {
     let listItems = items.map((listItem, i) => {
       if (listItem.listItems !== undefined) {
@@ -50,9 +69,19 @@ class NavigationBar extends React.Component {
   render() {
     return React.createElement("header", null, React.createElement("div", {
       className: style.navigationBarSmall
-    }), React.createElement("div", {
+    }, React.createElement("div", {
+      className: style.logoContainer
+    }, React.createElement("img", {
+      alt: "DIBK logo",
+      src: require('../images/dibk-logo-mobile.svg')
+    })), React.createElement("button", {
+      className: this.state.active ? style.menuToggle + ' active' : style.menuToggle,
+      onClick: () => this.toggleList()
+    })), React.createElement("div", {
+      className: this.state.active ? style.dropdownContainer + ' active' : style.dropdownContainer
+    }, React.createElement("div", {
       className: style.dropdown
-    }, this.renderPrimaryList(), this.renderSecondaryList()));
+    }, this.renderPrimaryList(), this.renderSecondaryList())));
   }
 
 }
