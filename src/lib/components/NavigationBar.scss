@@ -4,12 +4,51 @@
 	background-color: $dark-blue;
 	height: 54px;
 }
+
+:local(.logoContainer){
+	width: 200px;
+	height: 54px;
+	display: inline-block;
+}
+
+:local(.menuToggle){
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    border-color: #007095;
+    transition: background-color 300ms ease-out;
+    right: 20px;
+    background-color: transparent;
+    background: url(../images/hamburger.svg) 50% 50% no-repeat;
+    width: 30px;
+    height: 30px;
+    top: 12px;
+    float: right;
+    &.active {
+    	background: url(../images/hamburger-hover.svg) 50% 50% no-repeat;
+    }
+}
+
+:local(.dropdownContainer){
+	 max-height: 0;
+    transition: max-height 0.15s ease-out;
+    overflow: hidden;
+    background: #d5d5d5;
+	&.active{
+	   max-height: 500px;
+    transition: max-height 0.15s ease-in;
+	}
+}
+
 :local(.dropdown){
 	background-color: $dark-blue;
 	padding: 20px;
 	>:local(ul.primaryList){
 		list-style: none;
 		padding: 0;
+		margin: 0;
 		li{
 			a, span{
 				color: #fff;
