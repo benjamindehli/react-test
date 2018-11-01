@@ -22,6 +22,17 @@ eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/c
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js!./src/lib/components/Header.scss":
+/*!************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-oneOf-5-1!./node_modules/postcss-loader/src??postcss!./node_modules/sass-loader/lib/loader.js!./src/lib/components/Header.scss ***!
+  \************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \".uT2cAWstPtsbi-fIWPPfA {\\n  font-size: 22px;\\n  border-top: 1px solid #8aaec3;\\n  border-bottom: 1px solid #8aaec3;\\n  padding: 10px 0; }\\n  .uT2cAWstPtsbi-fIWPPfA .e84GnFxf3mhsZAWFDBCyn {\\n    margin: 0;\\n    font-weight: 400;\\n    line-height: 1.4;\\n    font-style: normal;\\n    font-size: 18px; }\\n  .uT2cAWstPtsbi-fIWPPfA h1.e84GnFxf3mhsZAWFDBCyn {\\n    font-family: \\\"Altis-Light\\\";\\n    font-size: 50px;\\n    line-height: 1.2;\\n    overflow: hidden;\\n    text-overflow: ellipsis; }\\n  .uT2cAWstPtsbi-fIWPPfA h2.e84GnFxf3mhsZAWFDBCyn {\\n    font-family: \\\"Open Sans\\\";\\n    font-weight: bold; }\\n  .uT2cAWstPtsbi-fIWPPfA h3.e84GnFxf3mhsZAWFDBCyn {\\n    font-family: \\\"Open Sans\\\";\\n    font-style: italic; }\\n  .uT2cAWstPtsbi-fIWPPfA h4.e84GnFxf3mhsZAWFDBCyn {\\n    font-family: \\\"Open Sans\\\";\\n    font-style: italic; }\\n  .uT2cAWstPtsbi-fIWPPfA h4.e84GnFxf3mhsZAWFDBCyn {\\n    font-family: \\\"Altis-Light\\\";\\n    font-size: 14.94px; }\\n\", \"\"]);\n\n// exports\nexports.locals = {\n\t\"headerContainer\": \"uT2cAWstPtsbi-fIWPPfA\",\n\t\"header\": \"e84GnFxf3mhsZAWFDBCyn\"\n};\n\n//# sourceURL=webpack:///./src/lib/components/Header.scss?./node_modules/css-loader??ref--6-oneOf-5-1!./node_modules/postcss-loader/src??postcss!./node_modules/sass-loader/lib/loader.js");
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js!./src/lib/components/List.scss":
 /*!**********************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-oneOf-5-1!./node_modules/postcss-loader/src??postcss!./node_modules/sass-loader/lib/loader.js!./src/lib/components/List.scss ***!
@@ -74,6 +85,17 @@ eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/c
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("\nif (false) {}\n\nvar requireMap = { 'react': __webpack_require__(/*! react */ \"./node_modules/react/index.js\") };\nvar requireInRuntimeBase = __webpack_require__(/*! ./node_modules/react-styleguidist/loaders/utils/client/requireInRuntime */ \"./node_modules/react-styleguidist/loaders/utils/client/requireInRuntime.js\");\nvar requireInRuntime = requireInRuntimeBase.bind(null, requireMap);\nvar evalInContextBase = __webpack_require__(/*! ./node_modules/react-styleguidist/loaders/utils/client/evalInContext */ \"./node_modules/react-styleguidist/loaders/utils/client/evalInContext.js\");\nvar evalInContext = evalInContextBase.bind(null, \"var React = require('react');\", requireInRuntime);\n\nmodule.exports = [\n    {\n        'type': 'markdown',\n        'content': 'Button example:'\n    },\n    {\n        'type': 'code',\n        'content': '<Button content=\"Click me\" color=\"default\" />\\n<Button content=\"Click me\" color=\"primary\" />\\n<Button content=\"Click me\" color=\"info\" />\\n<Button content=\"Click me\" color=\"warning\" />\\n<Button content=\"Click me\" color=\"success\" />',\n        'settings': {},\n        'evalInContext': evalInContext\n    }\n]\n\t\n\n//# sourceURL=webpack:///./src/lib/components/Button.md?./node_modules/react-styleguidist/loaders/examples-loader.js");
+
+/***/ }),
+
+/***/ "./node_modules/react-styleguidist/loaders/examples-loader.js!./src/lib/components/Header.md":
+/*!***************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/loaders/examples-loader.js!./src/lib/components/Header.md ***!
+  \***************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("\nif (false) {}\n\nvar requireMap = { 'react': __webpack_require__(/*! react */ \"./node_modules/react/index.js\") };\nvar requireInRuntimeBase = __webpack_require__(/*! ./node_modules/react-styleguidist/loaders/utils/client/requireInRuntime */ \"./node_modules/react-styleguidist/loaders/utils/client/requireInRuntime.js\");\nvar requireInRuntime = requireInRuntimeBase.bind(null, requireMap);\nvar evalInContextBase = __webpack_require__(/*! ./node_modules/react-styleguidist/loaders/utils/client/evalInContext */ \"./node_modules/react-styleguidist/loaders/utils/client/evalInContext.js\");\nvar evalInContext = evalInContextBase.bind(null, \"var React = require('react');\", requireInRuntime);\n\nmodule.exports = []\n\t\n\n//# sourceURL=webpack:///./src/lib/components/Header.md?./node_modules/react-styleguidist/loaders/examples-loader.js");
 
 /***/ }),
 
@@ -151,6 +173,17 @@ eval("\nif (false) {}\n\nmodule.exports = {\n    'description': '',\n    'displa
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("\nif (false) {}\n\nmodule.exports = {\n    'description': '',\n    'displayName': 'Colors',\n    'methods': [],\n    'props': [{\n            'type': { 'name': 'array' },\n            'required': false,\n            'description': '',\n            'defaultValue': {\n                'value': '[\\'primary\\', \\'primary-hover\\', \\'default\\', \\'default-hover\\', \\'info\\', \\'info-hover\\', \\'warning\\', \\'warning-hover\\', \\'success\\', \\'success-hover\\', \\'dark-blue\\', \\'light-blue\\']',\n                'computed': false\n            },\n            'tags': {},\n            'name': 'colors'\n        }],\n    'doclets': {},\n    'examples': []\n}\n\t\n\n//# sourceURL=webpack:///./src/lib/components/Colors.js?./node_modules/react-styleguidist/loaders/props-loader.js");
+
+/***/ }),
+
+/***/ "./node_modules/react-styleguidist/loaders/props-loader.js!./src/lib/components/Header.js":
+/*!************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/loaders/props-loader.js!./src/lib/components/Header.js ***!
+  \************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("\nif (false) {}\n\nmodule.exports = {\n    'description': '',\n    'displayName': 'Header',\n    'methods': [],\n    'props': [\n        {\n            'type': { 'name': 'string' },\n            'required': false,\n            'description': 'Text content inside button',\n            'defaultValue': {\n                'value': '\\'\\'',\n                'computed': false\n            },\n            'tags': {},\n            'name': 'content'\n        },\n        {\n            'type': {\n                'name': 'enum',\n                'value': [\n                    {\n                        'value': '1',\n                        'computed': false\n                    },\n                    {\n                        'value': '2',\n                        'computed': false\n                    },\n                    {\n                        'value': '3',\n                        'computed': false\n                    },\n                    {\n                        'value': '4',\n                        'computed': false\n                    },\n                    {\n                        'value': '5',\n                        'computed': false\n                    }\n                ]\n            },\n            'required': false,\n            'description': '',\n            'defaultValue': {\n                'value': '1',\n                'computed': false\n            },\n            'tags': {},\n            'name': 'size'\n        }\n    ],\n    'doclets': {},\n    'examples': __webpack_require__(/*! !./node_modules/react-styleguidist/loaders/examples-loader.js!./src/lib/components/Header.md */ \"./node_modules/react-styleguidist/loaders/examples-loader.js!./src/lib/components/Header.md\")\n}\n\t\n\n//# sourceURL=webpack:///./src/lib/components/Header.js?./node_modules/react-styleguidist/loaders/props-loader.js");
 
 /***/ }),
 
@@ -241,6 +274,29 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var C_Us
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("\nvar content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-oneOf-5-1!../../../node_modules/postcss-loader/src??postcss!../../../node_modules/sass-loader/lib/loader.js!./Colors.scss */ \"./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js!./src/lib/components/Colors.scss\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/lib/components/Colors.scss?");
+
+/***/ }),
+
+/***/ "./src/lib/components/Header.js":
+/*!**************************************!*\
+  !*** ./src/lib/components/Header.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var C_Users_BenjaminDehli_Repos_react_test_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck */ \"./node_modules/@babel/runtime/helpers/esm/classCallCheck.js\");\n/* harmony import */ var C_Users_BenjaminDehli_Repos_react_test_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass */ \"./node_modules/@babel/runtime/helpers/esm/createClass.js\");\n/* harmony import */ var C_Users_BenjaminDehli_Repos_react_test_node_modules_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn */ \"./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js\");\n/* harmony import */ var C_Users_BenjaminDehli_Repos_react_test_node_modules_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/getPrototypeOf */ \"./node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js\");\n/* harmony import */ var C_Users_BenjaminDehli_Repos_react_test_node_modules_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/inherits */ \"./node_modules/@babel/runtime/helpers/esm/inherits.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _Header_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Header.scss */ \"./src/lib/components/Header.scss\");\n/* harmony import */ var _Header_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_Header_scss__WEBPACK_IMPORTED_MODULE_6__);\n\n\n\n\n\n\n\n\nvar Header =\n/*#__PURE__*/\nfunction (_React$Component) {\n  Object(C_Users_BenjaminDehli_Repos_react_test_node_modules_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__[\"default\"])(Header, _React$Component);\n\n  function Header() {\n    Object(C_Users_BenjaminDehli_Repos_react_test_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(this, Header);\n\n    return Object(C_Users_BenjaminDehli_Repos_react_test_node_modules_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(this, Object(C_Users_BenjaminDehli_Repos_react_test_node_modules_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(Header).apply(this, arguments));\n  }\n\n  Object(C_Users_BenjaminDehli_Repos_react_test_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(Header, [{\n    key: \"render\",\n    value: function render() {\n      var headerElement = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement('h' + this.props.size, {\n        className: _Header_scss__WEBPACK_IMPORTED_MODULE_6___default.a.header\n      }, this.props.content);\n      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(\"div\", {\n        className: _Header_scss__WEBPACK_IMPORTED_MODULE_6___default.a.headerContainer\n      }, \" \", headerElement, \" \");\n    }\n  }]);\n\n  return Header;\n}(react__WEBPACK_IMPORTED_MODULE_5___default.a.Component);\n\nHeader.defaultProps = {\n  content: '',\n  size: 1\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (Header);\n\n//# sourceURL=webpack:///./src/lib/components/Header.js?");
+
+/***/ }),
+
+/***/ "./src/lib/components/Header.scss":
+/*!****************************************!*\
+  !*** ./src/lib/components/Header.scss ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("\nvar content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-oneOf-5-1!../../../node_modules/postcss-loader/src??postcss!../../../node_modules/sass-loader/lib/loader.js!./Header.scss */ \"./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js!./src/lib/components/Header.scss\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/lib/components/Header.scss?");
 
 /***/ }),
 
