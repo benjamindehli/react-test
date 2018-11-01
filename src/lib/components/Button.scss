@@ -1,9 +1,10 @@
 @import "../style/global.scss";
 
 :local(.button) {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    border-radius: 0;
+    @include appearance(none);
+    @include border-radius(0);
+    @include transition(background-color 300ms ease-out);
+    font-family: $default-font;
     border-style: solid;
     border-width: 0;
     cursor: pointer;
@@ -11,47 +12,45 @@
     position: relative;
     text-align: center;
     text-decoration: none;
-    transition: background-color 300ms ease-out;
     display: inline-block;
-    padding: 15px 20px;
     margin-right: 5px;
     margin-bottom: 5px;
-    font-family: $default-font;
     font-size: 18px;
     font-weight: normal;
+    &:local(.regular) {
+        padding: 15px 20px;
+    }
+    &:local(.small) {
+        padding: 8px 20px;
+        height: 40px;
+        min-width: 80px;
+    }
     &:local(.default) {
-        background-color: $default;
-        color: $primary;
+        background-color: $color-default;
+        color: $color-primary;
         &:hover{
-            background-color: $default-hover;
+            background-color: $color-default-hover;
         }
     }
     &:local(.primary) {
-        background-color: $primary;
+        background-color: $color-primary;
         color: #fff;
         &:hover{
-            background-color: $primary-hover;
-        }
-    }
-    &:local(.info) {
-        background-color: $info;
-        color: $primary;
-        &:hover{
-            background-color: $info-hover;
-        }
-    }
-    &:local(.warning) {
-        background-color: $warning;
-        color: $primary;
-        &:hover{
-            background-color: $warning-hover;
+            background-color: $color-primary-hover;
         }
     }
     &:local(.success) {
-        background-color: $success;
-        color: $primary;
+        background-color: $color-success;
+        color: $color-primary;
         &:hover{
-            background-color: $success-hover;
+            background-color: $color-success-hover;
+        }
+    }
+    &:local(.warning) {
+        background-color: $color-warning;
+        color: $color-primary;
+        &:hover{
+            background-color: $color-warning-hover;
         }
     }
 }
