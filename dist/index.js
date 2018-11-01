@@ -2,6 +2,7 @@
 
 import WebFont from 'webfontloader';
 import Button from './components/Button';
+import ContentBox from './components/ContentBox';
 import Header from './components/Header';
 import List from './components/List';
 import LoadingAnimation from './components/LoadingAnimation';
@@ -12,4 +13,4 @@ WebFont.load({
     families: ['Open Sans:300,400,700', 'sans-serif']
   }
 });
-export { Button, Header, List, LoadingAnimation, NavigationBar, Select };
+export { Button, ContentBox, Header, List, LoadingAnimation, NavigationBar, Select };

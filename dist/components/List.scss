@@ -1,6 +1,19 @@
-.list {
-	color: green;
-	li:first-child {
-		color: blue;
+:local(.list) {
+	margin: 0;
+	margin-left: 20px;
+	padding: 0;
+	margin-bottom: 20px;
+	list-style-position: outside;
+	font-size: 16px;
+	li {
+		line-height: 1.6;
 	}
+}
+
+:local(ul.list) {
+	list-style: disc;
+}
+
+:local(ol.list) {
+	list-style: decimal;
 }

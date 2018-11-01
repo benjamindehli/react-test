@@ -22,7 +22,6 @@ class Option extends React.Component {
 class Select extends React.Component {
   renderList() {
     let options = this.props.options.map(function (option, i) {
-      console.log(option);
       return React.createElement(Option, {
         option: option,
         key: i

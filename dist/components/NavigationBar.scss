@@ -1,7 +1,7 @@
 @import "../style/global.scss";
 
 :local(.navigationBarSmall){
-	background-color: $dark-blue;
+	background-color: $color-dark-blue;
 	height: 54px;
 }
 
@@ -43,7 +43,7 @@
 }
 
 :local(.dropdown){
-	background-color: $dark-blue;
+	background-color: $color-dark-blue;
 	padding: 20px;
 	>:local(ul.primaryList){
 		list-style: none;
@@ -57,7 +57,7 @@
 				font-family: "Altis";
 				padding: 10px 0;
 				display: block;
-				border-bottom: 1px solid $primary;
+				border-bottom: 1px solid $color-primary;
 				font-size: 14px;
 				line-height: 1.6;
 			}
@@ -73,7 +73,6 @@
 						padding: 10px 0;
 						margin-left: 20px;
 						display: block;
-						border-bottom: 1px solid $primary;
 						border-bottom: 1px solid #1b3a48;
 						font-size: 14px;
 						line-height: 1.6;
