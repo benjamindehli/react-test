@@ -5,7 +5,6 @@ import NavigationBar from './lib/components/NavigationBar';
 import List from './lib/components/List';
 import Button from './lib/components/Button';
 import Header from './lib/components/Header';
-import Colors from './lib/components/Colors';
 import Select from './lib/components/Select';
 import LoadingAnimation from './lib/components/LoadingAnimation';
 import ContentBox from './lib/components/ContentBox';
