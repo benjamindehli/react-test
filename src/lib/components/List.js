@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './List.scss';
+import style from './List.scss';
 
 class ListItem extends React.Component {
 	render() {
@@ -15,7 +15,9 @@ class List extends React.Component {
 		let listItems = this.props.listItems.map(function(listItem, i){
 			return <ListItem listItem={listItem} key={i}/>;
 		});
-		return <ul className="list">{listItems}</ul>;
+		let listType = this.props.ordered ? 'ol' : 'ul';
+		let listElement = React.createElement(listType, { className: style.list }, listItems);
+		return listElement;
 	}
 	render () {
 		return (
@@ -27,11 +29,13 @@ class List extends React.Component {
 }
 
 List.propTypes = {
-	listItems: PropTypes.array
+	listItems: PropTypes.arrayOf(PropTypes.string).isRequired,
+	ordered: PropTypes.bool
 }
 
 List.defaultProps = {
-	listItems: ['testing123']
+	listItems: [],
+	ordered: false
 }
 
 export default List;
