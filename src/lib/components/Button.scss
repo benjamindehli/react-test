@@ -41,14 +41,14 @@
     }
     &:local(.success) {
         background-color: $color-success;
-        color: $color-primary;
+        color: #fff;
         &:hover{
             background-color: $color-success-hover;
         }
     }
     &:local(.warning) {
         background-color: $color-warning;
-        color: $color-primary;
+        color: #fff;
         &:hover{
             background-color: $color-warning-hover;
         }
