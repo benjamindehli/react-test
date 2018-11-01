@@ -8,6 +8,7 @@ import Header from './lib/components/Header';
 import Colors from './lib/components/Colors';
 import Select from './lib/components/Select';
 import LoadingAnimation from './lib/components/LoadingAnimation';
+import ContentBox from './lib/components/ContentBox';
 
 WebFont.load({
   google: {
@@ -44,4 +45,9 @@ ReactDOM.render(
 ReactDOM.render(
   <LoadingAnimation />,
   document.getElementById('loading-animation')
+);
+
+ReactDOM.render(
+  <ContentBox title="Title for box" content="Content for box" />,
+  document.getElementById('content-box')
 );

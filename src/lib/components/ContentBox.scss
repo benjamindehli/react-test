@@ -1,0 +1,98 @@
+@import "../style/global.scss";
+
+:local(.contentBox) {
+    font-family: $default-font;
+    text-decoration: none;
+    padding: 20px;
+    width: 100%;
+    display: block;
+    &:local(.link){
+        @include transition(background-color .3s);
+    }
+    &:local(.default) {
+        background-color: $color-default;
+        &:local(.link):hover {
+            background-color: $color-default-hover;
+        }
+    }
+    &:local(.primary) {
+        background-color: $color-primary;
+        color: #fff;
+        &:local(.link):hover {
+            background-color: $color-primary-hover;
+        }
+    }
+    &:local(.success) {
+        background-color: $color-success;
+        color: #fff;
+        &:local(.link):hover {
+            background-color: $color-success-hover;
+        }
+    }
+    &:local(.warning) {
+        background-color: $color-warning;
+        color: #fff;
+        &:local(.link):hover {
+            background-color: $color-warning-hover;
+        }
+    }
+
+    &:local(.cyan) {
+        background-color: $color-cyan;
+        &:local(.link):hover {
+            background-color: $color-cyan-hover;
+        }
+    }
+    &:local(.lightCyan) {
+        background-color: $color-light-cyan;
+        &:local(.link):hover {
+            background-color: $color-light-cyan-hover;
+        }
+    }
+    &:local(.orange) {
+        background-color: $color-orange;
+        &:local(.link):hover {
+            background-color: $color-orange-hover;
+        }
+    }
+    &:local(.lightOrange) {
+        background-color: $color-light-orange;
+        &:local(.link):hover {
+            background-color: $color-light-orange-hover;
+        }
+    }
+    &:local(.lime) {
+        background-color: $color-lime;
+        &:local(.link):hover {
+            background-color: $color-lime-hover;
+        }
+    }
+    &:local(.lightLime) {
+        background-color: $color-light-lime;
+        &:local(.link):hover {
+            background-color: $color-light-lime-hover;
+        }
+    }
+
+    :local(.title){
+        font-weight: normal;
+        &:local(.regular) {
+            font-family: "Altis-Medium";
+            font-size: 20px;
+            font-style: normal;
+            line-height: 1.4;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e5e3e1;
+        }
+        &:local(.large){
+            font-family: "Altis-Light";
+            font-size: 24px;
+            margin: 0;
+            margin-bottom: 20px;
+            font-style: normal;
+        }
+    }
+    :local(.content){
+        color: #000;
+    }
+}
