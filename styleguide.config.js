@@ -1,6 +1,6 @@
 const path = require('path')
 module.exports = {
-	title: "DIBK designmal",
+	title: "DIBK design",
 	styleguideDir: "docs",
 	require: [
 		path.join(__dirname, 'src/styleguide/styleguide.js')
