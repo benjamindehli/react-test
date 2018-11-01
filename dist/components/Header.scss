@@ -1,0 +1,36 @@
+:local(.headerContainer){
+	font-size: 22px;
+	border-top: 1px solid #8aaec3;
+	border-bottom: 1px solid #8aaec3;
+	padding: 10px 0;
+	:local(.header){
+		margin: 0;
+		font-weight: 400;
+		line-height: 1.4;
+		font-style: normal;
+		font-size: 18px;
+	}
+	:local(h1.header){
+		font-family: "Altis-Light";
+		font-size: 50px;
+		line-height: 1.2;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	:local(h2.header){
+		font-family: "Open Sans";
+		font-weight: bold;
+	}
+	:local(h3.header){
+		font-family: "Open Sans";
+		font-style: italic;
+	}
+	:local(h4.header){
+		font-family: "Open Sans";
+		font-style: italic;
+	}
+	:local(h4.header){
+		font-family: "Altis-Light";
+		font-size: 14.94px;
+	}
+}
