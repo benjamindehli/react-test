@@ -1,0 +1,26 @@
+@import "../style/global.scss";
+
+:local(.loadingAnimation){
+	@include box-shadow(0 8px 17px 0 rgba(0,0,0,.2));
+	z-index: 6;
+	background-repeat: no-repeat;
+	background-position: 50% 15px;
+	background-color: #fff;
+	height: auto;
+	width: 200px;
+	border: 1px solid #ddd;
+	padding: 15px;
+	color: #666;
+	display: block;
+	text-align: center;
+	&:local(.fixed) {
+		@include calc(left, '50% - 100px');
+		top: 40%;
+		margin: auto;
+		position: fixed;
+	}
+	&:before {
+		content: url(../images/spinner.svg);
+		display: block;		
+	}
+}

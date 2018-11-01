@@ -6,6 +6,7 @@ import List from './lib/components/List';
 import Button from './lib/components/Button';
 import Colors from './lib/components/Colors';
 import Select from './lib/components/Select';
+import LoadingAnimation from './lib/components/LoadingAnimation';
 
 WebFont.load({
   google: {
@@ -33,4 +34,8 @@ ReactDOM.render(
   <Select options={['option 1', 'option 2', {key: 'option 3', value: 'value 3'}]} />,
   document.getElementById('select')
 );
+
+ReactDOM.render(
+  <LoadingAnimation />,
+  document.getElementById('loading-animation')
 );
