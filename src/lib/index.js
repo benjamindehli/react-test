@@ -1,8 +1,11 @@
 'use strict';
 import WebFont from 'webfontloader';
 import Button from './components/Button';
+import Header from './components/Header';
 import List from './components/List';
+import LoadingAnimation from './components/LoadingAnimation';
 import NavigationBar from './components/NavigationBar';
+import Select from './components/Select';
 
 
 WebFont.load({
@@ -11,4 +14,4 @@ WebFont.load({
   }
 });
 
-export {Button, List, NavigationBar}
+export {Button, Header, List, LoadingAnimation, NavigationBar, Select}
