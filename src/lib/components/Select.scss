@@ -1,0 +1,41 @@
+@import "../style/global.scss";
+
+:local(.selectContainer){
+	position: relative;
+	&:before {
+		position: absolute;
+		display: block;
+		content: "";
+		top: 12px;
+		right: 12px;
+		height: 0;
+		width: 0;
+		background-color: #fff;
+		border-left: 6px solid transparent;
+		border-right: 6px solid transparent;
+		border-top: 12px solid $primary;
+		pointer-events: none;
+	}
+	select {
+		@include border-radius(0);
+		@include box-shadow(none);
+		@include appearance(none);
+		font-weight: normal;
+		display: block;
+		height: 35px;
+		background: #fff;
+		border: 1px solid #E5E3E1;
+		cursor: pointer;
+		font-family: 'Open Sans';
+		font-size: 13px;
+		padding: 0 10px;
+		padding-right: 40px;
+		width: 100%;
+		margin: 0 0 1rem 0;
+		&:focus {
+			border-color: $primary;
+			outline: 0;
+			background: #fff;
+		}
+	}
+}

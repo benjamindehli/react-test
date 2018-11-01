@@ -5,6 +5,7 @@ import NavigationBar from './lib/components/NavigationBar';
 import List from './lib/components/List';
 import Button from './lib/components/Button';
 import Colors from './lib/components/Colors';
+import Select from './lib/components/Select';
 
 WebFont.load({
   google: {
@@ -29,6 +30,7 @@ ReactDOM.render(
 );
 
 ReactDOM.render(
-  <Colors/>,
-  document.getElementById('colors')
+  <Select options={['option 1', 'option 2', {key: 'option 3', value: 'value 3'}]} />,
+  document.getElementById('select')
+);
 );
