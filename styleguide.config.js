@@ -17,7 +17,8 @@ module.exports = {
 					href: 'src/styleguide/styleguide.css'
 				}
 			]
-		}
+		},
+		favicon: 'src/styleguide/favicon.ico'
 	},
 	theme: {
 		fontFamily: {
