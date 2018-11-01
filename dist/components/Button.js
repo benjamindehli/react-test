@@ -15,7 +15,7 @@ class Button extends React.Component {
 Button.propTypes = {
   /** Text content inside button */
   content: PropTypes.string,
-  color: PropTypes.string
+  color: PropTypes.oneOf(['default', 'primary', 'info', 'warning', 'success'])
 };
 Button.defaultProps = {
   content: 'button',
