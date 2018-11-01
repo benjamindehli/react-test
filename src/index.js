@@ -4,6 +4,7 @@ import WebFont from 'webfontloader';
 import NavigationBar from './lib/components/NavigationBar';
 import List from './lib/components/List';
 import Button from './lib/components/Button';
+import Header from './lib/components/Header';
 import Colors from './lib/components/Colors';
 import Select from './lib/components/Select';
 import LoadingAnimation from './lib/components/LoadingAnimation';
@@ -28,6 +29,11 @@ ReactDOM.render(
 ReactDOM.render(
   <Button content="dummy button"/>,
   document.getElementById('button')
+);
+
+ReactDOM.render(
+  <Header content="Title for content"/>,
+  document.getElementById('header' size="1")
 );
 
 ReactDOM.render(
