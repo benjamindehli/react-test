@@ -33,7 +33,7 @@ ReactDOM.render(
 
 ReactDOM.render(
   <Header content="Title for content"/>,
-  document.getElementById('header' size="1")
+  document.getElementById('header')
 );
 
 ReactDOM.render(
