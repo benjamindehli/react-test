@@ -37,12 +37,12 @@ class NavigationBar extends React.Component {
 	}
 	renderPrimaryList(items = this.props.primaryListItems, iteration = 0) {
 		let listItems = items.map( (listItem, i) => {
+			let key = iteration + "-" + i;
 			if (listItem.listItems !== undefined){
 				return (
-					<li><span>{ listItem.name }</span>{ this.renderPrimaryList(listItem.listItems, iteration+1) }</li>
+					<li key={key}><span>{ listItem.name }</span>{ this.renderPrimaryList(listItem.listItems, iteration+1) }</li>
 					)
 			}else{
-				let key = iteration + "-" + i;
 				return <PrimaryListItem listItem={listItem} key={key}/>;
 			}
 		});
