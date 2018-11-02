@@ -20,12 +20,6 @@
 			width: 270px;
 			height: 73px;
 		}
-		@media only screen and (min-width: $screen-sm){
-
-		}
-		@media only screen and (min-width: $screen-md){
-
-		}
 	}
 
 	:local(.dropdownOverlay){
@@ -64,6 +58,9 @@
 		float: right;
 		&.active {
 			background: url(../images/hamburger-hover.svg) 50% 50% no-repeat;
+		}
+		@media only screen and (min-width: $screen-xs){
+			top: 21px;
 		}
 	}
 
@@ -168,10 +165,7 @@
 	background: #83b4c6;
 	background: linear-gradient(to bottom,#83b4c6 0,#cbd6da 180px,#cbd6da 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#83b4c6',endColorstr='#cbd6da',GradientType=0);
-	padding: 20px;
 	padding: 20px 40px 0px 20px;
-
-
 	:local(.desktopBackground){
 		background: url(../images/header-desktop-bg.svg) no-repeat;
 		background-size: 720px;
@@ -183,7 +177,6 @@
 		display: block;
 		opacity: .15;
 	}
-
 	:local(.topNavigation){
 		text-align: right;
 		margin-bottom: 15px;
