@@ -7,12 +7,16 @@
     width: 100%;
     display: block;
     &:local(.link){
+        color: $color-primary;
         @include transition(background-color .3s);
     }
     &:local(.default) {
         background-color: $color-default;
         &:local(.link):hover {
             background-color: $color-default-hover;
+        }
+        :local(.content){
+            color: #000;
         }
     }
     &:local(.primary) {
@@ -21,6 +25,9 @@
         &:local(.link):hover {
             background-color: $color-primary-hover;
         }
+        :local(.content){
+            color: #fff;
+        }
     }
     &:local(.success) {
         background-color: $color-success;
@@ -28,12 +35,18 @@
         &:local(.link):hover {
             background-color: $color-success-hover;
         }
+        :local(.content){
+            color: #fff;
+        }   
     }
     &:local(.warning) {
         background-color: $color-warning;
         color: #fff;
         &:local(.link):hover {
             background-color: $color-warning-hover;
+        }
+        :local(.content){
+            color: #fff;
         }
     }
 
@@ -42,17 +55,27 @@
         &:local(.link):hover {
             background-color: $color-cyan-hover;
         }
+        :local(.content){
+            color: #000;
+        }
     }
     &:local(.lightCyan) {
         background-color: $color-light-cyan;
         &:local(.link):hover {
             background-color: $color-light-cyan-hover;
         }
+        :local(.content){
+            color: #000;
+        }
     }
     &:local(.orange) {
         background-color: $color-orange;
+        color: #fff;
         &:local(.link):hover {
             background-color: $color-orange-hover;
+        }
+        :local(.content){
+            color: #fff;
         }
     }
     &:local(.lightOrange) {
@@ -60,11 +83,18 @@
         &:local(.link):hover {
             background-color: $color-light-orange-hover;
         }
+        :local(.content){
+            color: #000;
+        }
     }
     &:local(.lime) {
         background-color: $color-lime;
+        color: #fff;
         &:local(.link):hover {
             background-color: $color-lime-hover;
+        }
+        :local(.content){
+            color: #fff;
         }
     }
     &:local(.lightLime) {
@@ -72,27 +102,30 @@
         &:local(.link):hover {
             background-color: $color-light-lime-hover;
         }
+        :local(.content){
+            color: #000;
+        }
     }
 
     :local(.title){
         font-weight: normal;
         &:local(.regular) {
             font-family: "Altis-Medium";
-            font-size: 20px;
+            font-family: "Changa";
+            font-weight: 400;
+            font-size: 21px;
             font-style: normal;
             line-height: 1.4;
             padding-bottom: 10px;
             border-bottom: 1px solid #e5e3e1;
         }
         &:local(.large){
-            font-family: "Altis-Light";
+            font-family: "Changa";
+            font-weight: 200;
             font-size: 24px;
             margin: 0;
             margin-bottom: 20px;
             font-style: normal;
         }
-    }
-    :local(.content){
-        color: #000;
     }
 }
