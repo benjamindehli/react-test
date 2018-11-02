@@ -39,10 +39,13 @@ class NavigationBar extends React.Component {
 
   renderPrimaryList(items = this.props.primaryListItems, iteration = 0) {
     let listItems = items.map((listItem, i) => {
+      let key = iteration + "-" + i;
+
       if (listItem.listItems !== undefined) {
-        return React.createElement("li", null, React.createElement("span", null, listItem.name), this.renderPrimaryList(listItem.listItems, iteration + 1));
+        return React.createElement("li", {
+          key: key
+        }, React.createElement("span", null, listItem.name), this.renderPrimaryList(listItem.listItems, iteration + 1));
       } else {
-        let key = iteration + "-" + i;
         return React.createElement(PrimaryListItem, {
           listItem: listItem,
           key: key
@@ -68,7 +71,9 @@ class NavigationBar extends React.Component {
 
   render() {
     return React.createElement("header", null, React.createElement("div", {
-      className: style.navigationBarSmall
+      className: style.isMobile
+    }, React.createElement("div", {
+      className: style.navigationBar
     }, React.createElement("div", {
       className: style.logoContainer
     }, React.createElement("img", {
@@ -81,7 +86,22 @@ class NavigationBar extends React.Component {
       className: this.state.active ? style.dropdownContainer + ' active' : style.dropdownContainer
     }, React.createElement("div", {
       className: style.dropdown
-    }, this.renderPrimaryList(), this.renderSecondaryList())));
+    }, this.renderPrimaryList(), this.renderSecondaryList())), React.createElement("div", {
+      className: this.state.active ? style.dropdownOverlay + ' active' : style.dropdownOverlay
+    })), React.createElement("div", {
+      className: style.isDesktop
+    }, React.createElement("div", {
+      className: style.desktopBackground
+    }), React.createElement("div", {
+      className: style.topNavigation
+    }, this.renderSecondaryList()), React.createElement("div", {
+      className: style.mainNavigation
+    }, React.createElement("div", {
+      className: style.logoContainer
+    }, React.createElement("img", {
+      alt: "DIBK logo",
+      src: require('../images/dibk-logo.svg')
+    })), this.renderPrimaryList())));
   }
 
 }
