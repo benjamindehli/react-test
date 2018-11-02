@@ -2,6 +2,6 @@ import WebFont from 'webfontloader';
 
 WebFont.load({
   google: {
-    families: ['Open Sans:300,400,700', 'sans-serif']
+    families: ['Changa:200,300,400', 'Open Sans:300,400,700', 'sans-serif']
   }
 });
