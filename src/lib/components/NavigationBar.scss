@@ -1,98 +1,267 @@
 @import "../style/global.scss";
 
-:local(.navigationBarSmall){
-	background-color: $color-dark-blue;
-	height: 54px;
-}
-
-:local(.logoContainer){
-	width: 200px;
-	height: 54px;
-	display: inline-block;
-}
-
-:local(.menuToggle){
-	-webkit-appearance: none;
-    -moz-appearance: none;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    border-color: #007095;
-    transition: background-color 300ms ease-out;
-    right: 20px;
-    background-color: transparent;
-    background: url(../images/hamburger.svg) 50% 50% no-repeat;
-    width: 30px;
-    height: 30px;
-    top: 12px;
-    float: right;
-    &.active {
-    	background: url(../images/hamburger-hover.svg) 50% 50% no-repeat;
-    }
-}
-
-:local(.dropdownContainer){
-	 max-height: 0;
-    transition: max-height 0.15s ease-out;
-    overflow: hidden;
-    background: #d5d5d5;
-	&.active{
-	   max-height: 500px;
-    transition: max-height 0.15s ease-in;
+:local(.isMobile){
+	@media only screen and (min-width: $screen-md) {
+		display: none;
 	}
-}
-
-:local(.dropdown){
-	background-color: $color-dark-blue;
-	padding: 20px;
-	>:local(ul.primaryList){
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		li{
-			a, span{
-				color: #fff;
-				text-transform: uppercase;
-				text-decoration: none;
-				font-family: "Altis";
-				padding: 10px 0;
-				display: block;
-				border-bottom: 1px solid $color-primary;
-				font-size: 14px;
-				line-height: 1.6;
-			}
-			>:local(ul.primaryList){
-				list-style: none;
-				padding: 0;
-				li{
-					a, span{
-						color: #fff;
-						text-transform: none;
-						text-decoration: none;
-						font-family: "Altis";
-						padding: 10px 0;
-						margin-left: 20px;
-						display: block;
-						border-bottom: 1px solid #1b3a48;
-						font-size: 14px;
-						line-height: 1.6;
-					}
-				}
-			}
-			
+	:local(.navigationBar){
+		background-color: $color-dark-blue;
+		height: 54px;
+		@media only screen and (min-width: $screen-xs) {
+			height: 73px;
 		}
 	}
-	>:local(ul.secondaryList){
-		list-style: none;
-		padding: 0;
-		li {
-			a, span{
-				color: #fff;
-				text-decoration: underline;
-				font-family: "Arial";
-				font-size: 14px;
-				padding: 10px 0;
-				line-height: 1;
+
+	:local(.logoContainer){
+		width: 200px;
+		height: 54px;
+		display: inline-block;
+		@media only screen and (min-width: $screen-xs) {
+			width: 270px;
+			height: 73px;
+		}
+		@media only screen and (min-width: $screen-sm){
+
+		}
+		@media only screen and (min-width: $screen-md){
+
+		}
+	}
+
+	:local(.dropdownOverlay){
+		@media only screen and (max-width: $screen-md) and (min-width: $screen-xs) {
+			@include transition(all .1s ease-out);
+			content: '';
+			position: absolute;
+			top: 73px;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 1;
+			visibility: hidden;
+			opacity: 0;
+			background: transparent;
+			&.active{
+				opacity: 1;
+				background: rgba(0,0,0,.5);
+				visibility: visible;
+			}
+		}
+	}
+
+	:local(.menuToggle){
+		@include appearance(none);
+		@include transition(background-color 300ms ease-out);
+		border: none;
+		cursor: pointer;
+		position: relative;
+		right: 20px;
+		top: 12px;
+		background-color: transparent;
+		background: url(../images/hamburger.svg) 50% 50% no-repeat;
+		width: 30px;
+		height: 30px;
+		float: right;
+		&.active {
+			background: url(../images/hamburger-hover.svg) 50% 50% no-repeat;
+		}
+	}
+
+	:local(.dropdownContainer){
+		@include transition(max-height 0.15s ease-out);
+		max-height: 0;
+		overflow: hidden;
+		&.active{
+			@include transition(max-height 0.15s ease-out);
+			max-height: 500px;
+		}
+	}
+
+	:local(.dropdown){
+		background-color: $color-dark-blue;
+		z-index: 2;
+		>:local(ul.primaryList){
+			list-style: none;
+			padding: 20px;
+			margin: 0;
+			li{
+				a, span{
+					color: #fff;
+					text-transform: uppercase;
+					text-decoration: none;
+					font-family: "Changa";
+					padding: 10px 0;
+					display: block;
+					border-bottom: 1px solid $color-primary;
+					font-size: 14px;
+					line-height: 1.6;
+				}
+				>:local(ul.primaryList){
+					list-style: none;
+					padding: 0;
+					li{
+						a, span{
+							color: #fff;
+							text-transform: none;
+							text-decoration: none;
+							font-family: "Changa";
+							padding: 10px 0;
+							margin-left: 20px;
+							display: block;
+							border-bottom: 1px solid #1b3a48;
+							font-size: 14px;
+							line-height: 1.6;
+						}
+					}
+				}
+
+			}
+		}
+		>:local(ul.secondaryList){
+			list-style: none;
+			padding: 20px;
+			margin: 0;
+
+			li {
+				a, span{
+					color: #fff;
+					text-decoration: underline;
+					font-family: "Arial";
+					font-size: 14px;
+					padding: 10px 0;
+					line-height: 1;
+				}
+			}
+		}
+	}
+
+	@media only screen and (min-width: $screen-xs) {
+		:local(.dropdownContainer){
+			position: relative;
+			overflow: visible;
+			:local(.dropdown){
+				@include transition(max-height 0.15s ease-out);
+				width: 300px;
+				position: absolute;
+				right: 0;
+				max-height: 0;
+				overflow: hidden;
+			}
+			&.active{
+				:local(.dropdown){
+					max-height: 500px;
+				}
+			}
+
+		}
+	}
+}
+
+
+:local(.isDesktop){
+	display: none;
+	@media only screen and (min-width: $screen-md) {
+		display: block;
+	}
+	position: relative;
+	overflow: hidden;
+	background: #83b4c6;
+	background: linear-gradient(to bottom,#83b4c6 0,#cbd6da 180px,#cbd6da 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#83b4c6',endColorstr='#cbd6da',GradientType=0);
+	padding: 20px;
+	padding: 20px 40px 0px 20px;
+
+
+	:local(.desktopBackground){
+		background: url(../images/header-desktop-bg.svg) no-repeat;
+		background-size: 720px;
+		position: absolute;
+		right: -70px;
+		top: -80px;
+		width: 720px;
+		height: 600px;
+		display: block;
+		opacity: .15;
+	}
+
+	:local(.topNavigation){
+		text-align: right;
+		margin-bottom: 15px;
+		margin-right: 20px;
+		position: relative;
+		>:local(ul.secondaryList){
+			list-style: none;
+			li {
+				display: inline-block;
+				a, span {
+					font-family: $default-font;
+					font-size: 14px;
+					font-weight: normal;
+					color: #000;
+					text-decoration: none;
+					line-height: 1.6;
+				}
+				&:not(:last-child):after{
+					content: "|";
+					font-size: 14px;
+					color: #fff;
+					margin: 0 6px;
+				}
+			}
+		}
+	}
+	:local(.mainNavigation){
+		position: relative;
+		text-align: center;
+		background: #fff;
+		height: 110px;
+		margin: 0 auto 40px;
+		max-width: 1240px;
+		:local(.logoContainer){
+			width: 105px;
+			height: 126px;
+			position: absolute;
+		}
+		>:local(ul.primaryList){
+			list-style: none;
+			margin: 0 0 0 105px;
+			padding: 30px 20px;
+			li{
+				display: inline-block;
+				line-height: 1.6;
+				a, span{
+					font-family: "Changa";
+					text-transform: uppercase;
+					text-decoration: none;
+					color: #072938;
+					font-size: 18px;
+					font-weight: 200;
+					line-height: 1.5;
+					padding: 10px 15px;
+					display: block;
+					position: relative;
+					&:after {
+						@include transition(all .3s);
+						content: "";
+						position: absolute;
+						height: 2px;
+						background-color: #072938;
+						display: block;
+						bottom: 8px;
+						width: 0;
+					}
+					&:hover {
+						&:after {
+							@include calc(width, '100% - 30px');
+						}
+					}
+					@media only screen and (min-width: $screen-md) {
+						font-size: 20px;
+					}
+				}
+				>ul {
+					display: none;
+				}
 			}
 		}
 	}

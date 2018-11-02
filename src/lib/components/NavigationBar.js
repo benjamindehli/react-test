@@ -57,16 +57,29 @@ class NavigationBar extends React.Component {
 	render () {
 		return (
 			<header>
-				<div className={style.navigationBarSmall}>
-					<div className={style.logoContainer}>
-						<img alt='DIBK logo' src={require('../images/dibk-logo-mobile.svg')} />
+				<div className={style.isMobile}>
+					<div className={style.navigationBar}>
+						<div className={style.logoContainer}>
+							<img alt='DIBK logo' src={require('../images/dibk-logo-mobile.svg')} />
+						</div>
+						<button className={this.state.active ? style.menuToggle + ' active' : style.menuToggle} onClick={ () => this.toggleList() }></button>
 					</div>
-					<button className={this.state.active ? style.menuToggle + ' active' : style.menuToggle} onClick={ () => this.toggleList() }></button>
+					<div className={this.state.active ? style.dropdownContainer + ' active' : style.dropdownContainer}>
+						<div className={style.dropdown}>{this.renderPrimaryList()}{this.renderSecondaryList()}</div>
+					</div>
+					<div className={this.state.active ? style.dropdownOverlay + ' active' : style.dropdownOverlay}></div>
 				</div>
-				<div className={this.state.active ? style.dropdownContainer + ' active' : style.dropdownContainer}>
-				
-					<div className={style.dropdown}>{this.renderPrimaryList()}{this.renderSecondaryList()}</div>
-				
+				<div className={style.isDesktop}>
+					<div className={style.desktopBackground}></div>
+					<div className={style.topNavigation}>
+						{this.renderSecondaryList()}
+					</div>
+					<div className={style.mainNavigation}>
+						<div className={style.logoContainer}>
+							<img alt='DIBK logo' src={require('../images/dibk-logo.svg')} />
+						</div>
+						{this.renderPrimaryList()}
+					</div>
 				</div>
 			</header>
 			)
