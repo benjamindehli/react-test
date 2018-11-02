@@ -1,11 +1,13 @@
 {
-  "main.js": "/build/main.a07a8778.js",
+  "main.js": "/build/main.121dc549.js",
   "build/0.785b8351.js": "/build/0.785b8351.js",
   "build/1.4430279b.js": "/build/1.4430279b.js",
   "runtime~main.js": "/build/bundle.4970557a.js",
+  "static/media/spinner.svg": "/static/media/spinner.4e12ad68.svg",
   "static/media/dibk-logo-mobile.svg": "/static/media/dibk-logo-mobile.c0758d10.svg",
   "static/media/hamburger-hover.svg": "/static/media/hamburger-hover.8f86b5f2.svg",
   "static/media/hamburger.svg": "/static/media/hamburger.eb9471df.svg",
-  "static/media/spinner.svg": "/static/media/spinner.4e12ad68.svg",
+  "static/media/header-desktop-bg.svg": "/static/media/header-desktop-bg.de1428af.svg",
+  "static/media/dibk-logo.svg": "/static/media/dibk-logo.fe0a3cdf.svg",
   "index.html": "/index.html"
 }
