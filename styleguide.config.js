@@ -2,6 +2,7 @@ const path = require('path')
 module.exports = {
 	title: "DIBK design",
 	styleguideDir: "docs",
+	contextDependencies: [path.resolve(__dirname, 'src/lib/components')],
 	require: [
 		path.join(__dirname, 'src/styleguide/styleguide.js')
 	],
