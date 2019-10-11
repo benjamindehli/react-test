@@ -13,7 +13,7 @@
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-scripts": "2.0.5",
+    "react-scripts": "^3.2.0",
     "webfontloader": "^1.6.28"
   },
   "scripts": {
@@ -36,6 +36,6 @@
   ],
   "devDependencies": {
     "@babel/cli": "^7.0.0",
-    "react-styleguidist": "^8.0.2"
+    "react-styleguidist": "^9.1.16"
   }
 }

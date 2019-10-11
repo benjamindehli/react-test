@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from './LoadingAnimation.scss';
+import style from './LoadingAnimation.module.scss';
 
 class LoadingAnimation extends React.Component {
 	render () {
@@ -24,5 +24,3 @@ LoadingAnimation.defaultProps = {
 }
 
 export default LoadingAnimation;
-
-

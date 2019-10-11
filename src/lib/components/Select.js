@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from './Select.scss';
+import style from './Select.module.scss';
 
 class Option extends React.Component {
 	render() {
@@ -38,7 +38,7 @@ class Select extends React.Component {
 Select.propTypes = {
 	options: PropTypes.arrayOf(
 		PropTypes.oneOfType([
-		PropTypes.string, 
+		PropTypes.string,
 		PropTypes.shape({
 				key: PropTypes.string,
 				value: PropTypes.string
