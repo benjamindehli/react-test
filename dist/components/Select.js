@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from './Select.scss';
+import style from './Select.module.scss';
 
 class Option extends React.Component {
   render() {

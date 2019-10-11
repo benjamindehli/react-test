@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from './ContentBox.scss';
+import style from './ContentBox.module.scss';
 
 class ContentBox extends React.Component {
   renderTitle() {
