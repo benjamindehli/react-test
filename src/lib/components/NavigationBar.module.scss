@@ -14,9 +14,15 @@
 		width: 200px;
 		height: 54px;
 		display: inline-block;
+		img {
+			height: 54px;
+		}
 		@media only screen and (min-width: $screen-xs) {
 			width: 270px;
 			height: 73px;
+			img {
+				height: 73px;
+			}
 		}
 	}
 
