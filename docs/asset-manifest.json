@@ -1,22 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.451ec8f8.chunk.css",
-    "main.js": "/build/main.bd58092d.js",
+    "main.css": "/static/css/main.cd4dafb7.chunk.css",
+    "main.js": "/build/main.238a1407.js",
     "runtime-main.js": "/build/bundle.843c4f69.js",
-    "build/2.b35d51e5.js": "/build/2.b35d51e5.js",
+    "build/2.f2476e68.js": "/build/2.f2476e68.js",
     "index.html": "/index.html",
-    "precache-manifest.88cf28a288a9912ee74491b665b060d6.js": "/precache-manifest.88cf28a288a9912ee74491b665b060d6.js",
+    "precache-manifest.7a40305e45e675800213c460b9c706c0.js": "/precache-manifest.7a40305e45e675800213c460b9c706c0.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.451ec8f8.chunk.css.map": "/static/css/main.451ec8f8.chunk.css.map",
+    "static/css/main.cd4dafb7.chunk.css.map": "/static/css/main.cd4dafb7.chunk.css.map",
     "static/media/dibk-logo-mobile.svg": "/static/media/dibk-logo-mobile.3d8cd6bf.svg",
-    "static/media/dibk-logo.svg": "/static/media/dibk-logo.2516cf41.svg",
-    "static/media/NavigationBar.module.scss": "/static/media/header-desktop-bg.af654473.svg",
+    "static/media/NavigationBar.module.scss": "/static/media/hamburger.3e6caca9.svg",
     "static/media/LoadingAnimation.module.scss": "/static/media/spinner.4e12ad68.svg"
   },
   "entrypoints": [
     "build/bundle.843c4f69.js",
-    "build/2.b35d51e5.js",
-    "static/css/main.451ec8f8.chunk.css",
-    "build/main.bd58092d.js"
+    "build/2.f2476e68.js",
+    "static/css/main.cd4dafb7.chunk.css",
+    "build/main.238a1407.js"
   ]
 }
