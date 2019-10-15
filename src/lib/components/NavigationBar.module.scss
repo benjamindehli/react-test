@@ -1,9 +1,7 @@
 @import "../style/global.scss";
 
-:local(.isMobile){
-	@media only screen and (min-width: $screen-md) {
-		display: none;
-	}
+:local(.isPresent){
+
 	:local(.navigationBar){
 		background-color: $color-dark-blue;
 		height: 54px;
@@ -155,107 +153,3 @@
 }
 
 
-:local(.isDesktop){
-	display: none;
-	@media only screen and (min-width: $screen-md) {
-		display: block;
-	}
-	position: relative;
-	overflow: hidden;
-	background: #83b4c6;
-	background: linear-gradient(to bottom,#83b4c6 0,#cbd6da 180px,#cbd6da 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#83b4c6',endColorstr='#cbd6da',GradientType=0);
-	padding: 20px 40px 0px 20px;
-	:local(.desktopBackground){
-		background: url(../images/header-desktop-bg.svg) no-repeat;
-		background-size: 720px;
-		position: absolute;
-		right: -70px;
-		top: -80px;
-		width: 720px;
-		height: 600px;
-		display: block;
-		opacity: .15;
-	}
-	:local(.topNavigation){
-		text-align: right;
-		margin-bottom: 15px;
-		margin-right: 20px;
-		position: relative;
-		>:local(ul.secondaryList){
-			list-style: none;
-			li {
-				display: inline-block;
-				a, span {
-					font-family: $default-font;
-					font-size: 14px;
-					font-weight: normal;
-					color: #000;
-					text-decoration: none;
-					line-height: 1.6;
-				}
-				&:not(:last-child):after{
-					content: "|";
-					font-size: 14px;
-					color: #fff;
-					margin: 0 6px;
-				}
-			}
-		}
-	}
-	:local(.mainNavigation){
-		position: relative;
-		text-align: center;
-		background: #fff;
-		height: 110px;
-		margin: 0 auto 40px;
-		max-width: 1240px;
-		:local(.logoContainer){
-			width: 105px;
-			height: 126px;
-			position: absolute;
-		}
-		>:local(ul.primaryList){
-			list-style: none;
-			margin: 0 0 0 105px;
-			padding: 30px 20px;
-			li{
-				display: inline-block;
-				line-height: 1.6;
-				a, span{
-					font-family: "Changa";
-					text-transform: uppercase;
-					text-decoration: none;
-					color: #072938;
-					font-size: 18px;
-					font-weight: 200;
-					line-height: 1.5;
-					padding: 10px 15px;
-					display: block;
-					position: relative;
-					&:after {
-						@include transition(all .3s);
-						content: "";
-						position: absolute;
-						height: 2px;
-						background-color: #072938;
-						display: block;
-						bottom: 8px;
-						width: 0;
-					}
-					&:hover {
-						&:after {
-							@include calc(width, '100% - 30px');
-						}
-					}
-					@media only screen and (min-width: $screen-md) {
-						font-size: 20px;
-					}
-				}
-				>ul {
-					display: none;
-				}
-			}
-		}
-	}
-}
