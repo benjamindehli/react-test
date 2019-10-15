@@ -4,9 +4,9 @@ import style from './NavigationBar.module.scss';
 
 class PrimaryListItem extends React.Component {
   render() {
-    if (typeof this.props.listItem == 'string') {
+    if (typeof this.props.listItem === 'string') {
       return React.createElement("li", null, React.createElement("span", null, this.props.listItem));
-    } else if (typeof this.props.listItem == 'object') {
+    } else if (typeof this.props.listItem === 'object') {
       return React.createElement("li", null, React.createElement("a", {
         href: this.props.listItem.href
       }, this.props.listItem.name));
@@ -39,7 +39,7 @@ class NavigationBar extends React.Component {
 
   renderPrimaryList(items = this.props.primaryListItems, iteration = 0) {
     let listItems = items.map((listItem, i) => {
-      let key = iteration + "-" + i;
+      let key = iteration + '-' + i;
 
       if (listItem.listItems !== undefined) {
         return React.createElement("li", {
@@ -71,7 +71,7 @@ class NavigationBar extends React.Component {
 
   render() {
     return React.createElement("header", null, React.createElement("div", {
-      className: style.isMobile
+      className: style.isPresent
     }, React.createElement("div", {
       className: style.navigationBar
     }, React.createElement("div", {
@@ -88,20 +88,7 @@ class NavigationBar extends React.Component {
       className: style.dropdown
     }, this.renderPrimaryList(), this.renderSecondaryList())), React.createElement("div", {
       className: this.state.active ? style.dropdownOverlay + ' active' : style.dropdownOverlay
-    })), React.createElement("div", {
-      className: style.isDesktop
-    }, React.createElement("div", {
-      className: style.desktopBackground
-    }), React.createElement("div", {
-      className: style.topNavigation
-    }, this.renderSecondaryList()), React.createElement("div", {
-      className: style.mainNavigation
-    }, React.createElement("div", {
-      className: style.logoContainer
-    }, React.createElement("img", {
-      alt: "DIBK logo",
-      src: require('../images/dibk-logo.svg')
-    })), this.renderPrimaryList())));
+    })));
   }
 
 }
