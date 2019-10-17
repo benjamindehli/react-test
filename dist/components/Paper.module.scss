@@ -1,0 +1,17 @@
+:local(.paper) {
+  line-height: 1.6;
+  position: relative;
+  padding: 24px 28px;
+  margin: 20px 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.18);
+
+  &:local(.noMargin) {
+    margin: 0;
+  }
+
+  &:local(.noPadding) {
+    padding: 0;
+  }
+}
