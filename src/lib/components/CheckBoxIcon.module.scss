@@ -1,0 +1,27 @@
+@import "../style/global.scss";
+
+:local(.checkBoxIcon) {
+  @include border-radius(0);
+  @include box-shadow(0 0 0 1px #afaba8);
+  @include transition(all 0.1s ease-in-out);
+  @include box-sizing(content-box);
+  display: inline-block;
+  vertical-align: middle;
+  min-width: 10px;
+  width: 10px;
+  height: 10px;
+  background: white;
+  margin-right: 1em;
+  line-height: 1;
+  text-align: center;
+
+  &:local(.checked) {
+    @include box-shadow(0 0 0 1px $color-dark-blue);
+    color: $color-primary;
+  }
+
+  :local(.checkmark) {
+    font-size: 1.25em;
+    line-height: 0.75em;
+  }
+}
