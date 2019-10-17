@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.cd4dafb7.chunk.css",
-    "main.js": "/build/main.238a1407.js",
+    "main.js": "/build/main.9278c76f.js",
     "runtime-main.js": "/build/bundle.843c4f69.js",
-    "build/2.f2476e68.js": "/build/2.f2476e68.js",
+    "build/2.cf4b285d.js": "/build/2.cf4b285d.js",
     "index.html": "/index.html",
-    "precache-manifest.7a40305e45e675800213c460b9c706c0.js": "/precache-manifest.7a40305e45e675800213c460b9c706c0.js",
+    "precache-manifest.4ba51d3e7db0c264dbda0878c777e043.js": "/precache-manifest.4ba51d3e7db0c264dbda0878c777e043.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.cd4dafb7.chunk.css.map": "/static/css/main.cd4dafb7.chunk.css.map",
     "static/media/dibk-logo-mobile.svg": "/static/media/dibk-logo-mobile.3d8cd6bf.svg",
@@ -14,8 +14,8 @@
   },
   "entrypoints": [
     "build/bundle.843c4f69.js",
-    "build/2.f2476e68.js",
+    "build/2.cf4b285d.js",
     "static/css/main.cd4dafb7.chunk.css",
-    "build/main.238a1407.js"
+    "build/main.9278c76f.js"
   ]
 }
