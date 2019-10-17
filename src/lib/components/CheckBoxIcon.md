@@ -8,6 +8,6 @@ Regular check box icons example:
 Check box icons with custom size example:
 
 ```js
-<CheckBoxIcon size='36px' />
-<CheckBoxIcon size='36px' checked={true} />
+<CheckBoxIcon size='43px' />
+<CheckBoxIcon size='43px' checked={true} />
 ```

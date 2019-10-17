@@ -21,7 +21,7 @@ CheckBoxIcon.propTypes = {
 }
 
 CheckBoxIcon.defaultProps = {
-  size: '10px',
+  size: '20px',
   checked: false
 }
 
