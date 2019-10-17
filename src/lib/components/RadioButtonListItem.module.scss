@@ -1,0 +1,43 @@
+@import "../style/global.scss";
+
+:local(.radioButtonListItem) {
+  @include box-sizing(content-box);
+  @include box-shadow(0 0 2px $color-dark-blue);
+  @include border-radius(5px);
+  @include transition(all 0.1s ease-in-out);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  cursor: pointer;
+  font-family: $default-font;
+  padding: 10px;
+  position: relative;
+  margin-top: 10px;
+  background: white;
+  font-size: 1rem;
+  color: #000;
+
+  :local(.content) {
+    margin-right: 30px;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  &:local(.checked) {
+    @include box-shadow(0 0 0 1px $color-dark-blue, 0 0 4px 0 $color-dark-blue);
+  }
+
+  &:not(:local(.checked)):hover {
+    @include box-shadow(0 0 6px $color-dark-blue);
+  }
+
+  &:focus {
+    outline-color: #54acb8;
+  }
+}

@@ -7,6 +7,7 @@ import List from './components/List';
 import LoadingAnimation from './components/LoadingAnimation';
 import NavigationBar from './components/NavigationBar';
 import RadioButtonIcon from './components/RadioButtonIcon';
+import RadioButtonListItem from './components/RadioButtonListItem';
 import Select from './components/Select';
 
 WebFont.load({
@@ -15,4 +16,4 @@ WebFont.load({
   }
 });
 
-export {Button, ContentBox, Header, List, LoadingAnimation, NavigationBar, RadioButtonIcon, Select}
+export {Button, ContentBox, Header, List, LoadingAnimation, NavigationBar, RadioButtonIcon, RadioButtonListItem, Select}
