@@ -10,7 +10,7 @@ class RadioButtonListItem extends React.Component {
         ? style.checked
         : ''}`}>
       <RadioButtonIcon checked={this.props.checked}/> {this.props.content}
-      <input type="radio" id={this.props.id} name={this.props.name} value={this.props.content} />
+      <input type="radio" id={this.props.id} name={this.props.name} value={this.props.content} checked={this.props.checked} />
     </label>)
   }
 }
