@@ -7,8 +7,11 @@ class CheckBoxListItem extends React.Component {
   render() {
     return (
       <div className={`${style.checkBoxListItem} ${this.props.checked ? style.checked : ''}`}>
-        <CheckBoxIcon checked={this.props.checked} />
-        {this.props.content}
+        <label for={this.props.id} >
+          <CheckBoxIcon checked={this.props.checked} />
+          <input type="checkbox" name={this.props.name} id={this.props.id} checked={this.props.checked} />
+          {this.props.content}
+        </label>
       </div>
     )
   }
@@ -17,10 +20,15 @@ class CheckBoxListItem extends React.Component {
 CheckBoxListItem.propTypes = {
   /** Text content inside list item */
   content: PropTypes.string,
-  checked: PropTypes.bool
+  checked: PropTypes.bool,
+  id: PropTypes.string,
+  name: PropTypes.string
+
 };
 CheckBoxListItem.defaultProps = {
   content: '',
-  checked: false
+  checked: false,
+  id: '',
+  name: ''
 };
 export default CheckBoxListItem;

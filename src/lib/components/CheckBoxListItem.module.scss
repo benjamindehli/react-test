@@ -41,3 +41,7 @@
     outline-color: #54acb8;
   }
 }
+input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+}
