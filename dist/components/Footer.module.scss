@@ -1,0 +1,11 @@
+@import "../style/global.scss";
+
+:local(.footer) {
+  background-color: $color-default;
+  padding-top: 40px;
+
+  :local(.footerContainer) {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+}
