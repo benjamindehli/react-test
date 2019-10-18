@@ -5,6 +5,7 @@ import Button from './components/Button';
 import CheckBoxIcon from './components/CheckBoxIcon';
 import CheckBoxListItem from './components/CheckBoxListItem';
 import ContentBox from './components/ContentBox';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import List from './components/List';
 import LoadingAnimation from './components/LoadingAnimation';
@@ -18,4 +19,4 @@ WebFont.load({
     families: ['Changa:200,300,400', 'Open Sans:300,400,700', 'sans-serif']
   }
 });
-export { Button, CheckBoxIcon, CheckBoxListItem, ContentBox, Header, List, LoadingAnimation, NavigationBar, Paper, RadioButtonIcon, RadioButtonListItem, Select };
+export { Button, CheckBoxIcon, CheckBoxListItem, Footer, ContentBox, Header, List, LoadingAnimation, NavigationBar, Paper, RadioButtonIcon, RadioButtonListItem, Select };
