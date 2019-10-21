@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.1a65f833.chunk.css",
-    "main.js": "/build/main.ae02e870.js",
+    "main.css": "/static/css/main.bbc9fc70.chunk.css",
+    "main.js": "/build/main.dbb31e2e.js",
     "runtime-main.js": "/build/bundle.843c4f69.js",
     "build/2.cc4f712f.js": "/build/2.cc4f712f.js",
     "index.html": "/index.html",
-    "precache-manifest.07c0eb0092f3f6e300f205e67d121ba3.js": "/precache-manifest.07c0eb0092f3f6e300f205e67d121ba3.js",
+    "precache-manifest.13ddcb82c22a4867af03a5ae8dca56ac.js": "/precache-manifest.13ddcb82c22a4867af03a5ae8dca56ac.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.1a65f833.chunk.css.map": "/static/css/main.1a65f833.chunk.css.map",
+    "static/css/main.bbc9fc70.chunk.css.map": "/static/css/main.bbc9fc70.chunk.css.map",
     "static/media/dibk-logo-mobile.svg": "/static/media/dibk-logo-mobile.3d8cd6bf.svg",
     "static/media/NavigationBar.module.scss": "/static/media/hamburger.3e6caca9.svg",
     "static/media/LoadingAnimation.module.scss": "/static/media/spinner.4e12ad68.svg"
@@ -15,7 +15,7 @@
   "entrypoints": [
     "build/bundle.843c4f69.js",
     "build/2.cc4f712f.js",
-    "static/css/main.1a65f833.chunk.css",
-    "build/main.ae02e870.js"
+    "static/css/main.bbc9fc70.chunk.css",
+    "build/main.dbb31e2e.js"
   ]
 }
