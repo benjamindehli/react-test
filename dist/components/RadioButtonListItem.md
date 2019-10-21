@@ -1,6 +1,6 @@
 Radio button list item example:
 
 ```js
-<RadioButtonListItem content="Checked radio button"/>
-<RadioButtonListItem content="Unchecked radio button" checked={true} />
+<RadioButtonListItem name="radio" id="1" checked={true}>Checked</RadioButtonListItem>
+<RadioButtonListItem name="radio" id="2">Unchecked </RadioButtonListItem>
 ```

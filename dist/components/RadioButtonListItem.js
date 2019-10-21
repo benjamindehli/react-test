@@ -1,15 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import RadioButtonIcon from './RadioButtonIcon';
+import RadioButtonInput from './RadioButtonInput';
 import style from './RadioButtonListItem.module.scss';
+import { id } from 'postcss-selector-parser';
 
 class RadioButtonListItem extends React.Component {
   render() {
     return React.createElement("div", {
-      className: `${style.radioButtonListItem} ${this.props.checked ? style.checked : ''}`
-    }, React.createElement(RadioButtonIcon, {
-      checked: this.props.checked
-    }), " ", this.props.content);
+      className: style.radioButtonListItem
+    }, React.createElement(RadioButtonInput, {
+      checked: this.props.checked,
+      id: this.props.id
+    }, this.props.children));
   }
 
 }
@@ -17,10 +19,14 @@ class RadioButtonListItem extends React.Component {
 RadioButtonListItem.propTypes = {
   /** Text content inside list item */
   content: PropTypes.string,
-  checked: PropTypes.bool
+  checked: PropTypes.bool,
+  name: PropTypes.string,
+  id: PropTypes.string.isRequired
 };
 RadioButtonListItem.defaultProps = {
   content: '',
-  checked: false
+  name: '',
+  checked: false,
+  id: ''
 };
 export default RadioButtonListItem;

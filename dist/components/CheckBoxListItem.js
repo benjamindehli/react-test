@@ -2,25 +2,29 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CheckBoxIcon from './CheckBoxIcon';
 import style from './CheckBoxListItem.module.scss';
+import CheckBoxInput from './CheckBoxInput';
 
 class CheckBoxListItem extends React.Component {
   render() {
     return React.createElement("div", {
       className: `${style.checkBoxListItem} ${this.props.checked ? style.checked : ''}`
-    }, React.createElement(CheckBoxIcon, {
-      checked: this.props.checked
-    }), this.props.content);
+    }, React.createElement(CheckBoxInput, {
+      checked: this.props.checked,
+      id: this.props.id
+    }, this.props.children));
   }
 
 }
 
 CheckBoxListItem.propTypes = {
   /** Text content inside list item */
-  content: PropTypes.string,
-  checked: PropTypes.bool
+  checked: PropTypes.bool,
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string
 };
 CheckBoxListItem.defaultProps = {
-  content: '',
-  checked: false
+  checked: false,
+  id: '',
+  name: ''
 };
 export default CheckBoxListItem;

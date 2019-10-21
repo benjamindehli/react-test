@@ -1,6 +1,6 @@
 Check box list item example:
 
 ```js
-<CheckBoxListItem content="Checked radio button"/>
-<CheckBoxListItem content="Unchecked radio button" checked={true} />
+<CheckBoxListItem checked={true} name="checkbox" id="21">Label for checked checkbox</CheckBoxListItem>
+<CheckBoxListItem name="checkbox" id="22">Label for unchecked checkbox</CheckBoxListItem>
 ```
