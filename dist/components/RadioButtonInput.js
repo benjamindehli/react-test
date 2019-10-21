@@ -6,15 +6,16 @@ import style from './RadioButtonInput.module.scss';
 class RadioButtonInput extends React.Component {
   render() {
     return React.createElement("label", {
-      for: this.props.id,
+      htmlFor: this.props.id,
       className: `${style.radioButtonInput} ${this.props.checked ? style.checked : ''}`
     }, React.createElement(RadioButtonIcon, {
       checked: this.props.checked
     }), React.createElement("input", {
       type: "radio",
+      onChange: this.props.onChange,
       id: this.props.id,
       name: this.props.name,
-      value: this.props.content,
+      value: this.props.inputValue,
       checked: this.props.checked
     }), this.props.children);
   }
@@ -23,15 +24,14 @@ class RadioButtonInput extends React.Component {
 
 RadioButtonInput.propTypes = {
   /** Text content inside list item */
-  content: PropTypes.string,
   checked: PropTypes.bool,
+  inputValue: PropTypes.string.isRequired,
   name: PropTypes.string,
-  id: PropTypes.string.isRequired
+  id: PropTypes.string.isRequired,
+  onChange: PropTypes.func
 };
 RadioButtonInput.defaultProps = {
-  content: '',
   name: '',
-  checked: false,
-  id: ''
+  checked: false
 };
 export default RadioButtonInput;

@@ -7,10 +7,11 @@ class CheckBoxInput extends React.Component {
   render() {
     return React.createElement("label", {
       className: style.checkBoxInput,
-      for: this.props.id
+      htmlFor: this.props.id
     }, React.createElement(CheckBoxIcon, {
       checked: this.props.checked
     }), React.createElement("input", {
+      onChange: this.props.onChange,
       type: "checkbox",
       name: this.props.name,
       id: this.props.id,
@@ -22,15 +23,13 @@ class CheckBoxInput extends React.Component {
 
 CheckBoxInput.propTypes = {
   /** Text content inside list item */
-  content: PropTypes.string,
   checked: PropTypes.bool,
   id: PropTypes.string.isRequired,
-  name: PropTypes.string
+  name: PropTypes.string,
+  onChange: PropTypes.func.isRequired
 };
 CheckBoxInput.defaultProps = {
-  content: '',
   checked: false,
-  id: '',
   name: ''
 };
 export default CheckBoxInput;
