@@ -6,9 +6,9 @@ import style from './CheckBoxInput.module.scss';
 class CheckBoxInput extends React.Component {
   render() {
     return (    
-        <label className={style.checkBoxInput} for={this.props.id} >
+        <label className={style.checkBoxInput} htmlFor={this.props.id} >
           <CheckBoxIcon checked={this.props.checked} />
-          <input type="checkbox" name={this.props.name} id={this.props.id} checked={this.props.checked} />
+          <input onChange={this.props.onChange} type="checkbox" name={this.props.name} id={this.props.id} checked={this.props.checked} />
           {this.props.children}
         </label>      
     )
@@ -17,16 +17,14 @@ class CheckBoxInput extends React.Component {
 
 CheckBoxInput.propTypes = {
   /** Text content inside list item */
-  content: PropTypes.string,
   checked: PropTypes.bool,
   id: PropTypes.string.isRequired,
-  name: PropTypes.string
+  name: PropTypes.string,
+  onChange: PropTypes.func.isRequired
 
 };
 CheckBoxInput.defaultProps = {
-  content: '',
   checked: false,
-  id: '',
   name: ''
 };
 export default CheckBoxInput;
