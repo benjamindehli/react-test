@@ -11,7 +11,7 @@
   width: 10px;
   height: 10px;
   background: white;
-  margin-right: 1em;
+  margin-right: .5em;
   line-height: 1;
   text-align: center;
 
@@ -21,7 +21,7 @@
   }
 
   :local(.checkmark) {
-    font-size: 1.25em;
+    font-size: 1em;
     line-height: 0.75em;
   }
 }

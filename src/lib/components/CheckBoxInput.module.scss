@@ -1,0 +1,9 @@
+@import "../style/global.scss";
+
+:local(.checkBoxInput) { 
+  input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+  }  
+    margin-right: 1em;    
+}
