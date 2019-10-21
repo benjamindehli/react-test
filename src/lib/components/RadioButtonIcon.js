@@ -6,11 +6,11 @@ class RadioButtonIcon extends React.Component {
   render() {
     const inlineStyle = {
       height: this.props.size,
-      width: this.props.size,
+      width: this.props.size
     };
-    return (<label for={this.props.id} className={`${style.radioButtonIcon} ${this.props.checked
+    return (<span className={`${style.radioButtonIcon} ${this.props.checked
         ? style.checked
-        : ''}`} style={inlineStyle}><input type="radio" id={this.props.id} name={this.props.name} /></label>)
+        : ''}`} style={inlineStyle}></span>)
   }
 }
 
@@ -21,8 +21,6 @@ RadioButtonIcon.propTypes = {
 
 RadioButtonIcon.defaultProps = {
   size: '10px',
-  name: '',
-  id: '',
   checked: false
 }
 

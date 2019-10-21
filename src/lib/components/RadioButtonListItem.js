@@ -1,17 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import RadioButtonIcon from './RadioButtonIcon';
+import RadioButtonInput from './RadioButtonInput';
 import style from './RadioButtonListItem.module.scss';
 import { id } from 'postcss-selector-parser';
 
 class RadioButtonListItem extends React.Component {
   render() {
-    return (<label for={this.props.id} className={`${style.radioButtonListItem} ${this.props.checked
-        ? style.checked
-        : ''}`}>
-      <RadioButtonIcon checked={this.props.checked}/> {this.props.content}
-      <input type="radio" id={this.props.id} name={this.props.name} value={this.props.content} checked={this.props.checked} />
-    </label>)
+    return (<div  className={style.radioButtonListItem}>
+    <RadioButtonInput checked={this.props.checked} id={this.props.id}>{this.props.children}</RadioButtonInput>
+    </div>)
   }
 }
 
@@ -20,7 +17,7 @@ RadioButtonListItem.propTypes = {
   content: PropTypes.string,
   checked: PropTypes.bool,
   name: PropTypes.string,
-  id: PropTypes.string
+  id: PropTypes.string.isRequired
 }
 
 RadioButtonListItem.defaultProps = {

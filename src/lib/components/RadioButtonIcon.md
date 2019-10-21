@@ -1,13 +1,13 @@
 Regular radio button icons example:
 
 ```js
-<RadioButtonIcon name="radio" id="11"/>
-<RadioButtonIcon checked={true} name="radio" id="12"/>
+<RadioButtonIcon />
+<RadioButtonIcon checked={true} />
 ```
 
 Radio button icons with custom size example:
 
 ```js
-<RadioButtonIcon size='36px' name="radio" id="11" />
-<RadioButtonIcon size='36px' name="radio" id="12" checked={true} />
+<RadioButtonIcon size='36px' />
+<RadioButtonIcon size='36px' checked={true} />
 ```
