@@ -1,0 +1,5 @@
+@font-face {
+	font-family: "Altis-Light";
+	src: url("../../fonts/Altis-Light.eot#Altis-Light") format("eot");
+	src: local("Altis-Light"), url("../../fonts/Altis-Light.woff") format("woff"), url("../../fonts/Altis-Light.ttf") format("truetype"), url("../../fonts/Altis-Light.svg") format("svg");
+}
