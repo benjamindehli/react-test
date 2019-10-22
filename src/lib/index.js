@@ -16,14 +16,12 @@ import RadioButtonIcon from './components/RadioButtonIcon';
 import RadiButtonInput from './components/RadioButtonInput';
 import RadioButtonListItem from './components/RadioButtonListItem';
 import Select from './components/Select';
+import './style/base/fonts.css';
+
 WebFont.load({
   google: {
     families: ['Open Sans:300,400,700', 'sans-serif']
-  },
-  custom: {
-      families: ['Altis-Light'],
-      urls: ['/src/lib/style/base/fonts.css']
-    }
+  }
 });
 
 export { Button, CheckBoxIcon, CheckBoxInput, CheckBoxListItem, Footer, ContentBox, Header, List, LoadingAnimation, NavigationBar, Paper, RadioButtonIcon, RadiButtonInput, RadioButtonListItem, Select };

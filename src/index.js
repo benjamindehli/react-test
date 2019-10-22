@@ -8,17 +8,13 @@ import Header from './lib/components/Header';
 import Select from './lib/components/Select';
 import LoadingAnimation from './lib/components/LoadingAnimation';
 import ContentBox from './lib/components/ContentBox';
+import './lib/style/base/fonts.css';
 
 WebFont.load({
   google: {
     families: ['Open Sans:300,400,700', 'sans-serif']
-  },
-  custom: {
-      families: ['Altis-Light'],
-      urls: ['/src/lib/style/base/fonts.css']
-    }
+  }
 });
-
 
 ReactDOM.render(
   <NavigationBar primaryListItems={[{name: 'Primary item 1', listItems:['Sub item 1', 'Sub item 2']}, 'Primary item 2', {name: 'Primary item 3', href: 'test.no'}]} secondaryListItems={['Secondary item 1', 'Secondary item 2']} />,
