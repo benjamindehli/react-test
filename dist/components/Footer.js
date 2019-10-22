@@ -3,7 +3,7 @@ import style from './Footer.module.scss';
 
 class Footer extends React.Component {
   render() {
-    return React.createElement("div", {
+    return React.createElement("footer", {
       className: style.footer
     }, React.createElement("div", {
       className: style.footerContainer
