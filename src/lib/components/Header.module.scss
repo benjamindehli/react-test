@@ -1,7 +1,5 @@
 :local(.headerContainer){
 	font-size: 22px;
-	border-top: 1px solid #8aaec3;
-	border-bottom: 1px solid #8aaec3;
 	padding: 10px 0;
 	:local(.header){
 		margin: 0;
@@ -19,15 +17,17 @@
 	}
 	:local(h2.header){
 		font-family: "Altis-Light","Altis","Open Sans",arial,sans-serif;
+		font-size: 42px;
 		font-weight: bold;
 	}
 	:local(h3.header){
 		font-family: "Altis-Light","Altis","Open Sans",arial,sans-serif;
-		font-style: italic;
+		font-size: 36px;		
 	}
 	:local(h4.header){
 		font-family: "Altis-Light","Altis","Open Sans",arial,sans-serif;
-		font-style: italic;
+		font-size: 22px;
+		
 	}
 	:local(h5.header){
 		font-family: "Altis-Light","Altis","Open Sans",arial,sans-serif;
