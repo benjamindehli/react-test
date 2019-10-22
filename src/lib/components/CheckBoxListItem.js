@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CheckBoxIcon from './CheckBoxIcon';
 import style from './CheckBoxListItem.module.scss';
 import CheckBoxInput from './CheckBoxInput';
-import { prototype } from 'eventemitter3';
 
 class CheckBoxListItem extends React.Component {
   render() {
