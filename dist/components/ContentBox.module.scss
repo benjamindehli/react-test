@@ -107,12 +107,10 @@
         }
     }
 
-    :local(.title){
-        font-weight: normal;
+    :local(.title){        
         &:local(.regular) {
-            font-family: "Altis-Medium";
-            font-family: "Changa";
-            font-weight: 400;
+            font-family: "Open Sans";            
+            font-weight: bold;
             font-size: 21px;
             font-style: normal;
             line-height: 1.4;
@@ -120,8 +118,8 @@
             border-bottom: 1px solid #e5e3e1;
         }
         &:local(.large){
-            font-family: "Changa";
-            font-weight: 200;
+            font-family: "Open Sans";
+            font-weight: normal;
             font-size: 24px;
             margin: 0;
             margin-bottom: 20px;
