@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.38d4ad0f.chunk.css",
-    "main.js": "/build/main.dc720369.js",
+    "main.css": "/static/css/main.c48adcbf.chunk.css",
+    "main.js": "/build/main.f86fffd4.js",
     "runtime-main.js": "/build/bundle.843c4f69.js",
     "build/2.46b2a7d9.js": "/build/2.46b2a7d9.js",
     "index.html": "/index.html",
-    "precache-manifest.86e9b24b694a431c1342c72af8b60914.js": "/precache-manifest.86e9b24b694a431c1342c72af8b60914.js",
+    "precache-manifest.410fd2ba30eabb5603e2f525eae56bbf.js": "/precache-manifest.410fd2ba30eabb5603e2f525eae56bbf.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.38d4ad0f.chunk.css.map": "/static/css/main.38d4ad0f.chunk.css.map",
+    "static/css/main.c48adcbf.chunk.css.map": "/static/css/main.c48adcbf.chunk.css.map",
     "static/media/fonts.css": "/static/media/Altis-Light.f02874c4.eot",
     "static/media/dibk-logo-mobile.svg": "/static/media/dibk-logo-mobile.3d8cd6bf.svg",
     "static/media/NavigationBar.module.scss": "/static/media/hamburger.3e6caca9.svg",
@@ -16,7 +16,7 @@
   "entrypoints": [
     "build/bundle.843c4f69.js",
     "build/2.46b2a7d9.js",
-    "static/css/main.38d4ad0f.chunk.css",
-    "build/main.dc720369.js"
+    "static/css/main.c48adcbf.chunk.css",
+    "build/main.f86fffd4.js"
   ]
 }
