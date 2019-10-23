@@ -1,7 +1,7 @@
 @import "../style/global.scss";
 
 :local(.radioButtonInput) {
- 
+ display: flex;
   input[type="radio"] {
     opacity: 0;
     position: absolute;

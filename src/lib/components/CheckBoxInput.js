@@ -9,7 +9,7 @@ class CheckBoxInput extends React.Component {
         <label className={style.checkBoxInput} htmlFor={this.props.id} >
           <CheckBoxIcon checked={this.props.checked} />
           <input onChange={this.props.onChange} type="checkbox" name={this.props.name} id={this.props.id} checked={this.props.checked} />
-          {this.props.children}
+          <span>{this.props.children}</span>
         </label>      
     )
   }
