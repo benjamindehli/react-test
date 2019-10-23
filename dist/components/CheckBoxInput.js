@@ -16,7 +16,7 @@ class CheckBoxInput extends React.Component {
       name: this.props.name,
       id: this.props.id,
       checked: this.props.checked
-    }), this.props.children);
+    }), React.createElement("span", null, this.props.children));
   }
 
 }

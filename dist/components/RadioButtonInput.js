@@ -17,7 +17,7 @@ class RadioButtonInput extends React.Component {
       name: this.props.name,
       value: this.props.inputValue,
       checked: this.props.checked
-    }), this.props.children);
+    }), React.createElement("span", null, this.props.children));
   }
 
 }
