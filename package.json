@@ -36,6 +36,6 @@
   ],
   "devDependencies": {
     "@babel/cli": "^7.0.0",
-    "react-styleguidist": "^9.1.16"
+    "react-styleguidist": "^10.2.0"
   }
 }
