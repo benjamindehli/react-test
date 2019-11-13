@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.c48adcbf.chunk.css",
-    "main.js": "/build/main.f86fffd4.js",
-    "runtime-main.js": "/build/bundle.843c4f69.js",
-    "build/2.46b2a7d9.js": "/build/2.46b2a7d9.js",
+    "main.css": "/static/css/main.92634e31.chunk.css",
+    "main.js": "/build/main.c67e0cd4.js",
+    "runtime-main.js": "/build/bundle.bc3e1207.js",
+    "build/2.5b97cace.js": "/build/2.5b97cace.js",
+    "build/2.5b97cace.js.LICENSE": "/build/2.5b97cace.js.LICENSE",
     "index.html": "/index.html",
-    "precache-manifest.410fd2ba30eabb5603e2f525eae56bbf.js": "/precache-manifest.410fd2ba30eabb5603e2f525eae56bbf.js",
+    "precache-manifest.0223e9db87140f1c5ff26bea31fae048.js": "/precache-manifest.0223e9db87140f1c5ff26bea31fae048.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.c48adcbf.chunk.css.map": "/static/css/main.c48adcbf.chunk.css.map",
+    "static/css/main.92634e31.chunk.css.map": "/static/css/main.92634e31.chunk.css.map",
     "static/media/fonts.css": "/static/media/Altis-Light.f02874c4.eot",
     "static/media/dibk-logo-mobile.svg": "/static/media/dibk-logo-mobile.3d8cd6bf.svg",
     "static/media/NavigationBar.module.scss": "/static/media/hamburger.3e6caca9.svg",
     "static/media/LoadingAnimation.module.scss": "/static/media/spinner.4e12ad68.svg"
   },
   "entrypoints": [
-    "build/bundle.843c4f69.js",
-    "build/2.46b2a7d9.js",
-    "static/css/main.c48adcbf.chunk.css",
-    "build/main.f86fffd4.js"
+    "build/bundle.bc3e1207.js",
+    "build/2.5b97cace.js",
+    "static/css/main.92634e31.chunk.css",
+    "build/main.c67e0cd4.js"
   ]
 }
