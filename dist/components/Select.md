@@ -1,5 +1,5 @@
 Select example:
 
 ```js
-<Select options={['option 1', 'option 2', {key: 'option 3', value: 'value 3'}]} />
+<Select id="select1" options={['option 1', 'option 2', {key: 'option 3', value: 'value 3'}]} />
 ```

@@ -1,0 +1,50 @@
+@import "../style/global.scss";
+
+:local(.inputField) {
+  label {
+    cursor: pointer;
+    font-size: 18px;
+    margin: 0 0 4px;
+    font-family: "Open Sans",arial,sans-serif;
+    line-height: 1.3;
+    font-weight: bold;
+    font-style: normal;
+    display: block;
+  }
+
+  input {
+    @include appearance(none);
+    @include transition(border-color 0.15s linear,background 0.15s linear);
+    @include border-radius(0);
+    @include box-shadow(none);
+    height: 46px;
+    width: auto;
+    display: block;
+    padding: 10px;
+    margin-bottom: 0;
+    font-weight: 300;
+    background-color: #fff;
+    box-shadow: none;
+    color: rgba(0,0,0,.75);
+    font-family: inherit;
+    font-size: 1.125rem;
+    box-sizing: border-box;
+    min-width: 40%;
+    border: 1px solid #afaba8;
+
+    &:hover {
+      border-color: $color-dark-blue;
+    }
+
+    &:focus {
+      border-color: $color-dark-blue;
+      outline-color: #54acb8;
+    }
+
+    &[disabled],
+    &[readonly] {
+      background-color: #ddd;
+      cursor: default;
+    }
+  }
+}
