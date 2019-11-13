@@ -1,13 +1,14 @@
 @import "../style/global.scss";
 
-:local(.selectContainer){
+:local(.selectContainer) {
 	position: relative;
+
 	&:before {
 		position: absolute;
 		display: block;
 		content: "";
-		top: 12px;
-		right: 12px;
+		top: 14px;
+		right: 14px;
 		height: 0;
 		width: 0;
 		background-color: #fff;
@@ -16,26 +17,30 @@
 		border-top: 12px solid $color-primary;
 		pointer-events: none;
 	}
+
 	select {
 		@include border-radius(0);
-		@include box-shadow(none);
+		@include transition(border-color 0.15s linear);
 		@include appearance(none);
-		font-weight: normal;
-		display: block;
-		height: 35px;
-		background: #fff;
-		border: 1px solid #E5E3E1;
-		cursor: pointer;
-		font-family: 'Open Sans';
-		font-size: 13px;
-		padding: 0 10px;
-		padding-right: 40px;
+		@include box-shadow(none);
+		color: rgba(0,0,0,.75);
 		width: 100%;
-		margin: 0 0 1rem 0;
+		font-family: inherit;
+		font-size: 1em;
+		padding: 0.5em 40px 0.5em 0.5em;
+		border: 1px solid #afaba8;
+		border-radius: 0;
+		line-height: normal;
+		background: white;
+		cursor: pointer;
+
+		&:hover {
+			border-color: $color-dark-blue;
+		}
+
 		&:focus {
-			border-color: $color-primary;
-			outline: 0;
-			background: #fff;
+			border-color: $color-dark-blue;
+			outline-color: #54acb8;
 		}
 	}
 }
