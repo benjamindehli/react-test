@@ -53,7 +53,7 @@ Select.propTypes = {
     value: PropTypes.string
   })])),
   value: PropTypes.any,
-  label: PropTypes.string
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.object]))])
 };
 Select.defaultProps = {
   name: '',
