@@ -8,44 +8,44 @@ class Select extends React.Component {
   renderOptionElements(options) {
     return options.map((option, key) => {
       let optionObject = null;
-      let isSelected = false;
 
       if (typeof option === 'object') {
         optionObject = {
           key: option.key ? option.key : '',
           value: option.value ? option.value : ''
         };
-        isSelected = this.props.value && option.value && this.props.value === option.value;
       } else {
         optionObject = {
           key: option,
           value: option
         };
-        isSelected = this.props.value && option && this.props.value === option;
       }
 
       return React.createElement("option", {
         value: optionObject.value,
-        key: key,
-        selected: isSelected
+        key: key
       }, optionObject.key);
     });
   }
 
   render() {
     return React.createElement("div", {
-      className: style.selectContainer
+      className: style.select
     }, React.createElement("label", {
       htmlFor: this.props.id
-    }, this.props.label), React.createElement("select", _extends({}, this.props, {
+    }, this.props.label), React.createElement("div", {
+      className: style.selectContainer
+    }, React.createElement("select", _extends({}, this.props, {
+      onChange: this.props.onChange,
       id: this.props.id
-    }), this.renderOptionElements(this.props.options)));
+    }), this.renderOptionElements(this.props.options))));
   }
 
 }
 
 Select.propTypes = {
   id: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
   name: PropTypes.string,
   multiple: PropTypes.bool,
   options: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.shape({

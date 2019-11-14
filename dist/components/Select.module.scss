@@ -1,46 +1,59 @@
 @import "../style/global.scss";
 
-:local(.selectContainer) {
-	position: relative;
-
-	&:before {
-		position: absolute;
+:local(.select) {
+	label {
+		cursor: pointer;
+		font-size: 18px;
+		margin: 0 0 4px;
+		font-family: "Open Sans",arial,sans-serif;
+		line-height: 1.3;
+		font-weight: bold;
+		font-style: normal;
 		display: block;
-		content: "";
-		top: 14px;
-		right: 14px;
-		height: 0;
-		width: 0;
-		background-color: #fff;
-		border-left: 6px solid transparent;
-		border-right: 6px solid transparent;
-		border-top: 12px solid $color-primary;
-		pointer-events: none;
 	}
 
-	select {
-		@include border-radius(0);
-		@include transition(border-color 0.15s linear);
-		@include appearance(none);
-		@include box-shadow(none);
-		color: rgba(0,0,0,.75);
-		width: 100%;
-		font-family: inherit;
-		font-size: 1em;
-		padding: 0.5em 40px 0.5em 0.5em;
-		border: 1px solid #afaba8;
-		border-radius: 0;
-		line-height: normal;
-		background: white;
-		cursor: pointer;
+	:local(.selectContainer) {
+		position: relative;
 
-		&:hover {
-			border-color: $color-dark-blue;
+		&:before {
+			position: absolute;
+			display: block;
+			content: "";
+			top: 14px;
+			right: 14px;
+			height: 0;
+			width: 0;
+			background-color: #fff;
+			border-left: 6px solid transparent;
+			border-right: 6px solid transparent;
+			border-top: 12px solid $color-primary;
+			pointer-events: none;
 		}
 
-		&:focus {
-			border-color: $color-dark-blue;
-			outline-color: #54acb8;
+		select {
+			@include border-radius(0);
+			@include transition(border-color 0.15s linear);
+			@include appearance(none);
+			@include box-shadow(none);
+			color: rgba(0,0,0,.75);
+			width: 100%;
+			font-family: inherit;
+			font-size: 1em;
+			padding: 0.5em 40px 0.5em 0.5em;
+			border: 1px solid #afaba8;
+			border-radius: 0;
+			line-height: normal;
+			background: white;
+			cursor: pointer;
+
+			&:hover {
+				border-color: $color-dark-blue;
+			}
+
+			&:focus {
+				border-color: $color-dark-blue;
+				outline-color: #54acb8;
+			}
 		}
 	}
 }
