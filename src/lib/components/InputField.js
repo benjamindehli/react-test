@@ -14,12 +14,17 @@ class InputField extends React.Component {
 InputField.propTypes = {
   /** Text content inside list item */
   id: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
   name: PropTypes.string,
   type: PropTypes.string,
   value: PropTypes.any,
-  label: PropTypes.string,
-  onChange: PropTypes.func.isRequired
-
+  label: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.object
+    ]))
+  ])
 };
 InputField.defaultProps = {
   name: '',
