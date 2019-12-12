@@ -8,7 +8,7 @@ class Button extends React.Component {
 		let sizeClass = " " + style[this.props.size];
 		let className = style.button + colorClass + sizeClass;
 		return (
-			<button className={className}>{this.props.content}</button>
+			<button {...this.props} className={className}>{this.props.content}</button>
 			)
 	}
 }
