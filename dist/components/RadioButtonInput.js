@@ -8,7 +8,7 @@ class RadioButtonInput extends React.Component {
     return React.createElement("label", {
       htmlFor: this.props.id,
       className: `${style.radioButtonInput} ${this.props.checked ? style.checked : ''}`
-    }, React.createElement(RadioButtonIcon, {
+    }, !this.props.contentOnly ? React.createElement(React.Fragment, null, React.createElement(RadioButtonIcon, {
       checked: this.props.checked
     }), React.createElement("input", {
       type: "radio",
@@ -17,21 +17,22 @@ class RadioButtonInput extends React.Component {
       name: this.props.name,
       value: this.props.inputValue,
       checked: this.props.checked
-    }), React.createElement("span", null, this.props.children));
+    })) : '', React.createElement("span", null, this.props.children));
   }
 
 }
 
 RadioButtonInput.propTypes = {
-  /** Text content inside list item */
   checked: PropTypes.bool,
   inputValue: PropTypes.string.isRequired,
   name: PropTypes.string,
   id: PropTypes.string.isRequired,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  contentOnly: PropTypes.bool
 };
 RadioButtonInput.defaultProps = {
   name: '',
-  checked: false
+  checked: false,
+  contentOnly: false
 };
 export default RadioButtonInput;

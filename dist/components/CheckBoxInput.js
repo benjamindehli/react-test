@@ -8,7 +8,7 @@ class CheckBoxInput extends React.Component {
     return React.createElement("label", {
       className: style.checkBoxInput,
       htmlFor: this.props.id
-    }, React.createElement(CheckBoxIcon, {
+    }, !this.props.contentOnly ? React.createElement(React.Fragment, null, React.createElement(CheckBoxIcon, {
       checked: this.props.checked
     }), React.createElement("input", {
       onChange: this.props.onChange,
@@ -16,20 +16,21 @@ class CheckBoxInput extends React.Component {
       name: this.props.name,
       id: this.props.id,
       checked: this.props.checked
-    }), React.createElement("span", null, this.props.children));
+    })) : '', React.createElement("span", null, this.props.children));
   }
 
 }
 
 CheckBoxInput.propTypes = {
-  /** Text content inside list item */
   checked: PropTypes.bool,
   id: PropTypes.string.isRequired,
   name: PropTypes.string,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
+  contentOnly: PropTypes.bool
 };
 CheckBoxInput.defaultProps = {
   checked: false,
-  name: ''
+  name: '',
+  contentOnly: false
 };
 export default CheckBoxInput;

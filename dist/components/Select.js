@@ -33,12 +33,12 @@ class Select extends React.Component {
       className: style.select
     }, React.createElement("label", {
       htmlFor: this.props.id
-    }, this.props.label), React.createElement("div", {
+    }, this.props.label), !this.props.contentOnly ? React.createElement(React.Fragment, null, React.createElement("div", {
       className: style.selectContainer
     }, React.createElement("select", _extends({}, this.props, {
       onChange: this.props.onChange,
       id: this.props.id
-    }), this.renderOptionElements(this.props.options))));
+    }), this.renderOptionElements(this.props.options)))) : React.createElement("span", null, this.props.value));
   }
 
 }
@@ -53,11 +53,13 @@ Select.propTypes = {
     value: PropTypes.string
   })])),
   value: PropTypes.any,
-  label: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.object]))])
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.object]))]),
+  contentOnly: PropTypes.bool
 };
 Select.defaultProps = {
   name: '',
   options: [],
-  label: ''
+  label: '',
+  contentOnly: false
 };
 export default Select;

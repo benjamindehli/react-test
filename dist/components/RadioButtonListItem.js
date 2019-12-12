@@ -11,6 +11,7 @@ class RadioButtonListItem extends React.Component {
       onChange: this.props.onChange,
       inputValue: this.props.inputValue,
       checked: this.props.checked,
+      contentOnly: this.props.contentOnly,
       id: this.props.id
     }, this.props.children));
   }
@@ -23,10 +24,12 @@ RadioButtonListItem.propTypes = {
   checked: PropTypes.bool,
   name: PropTypes.string,
   id: PropTypes.string.isRequired,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  contentOnly: PropTypes.bool
 };
 RadioButtonListItem.defaultProps = {
   name: '',
-  checked: false
+  checked: false,
+  contentOnly: false
 };
 export default RadioButtonListItem;

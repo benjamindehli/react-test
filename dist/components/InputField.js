@@ -10,11 +10,11 @@ class InputField extends React.Component {
       className: style.inputField
     }, React.createElement("label", {
       htmlFor: this.props.id
-    }, this.props.label), React.createElement("input", _extends({}, this.props, {
+    }, this.props.label), !this.props.contentOnly ? React.createElement("input", _extends({}, this.props, {
       id: this.props.id,
       onChange: this.props.onChange,
       value: this.props.value
-    })));
+    })) : React.createElement("span", null, this.props.value));
   }
 
 }
@@ -26,11 +26,13 @@ InputField.propTypes = {
   name: PropTypes.string,
   type: PropTypes.string,
   value: PropTypes.any,
-  label: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.object]))])
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.object]))]),
+  contentOnly: PropTypes.bool
 };
 InputField.defaultProps = {
   name: '',
   type: 'text',
-  label: ''
+  label: '',
+  contentOnly: false
 };
 export default InputField;
