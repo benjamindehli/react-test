@@ -6,7 +6,12 @@ class InputField extends React.Component {
   render() {
     return (<div className={style.inputField}>
       <label htmlFor={this.props.id}>{this.props.label}</label>
-      <input {...this.props} id={this.props.id} onChange={this.props.onChange} value={this.props.value}/>
+      {
+        !this.props.contentOnly
+          ? <input {...this.props} id={this.props.id} onChange={this.props.onChange} value={this.props.value}/>
+          : <span>{this.props.value}</span>
+      }
+
     </div>)
   }
 }
@@ -24,11 +29,13 @@ InputField.propTypes = {
       PropTypes.string,
       PropTypes.object
     ]))
-  ])
+  ]),
+  contentOnly: PropTypes.bool
 };
 InputField.defaultProps = {
   name: '',
   type: 'text',
-  label: ''
+  label: '',
+  contentOnly: false
 };
 export default InputField;

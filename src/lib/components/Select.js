@@ -27,11 +27,20 @@ class Select extends React.Component {
   render() {
     return (<div className={style.select}>
       <label htmlFor={this.props.id}>{this.props.label}</label>
-      <div className={style.selectContainer}>
-        <select {...this.props} onChange={this.props.onChange} id={this.props.id}>
-          {this.renderOptionElements(this.props.options)}
-        </select>
-      </div>
+      {
+        !this.props.contentOnly
+          ? (<React.Fragment>
+            <div className={style.selectContainer}>
+              <select {...this.props} onChange={this.props.onChange} id={this.props.id}>
+                {this.renderOptionElements(this.props.options)}
+              </select>
+            </div>
+          </React.Fragment>)
+          : (<span>
+            {this.props.value}
+          </span>)
+      }
+
     </div>)
   }
 }
@@ -52,11 +61,13 @@ Select.propTypes = {
       PropTypes.string,
       PropTypes.object
     ]))
-  ])
+  ]),
+  contentOnly: PropTypes.bool
 };
 Select.defaultProps = {
   name: '',
   options: [],
-  label: ''
+  label: '',
+  contentOnly: false
 };
 export default Select;

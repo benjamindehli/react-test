@@ -7,7 +7,7 @@ class CheckBoxListItem extends React.Component {
   render() {
     return (
       <div className={`${style.checkBoxListItem} ${this.props.checked ? style.checked : ''}`}>
-        <CheckBoxInput onChange={this.props.onChange} checked={this.props.checked} id={this.props.id}>{this.props.children}</CheckBoxInput>
+        <CheckBoxInput onChange={this.props.onChange} checked={this.props.checked} contentOnly={this.props.contentOnly} id={this.props.id}>{this.props.children}</CheckBoxInput>
       </div>
     )
   }
@@ -18,12 +18,13 @@ CheckBoxListItem.propTypes = {
   checked: PropTypes.bool,
   id: PropTypes.string.isRequired,
   name: PropTypes.string,
-  onChange: PropTypes.func.isRequired
-
+  onChange: PropTypes.func.isRequired,
+  contentOnly: PropTypes.bool
 };
 CheckBoxListItem.defaultProps = {
   checked: false,
   id: '',
-  name: ''
+  name: '',
+  contentOnly: false
 };
 export default CheckBoxListItem;
