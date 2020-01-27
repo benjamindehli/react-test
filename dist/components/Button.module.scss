@@ -1,56 +1,150 @@
 @import "../style/global.scss";
+@include keyframes(pushnext) {
+  0% {
+    @include transform(rotate(45deg) translate3d(0, 0, 0));
+  }
+
+  50% {
+    @include transform(rotate(45deg) translate3d(2px, -2px, 0));
+  }
+
+  100% {
+    @include transform(rotate(45deg) translate3d(0, 0, 0));
+  }
+}
+@include keyframes(pushprev) {
+  0% {
+    @include transform(rotate(-135deg) translate3d(0, 0, 0));
+  }
+
+  50% {
+    @include transform(rotate(-135deg) translate3d(-2px, 2px, 0));
+  }
+
+  100% {
+    @include transform(rotate(-135deg) translate3d(0, 0, 0));
+  }
+}
 
 :local(.button) {
-    @include appearance(none);
-    @include border-radius(0);
-    @include transition(background-color 300ms ease-out);
-    font-family: $default-font;
-    border-style: solid;
-    border-width: 0;
-    cursor: pointer;
-    line-height: normal;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    font-size: 18px;
-    font-weight: normal;
-    &:local(.regular) {
-        padding: 15px 20px;
+  @include appearance(none);
+  @include border-radius(0);
+  @include transition(background-color 300ms ease-out);
+  font-family: $default-font;
+  border-style: solid;
+  border-width: 0;
+  cursor: pointer;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: normal;
+
+  &:local(.regular) {
+    padding: 15px 30px;
+  }
+
+  &:local(.small) {
+    padding: 8px 30px;
+    height: 40px;
+    min-width: 80px;
+  }
+
+  &:local(.default):not(:disabled) {
+    background-color: $color-default;
+    color: $color-primary;
+
+    &:hover {
+      background-color: $color-default-hover;
     }
-    &:local(.small) {
-        padding: 8px 20px;
-        height: 40px;
-        min-width: 80px;
+  }
+
+  &:local(.primary):not(:disabled) {
+    background-color: $color-primary;
+    color: #fff;
+
+    &:hover {
+      background-color: $color-primary-hover;
     }
-    &:local(.default) {
-        background-color: $color-default;
-        color: $color-primary;
-        &:hover{
-            background-color: $color-default-hover;
-        }
+  }
+
+  &:local(.success):not(:disabled) {
+    background-color: $color-success;
+    color: #fff;
+
+    &:hover {
+      background-color: $color-success-hover;
     }
-    &:local(.primary) {
-        background-color: $color-primary;
-        color: #fff;
-        &:hover{
-            background-color: $color-primary-hover;
-        }
+  }
+
+  &:local(.warning):not(:disabled) {
+    background-color: $color-warning;
+    color: #fff;
+
+    &:hover {
+      background-color: $color-warning-hover;
     }
-    &:local(.success) {
-        background-color: $color-success;
-        color: #fff;
-        &:hover{
-            background-color: $color-success-hover;
-        }
+  }
+
+  &:disabled {
+    background-color: #008cba;
+    border-color: #007095;
+    color: #fff;
+    cursor: default;
+  }
+
+  &:local(.hasArrowLeft) {
+    &:before {
+      @include transform(rotate(-135deg));
+      @include calc('top', '50% - 0.3rem') content: ' ';
+      display: inline-block;
+      position: absolute;
+      left: 1em;
+      right: auto;
+      width: 0.5rem;
+      height: 0.5rem;
+      vertical-align: middle;
+      border: 2px solid white;
+      border-width: 2px 2px 0 0;
+      margin-right: 1em;
     }
-    &:local(.warning) {
-        background-color: $color-warning;
-        color: #fff;
-        &:hover{
-            background-color: $color-warning-hover;
-        }
+
+    &:hover {
+      &:before {
+        @include animation(pushprev 0.8s linear infinite);
+      }
     }
+    &:local(.default):not(:disabled) {
+      &:before{
+        border-color: $color-primary;
+      }
+    }
+  }
+
+  &:local(.hasArrowRight) {
+    &:after {
+      @include transform(rotate(45deg));
+      @include calc('top', '50% - 0.3rem') content: ' ';
+      display: inline-block;
+      position: absolute;
+      left: auto;
+      right: 1em;
+      width: 0.5rem;
+      height: 0.5rem;
+      vertical-align: middle;
+      border: 2px solid white;
+      border-width: 2px 2px 0 0;
+      margin-left: 1em;
+    }
+
+    &:hover {
+      &:after {
+        @include animation(pushnext 0.8s linear infinite);
+      }
+    }
+  }
 }
