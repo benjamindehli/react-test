@@ -1,11 +1,12 @@
 @import "../style/global.scss";
 
-:local(.checkBoxInput) { 
+:local(.checkBoxInput) {
   display: flex;
+  cursor: pointer;
+
   input[type="checkbox"] {
     opacity: 0;
     position: absolute;
-  }  
-    margin-right: 1em; 
-
+  }
+  margin-right: 1em;
 }
