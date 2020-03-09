@@ -62,12 +62,12 @@ class NavigationBar extends React.Component {
             <div className={style.logoContainer}>
               <img alt='DIBK logo' src={require('../images/dibk-logo-mobile.svg')} />
             </div>
-            <button className={this.state.active ? style.menuToggle + ' active' : style.menuToggle} onClick={() => this.toggleList()} />
+            <button className={`${style.menuToggle} ${this.state.active ? style.active : ''}`} onClick={() => this.toggleList()} />
           </div>
-          <div className={this.state.active ? style.dropdownContainer + ' active' : style.dropdownContainer}>
+          <div className={`${style.dropdownContainer} ${this.state.active ? style.active : ''}`}>
             <div className={style.dropdown}>{this.renderPrimaryList()}{this.renderSecondaryList()}</div>
           </div>
-          <div className={this.state.active ? style.dropdownOverlay + ' active' : style.dropdownOverlay} />
+          <div className={`${style.dropdownOverlay} ${this.state.active ? style.active : ''}`} />
         </div>
 
       </header>
