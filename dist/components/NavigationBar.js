@@ -93,7 +93,7 @@ class NavigationBar extends React.Component {
       className: `${style.dropdownContainer} ${this.state.active ? style.active : ''}`
     }, React.createElement("div", {
       className: style.dropdown
-    }, this.renderPrimaryList(), this.renderSecondaryList())), React.createElement("div", {
+    }, this.renderPrimaryList(), this.renderSecondaryList(), this.props.children)), React.createElement("div", {
       className: `${style.dropdownOverlay} ${this.state.active ? style.active : ''}`
     })));
   }
