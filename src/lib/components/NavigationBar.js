@@ -71,7 +71,7 @@ class NavigationBar extends React.Component {
             <button className={`${style.menuToggle} ${this.state.active ? style.active : ''}`} onClick={() => this.toggleList()} />
           </div>
           <div className={`${style.dropdownContainer} ${this.state.active ? style.active : ''}`}>
-            <div className={style.dropdown}>{this.renderPrimaryList()}{this.renderSecondaryList()}</div>
+            <div className={style.dropdown}>{this.renderPrimaryList()}{this.renderSecondaryList()}{this.props.children}</div>
           </div>
           <div className={`${style.dropdownOverlay} ${this.state.active ? style.active : ''}`} />
         </div>
