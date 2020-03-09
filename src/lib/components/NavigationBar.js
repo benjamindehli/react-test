@@ -54,13 +54,19 @@ class NavigationBar extends React.Component {
     })
     return <ul className={style.secondaryList}>{listItems}</ul>
   }
+  renderLogo(logoLink){
+    const logoElement = <img alt='DIBK logo' src={require('../images/dibk-logo-mobile.svg')} />;
+    return logoLink && logoLink.length
+      ? (<a href={logoLink}>{logoElement}</a>)
+      : logoElement
+  }
   render () {
     return (
       <header>
         <div className={style.isPresent}>
           <div className={style.navigationBar}>
             <div className={style.logoContainer}>
-              <img alt='DIBK logo' src={require('../images/dibk-logo-mobile.svg')} />
+              {this.renderLogo(this.props.logoLink)}
             </div>
             <button className={`${style.menuToggle} ${this.state.active ? style.active : ''}`} onClick={() => this.toggleList()} />
           </div>
@@ -69,7 +75,6 @@ class NavigationBar extends React.Component {
           </div>
           <div className={`${style.dropdownOverlay} ${this.state.active ? style.active : ''}`} />
         </div>
-
       </header>
     )
   }
@@ -79,12 +84,15 @@ NavigationBar.propTypes = {
   /** Main links in navigation bar */
   primaryListItems: PropTypes.array,
   /** Secondary links in navigation bar */
-  secondaryListItems: PropTypes.array
+  secondaryListItems: PropTypes.array,
+  /** Link for logo */
+  logoLink: PropTypes.string
 }
 
 NavigationBar.defaultProps = {
   primaryListItems: [],
-  secondaryListItems: []
+  secondaryListItems: [],
+  logoLink: null
 }
 
 export default NavigationBar
