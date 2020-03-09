@@ -69,6 +69,16 @@ class NavigationBar extends React.Component {
     }, listItems);
   }
 
+  renderLogo(logoLink) {
+    const logoElement = React.createElement("img", {
+      alt: "DIBK logo",
+      src: require('../images/dibk-logo-mobile.svg')
+    });
+    return logoLink && logoLink.length ? React.createElement("a", {
+      href: logoLink
+    }, logoElement) : logoElement;
+  }
+
   render() {
     return React.createElement("header", null, React.createElement("div", {
       className: style.isPresent
@@ -76,18 +86,15 @@ class NavigationBar extends React.Component {
       className: style.navigationBar
     }, React.createElement("div", {
       className: style.logoContainer
-    }, React.createElement("img", {
-      alt: "DIBK logo",
-      src: require('../images/dibk-logo-mobile.svg')
-    })), React.createElement("button", {
-      className: this.state.active ? style.menuToggle + ' active' : style.menuToggle,
+    }, this.renderLogo(this.props.logoLink)), React.createElement("button", {
+      className: `${style.menuToggle} ${this.state.active ? style.active : ''}`,
       onClick: () => this.toggleList()
     })), React.createElement("div", {
-      className: this.state.active ? style.dropdownContainer + ' active' : style.dropdownContainer
+      className: `${style.dropdownContainer} ${this.state.active ? style.active : ''}`
     }, React.createElement("div", {
       className: style.dropdown
     }, this.renderPrimaryList(), this.renderSecondaryList())), React.createElement("div", {
-      className: this.state.active ? style.dropdownOverlay + ' active' : style.dropdownOverlay
+      className: `${style.dropdownOverlay} ${this.state.active ? style.active : ''}`
     })));
   }
 
@@ -98,10 +105,14 @@ NavigationBar.propTypes = {
   primaryListItems: PropTypes.array,
 
   /** Secondary links in navigation bar */
-  secondaryListItems: PropTypes.array
+  secondaryListItems: PropTypes.array,
+
+  /** Link for logo */
+  logoLink: PropTypes.string
 };
 NavigationBar.defaultProps = {
   primaryListItems: [],
-  secondaryListItems: []
+  secondaryListItems: [],
+  logoLink: null
 };
 export default NavigationBar;

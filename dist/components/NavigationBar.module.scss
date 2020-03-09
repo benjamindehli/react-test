@@ -39,7 +39,7 @@
 			visibility: hidden;
 			opacity: 0;
 			background: transparent;
-			&.active{
+			&:local(.active){
 				opacity: 1;
 				background: rgba(0,0,0,.5);
 				visibility: visible;
@@ -60,7 +60,7 @@
 		width: 30px;
 		height: 30px;
 		float: right;
-		&.active {
+		&:local(.active) {
 			background: url(../images/hamburger-hover.svg) 50% 50% no-repeat;
 		}
 		@media only screen and (min-width: $screen-xs){
@@ -72,7 +72,7 @@
 		@include transition(max-height 0.15s ease-out);
 		max-height: 0;
 		overflow: hidden;
-		&.active{
+		&:local(.active){
 			@include transition(max-height 0.15s ease-out);
 			max-height: 500px;
 		}
@@ -148,7 +148,7 @@
 				max-height: 0;
 				overflow: hidden;
 			}
-			&.active{
+			&:local(.active){
 				:local(.dropdown){
 					max-height: 500px;
 				}
@@ -157,5 +157,3 @@
 		}
 	}
 }
-
-
