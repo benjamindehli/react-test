@@ -8,7 +8,7 @@ class InputField extends React.Component {
       <label htmlFor={this.props.id}>{this.props.label}</label>
       {
         !this.props.contentOnly
-          ? <input {...this.props} id={this.props.id} onChange={this.props.onChange} value={this.props.value}/>
+          ? <input name={this.props.name} readOnly={this.props.readOnly} disabled={this.props.disabled} type={this.props.type} id={this.props.id} onChange={this.props.onChange} value={this.props.value}/>
           : <span>{this.props.value}</span>
       }
 

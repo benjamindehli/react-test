@@ -31,7 +31,7 @@ class Select extends React.Component {
         !this.props.contentOnly
           ? (<React.Fragment>
             <div className={style.selectContainer}>
-              <select {...this.props} onChange={this.props.onChange} id={this.props.id}>
+              <select name={this.props.name} multiple={this.props.multiple} value={this.props.value} onChange={this.props.onChange} id={this.props.id}>
                 {this.renderOptionElements(this.props.options)}
               </select>
             </div>
