@@ -12,7 +12,7 @@
     display: block;
   }
 
-  input {
+  input, &:local(.file) :local(span.input) {
     @include appearance(none);
     @include transition(border-color 0.15s linear,background 0.15s linear);
     @include border-radius(0);
@@ -45,6 +45,20 @@
     &[readonly] {
       background-color: #ddd;
       cursor: default;
+    }
+  }
+  &:local(.file){
+    label {
+      :local(.fileInputContainer){
+        display: flex;
+        align-items: center;
+      }
+    }
+    input {
+      display: none;
+    }
+    button {
+      margin: 0 8px;
     }
   }
 }
