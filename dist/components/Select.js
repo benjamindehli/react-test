@@ -1,5 +1,3 @@
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import style from './Select.module.scss';
@@ -35,10 +33,13 @@ class Select extends React.Component {
       htmlFor: this.props.id
     }, this.props.label), !this.props.contentOnly ? React.createElement(React.Fragment, null, React.createElement("div", {
       className: style.selectContainer
-    }, React.createElement("select", _extends({}, this.props, {
+    }, React.createElement("select", {
+      name: this.props.name,
+      multiple: this.props.multiple,
+      value: this.props.value,
       onChange: this.props.onChange,
       id: this.props.id
-    }), this.renderOptionElements(this.props.options)))) : React.createElement("span", null, this.props.value));
+    }, this.renderOptionElements(this.props.options)))) : React.createElement("span", null, this.props.value));
   }
 
 }
