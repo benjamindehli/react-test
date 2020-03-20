@@ -3,6 +3,25 @@ import PropTypes from 'prop-types';
 import style from './Select.module.scss';
 
 class Select extends React.Component {
+  getKeyByValue(value, options) {
+    const selectedOption = options && options.length
+      ? options.find(option => {
+        console.log(typeof(option));
+        if (typeof(option) === 'object') {
+          return option.value === value;
+        } else {
+          return option === value;
+        }
+      })
+      : null;
+    if (selectedOption && selectedOption.key) {
+      return selectedOption.key;
+    } else if (selectedOption && selectedOption.value) {
+      return selectedOption.value;
+    } else {
+      return selectedOption;
+    }
+  }
   renderOptionElements(options) {
     return options.map((option, key) => {
       let optionObject = null;
@@ -37,7 +56,11 @@ class Select extends React.Component {
             </div>
           </React.Fragment>)
           : (<span>
-            {this.props.value}
+            {
+              this.props.keyAsContent
+                ? this.getKeyByValue(this.props.value, this.props.options)
+                : this.props.value
+            }
           </span>)
       }
 
@@ -57,17 +80,16 @@ Select.propTypes = {
   value: PropTypes.any,
   label: PropTypes.oneOfType([
     PropTypes.string,
-    PropTypes.arrayOf(PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.object
-    ]))
+    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.object]))
   ]),
-  contentOnly: PropTypes.bool
+  contentOnly: PropTypes.bool,
+  keyAsContent: PropTypes.bool
 };
 Select.defaultProps = {
   name: '',
   options: [],
   label: '',
-  contentOnly: false
+  contentOnly: false,
+  keyAsContent: false
 };
 export default Select;
