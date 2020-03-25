@@ -54,7 +54,7 @@ class Select extends React.Component {
     }, /*#__PURE__*/React.createElement("select", {
       name: this.props.name,
       multiple: this.props.multiple,
-      value: this.props.value,
+      value: this.props.value ? this.props.value : '',
       onChange: this.props.onChange,
       id: this.props.id
     }, this.renderOptionElements(this.props.options)))) : /*#__PURE__*/React.createElement("span", null, this.props.keyAsContent ? this.getKeyByValue(this.props.value, this.props.options) : this.props.value));
