@@ -20,7 +20,7 @@ class Button extends React.Component {
 
   render() {
     const className = `${style.button} ${style[this.props.color]} ${style[this.props.size]} ${this.getArrowClass()}`;
-    return React.createElement("button", _extends({}, this.props, {
+    return /*#__PURE__*/React.createElement("button", _extends({}, this.props, {
       className: className
     }), this.props.content);
   }

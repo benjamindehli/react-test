@@ -5,9 +5,9 @@ import style from './NavigationBar.module.scss';
 class PrimaryListItem extends React.Component {
   render() {
     if (typeof this.props.listItem === 'string') {
-      return React.createElement("li", null, React.createElement("span", null, this.props.listItem));
+      return /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("span", null, this.props.listItem));
     } else if (typeof this.props.listItem === 'object') {
-      return React.createElement("li", null, React.createElement("a", {
+      return /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
         href: this.props.listItem.href
       }, this.props.listItem.name));
     } else {
@@ -42,58 +42,58 @@ class NavigationBar extends React.Component {
       let key = iteration + '-' + i;
 
       if (listItem.listItems !== undefined) {
-        return React.createElement("li", {
+        return /*#__PURE__*/React.createElement("li", {
           key: key
-        }, React.createElement("span", null, listItem.name), this.renderPrimaryList(listItem.listItems, iteration + 1));
+        }, /*#__PURE__*/React.createElement("span", null, listItem.name), this.renderPrimaryList(listItem.listItems, iteration + 1));
       } else {
-        return React.createElement(PrimaryListItem, {
+        return /*#__PURE__*/React.createElement(PrimaryListItem, {
           listItem: listItem,
           key: key
         });
       }
     });
-    return React.createElement("ul", {
+    return /*#__PURE__*/React.createElement("ul", {
       className: style.primaryList
     }, listItems);
   }
 
   renderSecondaryList() {
     let listItems = this.props.secondaryListItems.map(function (listItem, i) {
-      return React.createElement(PrimaryListItem, {
+      return /*#__PURE__*/React.createElement(PrimaryListItem, {
         listItem: listItem,
         key: i
       });
     });
-    return React.createElement("ul", {
+    return /*#__PURE__*/React.createElement("ul", {
       className: style.secondaryList
     }, listItems);
   }
 
   renderLogo(logoLink) {
-    const logoElement = React.createElement("img", {
+    const logoElement = /*#__PURE__*/React.createElement("img", {
       alt: "DIBK logo",
       src: require('../images/dibk-logo-mobile.svg')
     });
-    return logoLink && logoLink.length ? React.createElement("a", {
+    return logoLink && logoLink.length ? /*#__PURE__*/React.createElement("a", {
       href: logoLink
     }, logoElement) : logoElement;
   }
 
   render() {
-    return React.createElement("header", null, React.createElement("div", {
+    return /*#__PURE__*/React.createElement("header", null, /*#__PURE__*/React.createElement("div", {
       className: style.isPresent
-    }, React.createElement("div", {
+    }, /*#__PURE__*/React.createElement("div", {
       className: style.navigationBar
-    }, React.createElement("div", {
+    }, /*#__PURE__*/React.createElement("div", {
       className: style.logoContainer
-    }, this.renderLogo(this.props.logoLink)), React.createElement("button", {
+    }, this.renderLogo(this.props.logoLink)), /*#__PURE__*/React.createElement("button", {
       className: `${style.menuToggle} ${this.state.active ? style.active : ''}`,
       onClick: () => this.toggleList()
-    })), React.createElement("div", {
+    })), /*#__PURE__*/React.createElement("div", {
       className: `${style.dropdownContainer} ${this.state.active ? style.active : ''}`
-    }, React.createElement("div", {
+    }, /*#__PURE__*/React.createElement("div", {
       className: style.dropdown
-    }, this.renderPrimaryList(), this.renderSecondaryList(), this.props.children)), React.createElement("div", {
+    }, this.renderPrimaryList(), this.renderSecondaryList(), this.props.children)), /*#__PURE__*/React.createElement("div", {
       className: `${style.dropdownOverlay} ${this.state.active ? style.active : ''}`
     })));
   }

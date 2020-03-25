@@ -8,7 +8,7 @@ class RadioButtonIcon extends React.Component {
       height: this.props.size,
       width: this.props.size
     };
-    return React.createElement("span", {
+    return /*#__PURE__*/React.createElement("span", {
       className: `${style.radioButtonIcon} ${this.props.checked ? style.checked : ''}`,
       style: inlineStyle
     });

@@ -5,8 +5,6 @@ import style from './Select.module.scss';
 class Select extends React.Component {
   getKeyByValue(value, options) {
     const selectedOption = options && options.length ? options.find(option => {
-      console.log(typeof option);
-
       if (typeof option === 'object') {
         return option.value === value;
       } else {
@@ -39,7 +37,7 @@ class Select extends React.Component {
         };
       }
 
-      return React.createElement("option", {
+      return /*#__PURE__*/React.createElement("option", {
         value: optionObject.value,
         key: key
       }, optionObject.key);
@@ -47,19 +45,19 @@ class Select extends React.Component {
   }
 
   render() {
-    return React.createElement("div", {
+    return /*#__PURE__*/React.createElement("div", {
       className: style.select
-    }, React.createElement("label", {
+    }, /*#__PURE__*/React.createElement("label", {
       htmlFor: this.props.id
-    }, this.props.label), !this.props.contentOnly ? React.createElement(React.Fragment, null, React.createElement("div", {
+    }, this.props.label), !this.props.contentOnly ? /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
       className: style.selectContainer
-    }, React.createElement("select", {
+    }, /*#__PURE__*/React.createElement("select", {
       name: this.props.name,
       multiple: this.props.multiple,
       value: this.props.value,
       onChange: this.props.onChange,
       id: this.props.id
-    }, this.renderOptionElements(this.props.options)))) : React.createElement("span", null, this.props.keyAsContent ? this.getKeyByValue(this.props.value, this.props.options) : this.props.value));
+    }, this.renderOptionElements(this.props.options)))) : /*#__PURE__*/React.createElement("span", null, this.props.keyAsContent ? this.getKeyByValue(this.props.value, this.props.options) : this.props.value));
   }
 
 }

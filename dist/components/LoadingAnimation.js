@@ -4,7 +4,7 @@ import style from './LoadingAnimation.module.scss';
 
 class LoadingAnimation extends React.Component {
   render() {
-    return React.createElement("div", {
+    return /*#__PURE__*/React.createElement("div", {
       className: this.props.fixed ? style.loadingAnimation + ' ' + style.fixed : style.loadingAnimation
     }, this.props.message);
   }

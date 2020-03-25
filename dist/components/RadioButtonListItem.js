@@ -5,9 +5,9 @@ import style from './RadioButtonListItem.module.scss';
 
 class RadioButtonListItem extends React.Component {
   render() {
-    return React.createElement("div", {
+    return /*#__PURE__*/React.createElement("div", {
       className: style.radioButtonListItem
-    }, React.createElement(RadioButtonInput, {
+    }, /*#__PURE__*/React.createElement(RadioButtonInput, {
       onChange: this.props.onChange,
       inputValue: this.props.inputValue,
       checked: this.props.checked,

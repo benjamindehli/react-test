@@ -7,7 +7,7 @@ class Header extends React.Component {
     let headerElement = React.createElement('h' + this.props.size, {
       className: style.header
     }, this.props.content);
-    return React.createElement("div", {
+    return /*#__PURE__*/React.createElement("div", {
       className: style.headerContainer
     }, " ", headerElement, " ");
   }

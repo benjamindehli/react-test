@@ -7,7 +7,7 @@ class ContentBox extends React.Component {
     let className = style.title + " " + style[this.props.titleSize];
 
     if (this.props.title) {
-      return React.createElement("h2", {
+      return /*#__PURE__*/React.createElement("h2", {
         className: className
       }, this.props.title);
     } else {
@@ -21,16 +21,16 @@ class ContentBox extends React.Component {
     let className = style.contentBox + colorClass + linkClass;
 
     if (this.props.href) {
-      return React.createElement("a", {
+      return /*#__PURE__*/React.createElement("a", {
         href: this.props.href,
         className: className
-      }, this.renderTitle(), React.createElement("div", {
+      }, this.renderTitle(), /*#__PURE__*/React.createElement("div", {
         className: style.content
       }, this.props.content));
     } else {
-      return React.createElement("div", {
+      return /*#__PURE__*/React.createElement("div", {
         className: className
-      }, this.renderTitle(), React.createElement("div", {
+      }, this.renderTitle(), /*#__PURE__*/React.createElement("div", {
         className: style.content
       }, this.props.content));
     }

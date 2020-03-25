@@ -9,10 +9,10 @@ class CheckBoxIcon extends React.Component {
       width: this.props.size,
       fontSize: this.props.size
     };
-    return React.createElement("span", {
+    return /*#__PURE__*/React.createElement("span", {
       className: `${style.checkBoxIcon} ${this.props.checked ? style.checked : ''}`,
       style: inlineStyle
-    }, React.createElement("span", {
+    }, /*#__PURE__*/React.createElement("span", {
       className: style.checkmark
     }, this.props.checked ? '✔' : ''));
   }

@@ -4,7 +4,7 @@ import style from './List.module.scss';
 
 class ListItem extends React.Component {
   render() {
-    return React.createElement("li", null, this.props.listItem);
+    return /*#__PURE__*/React.createElement("li", null, this.props.listItem);
   }
 
 }
@@ -12,7 +12,7 @@ class ListItem extends React.Component {
 class List extends React.Component {
   renderList() {
     let listItems = this.props.listItems.map(function (listItem, i) {
-      return React.createElement(ListItem, {
+      return /*#__PURE__*/React.createElement(ListItem, {
         listItem: listItem,
         key: i
       });
@@ -25,7 +25,7 @@ class List extends React.Component {
   }
 
   render() {
-    return React.createElement("div", null, this.renderList());
+    return /*#__PURE__*/React.createElement("div", null, this.renderList());
   }
 
 }

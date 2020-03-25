@@ -5,22 +5,22 @@ import style from './InputField.module.scss';
 
 class InputField extends React.Component {
   render() {
-    return React.createElement("div", {
+    return /*#__PURE__*/React.createElement("div", {
       className: `${style.inputField} ${style[this.props.type]}`
-    }, React.createElement("label", {
+    }, /*#__PURE__*/React.createElement("label", {
       htmlFor: this.props.id
-    }, this.props.label, this.props.type === 'file' ? React.createElement("div", {
+    }, this.props.label, this.props.type === 'file' ? /*#__PURE__*/React.createElement("div", {
       className: style.fileInputContainer
-    }, React.createElement("span", {
+    }, /*#__PURE__*/React.createElement("span", {
       className: style.input
-    }, this.props.selectedFileName), this.props.buttonContent ? React.createElement(Button, {
+    }, this.props.selectedFileName), this.props.buttonContent ? /*#__PURE__*/React.createElement(Button, {
       size: "small",
       color: this.props.buttonColor,
       onClick: () => {
         document.getElementById(this.props.id).click();
       },
       content: this.props.buttonContent
-    }) : '') : ''), !this.props.contentOnly ? React.createElement("input", {
+    }) : '') : ''), !this.props.contentOnly ? /*#__PURE__*/React.createElement("input", {
       name: this.props.name,
       readOnly: this.props.readOnly,
       disabled: this.props.disabled,
@@ -28,7 +28,7 @@ class InputField extends React.Component {
       id: this.props.id,
       onChange: this.props.onChange,
       value: this.props.value ? this.props.value : ''
-    }) : React.createElement("span", null, this.props.value));
+    }) : /*#__PURE__*/React.createElement("span", null, this.props.value));
   }
 
 }

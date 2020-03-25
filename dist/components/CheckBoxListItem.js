@@ -5,9 +5,9 @@ import CheckBoxInput from './CheckBoxInput';
 
 class CheckBoxListItem extends React.Component {
   render() {
-    return React.createElement("div", {
+    return /*#__PURE__*/React.createElement("div", {
       className: `${style.checkBoxListItem} ${this.props.checked ? style.checked : ''}`
-    }, React.createElement(CheckBoxInput, {
+    }, /*#__PURE__*/React.createElement(CheckBoxInput, {
       onChange: this.props.onChange,
       checked: this.props.checked,
       contentOnly: this.props.contentOnly,

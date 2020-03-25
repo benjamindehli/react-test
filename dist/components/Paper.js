@@ -4,7 +4,7 @@ import style from './Paper.module.scss';
 
 class Paper extends React.Component {
   render() {
-    return React.createElement("div", {
+    return /*#__PURE__*/React.createElement("div", {
       className: `${style.paper} ${this.props.noMargin ? style.noMargin : ''} ${this.props.noPadding ? style.noPadding : ''}`
     }, this.props.children);
   }

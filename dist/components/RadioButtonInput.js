@@ -5,19 +5,19 @@ import style from './RadioButtonInput.module.scss';
 
 class RadioButtonInput extends React.Component {
   render() {
-    return React.createElement("label", {
+    return /*#__PURE__*/React.createElement("label", {
       htmlFor: this.props.id,
       className: `${style.radioButtonInput} ${this.props.checked ? style.checked : ''}`
-    }, !this.props.contentOnly ? React.createElement(React.Fragment, null, React.createElement(RadioButtonIcon, {
+    }, !this.props.contentOnly ? /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(RadioButtonIcon, {
       checked: this.props.checked
-    }), React.createElement("input", {
+    }), /*#__PURE__*/React.createElement("input", {
       type: "radio",
       onChange: this.props.onChange,
       id: this.props.id,
       name: this.props.name,
       value: this.props.inputValue,
       checked: this.props.checked
-    })) : '', React.createElement("span", null, this.props.children));
+    })) : '', /*#__PURE__*/React.createElement("span", null, this.props.children));
   }
 
 }

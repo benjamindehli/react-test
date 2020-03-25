@@ -5,18 +5,18 @@ import style from './CheckBoxInput.module.scss';
 
 class CheckBoxInput extends React.Component {
   render() {
-    return React.createElement("label", {
+    return /*#__PURE__*/React.createElement("label", {
       className: style.checkBoxInput,
       htmlFor: this.props.id
-    }, !this.props.contentOnly ? React.createElement(React.Fragment, null, React.createElement(CheckBoxIcon, {
+    }, !this.props.contentOnly ? /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(CheckBoxIcon, {
       checked: this.props.checked
-    }), React.createElement("input", {
+    }), /*#__PURE__*/React.createElement("input", {
       onChange: this.props.onChange,
       type: "checkbox",
       name: this.props.name,
       id: this.props.id,
       checked: this.props.checked
-    })) : '', React.createElement("span", null, this.props.children));
+    })) : '', /*#__PURE__*/React.createElement("span", null, this.props.children));
   }
 
 }

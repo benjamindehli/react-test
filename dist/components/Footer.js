@@ -3,9 +3,9 @@ import style from './Footer.module.scss';
 
 class Footer extends React.Component {
   render() {
-    return React.createElement("footer", {
+    return /*#__PURE__*/React.createElement("footer", {
       className: style.footer
-    }, React.createElement("div", {
+    }, /*#__PURE__*/React.createElement("div", {
       className: style.footerContainer
     }, this.props.children));
   }
