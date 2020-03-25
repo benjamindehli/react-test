@@ -6,7 +6,6 @@ class Select extends React.Component {
   getKeyByValue(value, options) {
     const selectedOption = options && options.length
       ? options.find(option => {
-        console.log(typeof(option));
         if (typeof(option) === 'object') {
           return option.value === value;
         } else {
