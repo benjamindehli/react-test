@@ -1,9 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
+import DatePicker from 'react-datepicker';
+import { registerLocale, setDefaultLocale } from "react-datepicker";
+import nb from 'date-fns/locale/nb';
+import "react-datepicker/dist/react-datepicker.css";
 import style from './InputField.module.scss';
+registerLocale('nb', nb);
 
 class InputField extends React.Component {
+  renderInputField() {
+    const startDate = new Date();
+    return this.props.type === 'date' ? /*#__PURE__*/React.createElement(DatePicker, {
+      name: this.props.name,
+      readOnly: this.props.readOnly,
+      disabled: this.props.disabled,
+      id: this.props.id,
+      dateFormat: this.props.dateFormat,
+      locale: "nb",
+      onChange: this.props.onChange ? date => this.props.onChange(date) : console.log("no function"),
+      selected: new Date(this.props.value)
+    }) : /*#__PURE__*/React.createElement("input", {
+      name: this.props.name,
+      readOnly: this.props.readOnly,
+      disabled: this.props.disabled,
+      type: this.props.type,
+      id: this.props.id,
+      onChange: this.props.onChange,
+      value: this.props.value ? this.props.value : ''
+    });
+  }
+
   render() {
     return /*#__PURE__*/React.createElement("div", {
       className: `${style.inputField} ${style[this.props.type]}`
@@ -20,15 +47,7 @@ class InputField extends React.Component {
         document.getElementById(this.props.id).click();
       },
       content: this.props.buttonContent
-    }) : '') : ''), !this.props.contentOnly ? /*#__PURE__*/React.createElement("input", {
-      name: this.props.name,
-      readOnly: this.props.readOnly,
-      disabled: this.props.disabled,
-      type: this.props.type,
-      id: this.props.id,
-      onChange: this.props.onChange,
-      value: this.props.value ? this.props.value : ''
-    }) : /*#__PURE__*/React.createElement("span", null, this.props.value));
+    }) : '') : ''), !this.props.contentOnly ? this.renderInputField() : /*#__PURE__*/React.createElement("span", null, this.props.value));
   }
 
 }
@@ -44,13 +63,15 @@ InputField.propTypes = {
   contentOnly: PropTypes.bool,
   buttonColor: PropTypes.string,
   buttonContent: PropTypes.string,
-  selectedFileName: PropTypes.string
+  selectedFileName: PropTypes.string,
+  dateFormat: PropTypes.string
 };
 InputField.defaultProps = {
   name: '',
   type: 'text',
   label: '',
   contentOnly: false,
-  buttonColor: 'default'
+  buttonColor: 'default',
+  dateFormat: 'd. MMMM, yyyy'
 };
 export default InputField;
