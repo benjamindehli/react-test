@@ -11,4 +11,5 @@ Input field example:
 <InputField id="textInput7" onChange={()=>{console.log('onchange')}} value="Value for inputField" label="InputField with label, value and contentOnly set to true" contentOnly={true} />
 <InputField id="fileInput1" onChange={()=>{console.log('onchange')}} type="file" label="InputField with label, value and type set to file" />
 <InputField id="fileInput1" onChange={()=>{console.log('onchange')}} type="file" label="InputField with label, value, fileName, buttonContent and type set to file" selectedFileName="file.txt" buttonContent="Legg til fil" />
+<InputField id="dateInput1" onChange={(date) => console.log("date", date)} type="date" label="InputField with label, value, type set to date" value="2020-05-10T13:12:04.817Z" />
 ```

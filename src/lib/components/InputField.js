@@ -1,9 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
+import DatePicker from 'react-datepicker';
+import { registerLocale, setDefaultLocale } from  "react-datepicker";
+import nb from 'date-fns/locale/nb';
+
+import "react-datepicker/dist/react-datepicker.css";
 import style from './InputField.module.scss';
 
+registerLocale('nb', nb)
+
 class InputField extends React.Component {
+  renderInputField() {
+    const startDate = new Date();
+    return this.props.type === 'date'
+    ? (<DatePicker name={this.props.name}
+                   readOnly={this.props.readOnly}
+                   disabled={this.props.disabled}
+                   id={this.props.id}
+                   dateFormat={this.props.dateFormat}
+                   locale="nb"
+                   onChange={this.props.onChange ? date => this.props.onChange(date) : console.log("no function")}
+                   selected={new Date(this.props.value)} />)
+    : (<input name={this.props.name}
+              readOnly={this.props.readOnly}
+              disabled={this.props.disabled}
+              type={this.props.type}
+              id={this.props.id}
+              onChange={this.props.onChange}
+              value={this.props.value ? this.props.value : ''}/>)
+  }
   render() {
     return (<div className={`${style.inputField} ${style[this.props.type]}`}>
       <label htmlFor={this.props.id}>
@@ -23,7 +49,7 @@ class InputField extends React.Component {
       </label>
       {
         !this.props.contentOnly
-          ? <input name={this.props.name} readOnly={this.props.readOnly} disabled={this.props.disabled} type={this.props.type} id={this.props.id} onChange={this.props.onChange} value={this.props.value ? this.props.value : ''}/>
+          ? this.renderInputField()
           : <span>{this.props.value}</span>
       }
     </div>)
@@ -47,7 +73,8 @@ InputField.propTypes = {
   contentOnly: PropTypes.bool,
   buttonColor: PropTypes.string,
   buttonContent: PropTypes.string,
-  selectedFileName: PropTypes.string
+  selectedFileName: PropTypes.string,
+  dateFormat: PropTypes.string
 };
 
 InputField.defaultProps = {
@@ -56,6 +83,7 @@ InputField.defaultProps = {
   label: '',
   contentOnly: false,
   buttonColor: 'default',
+  dateFormat: 'd. MMMM, yyyy'
 };
 
 export default InputField;
