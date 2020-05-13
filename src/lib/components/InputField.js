@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
 import DatePicker from 'react-datepicker';
-import { registerLocale, setDefaultLocale } from  "react-datepicker";
+import { registerLocale } from  "react-datepicker";
 import nb from 'date-fns/locale/nb';
 
 import "react-datepicker/dist/react-datepicker.css";
@@ -12,7 +12,6 @@ registerLocale('nb', nb)
 
 class InputField extends React.Component {
   renderInputField() {
-    const startDate = new Date();
     return this.props.type === 'date'
     ? (<DatePicker name={this.props.name}
                    readOnly={this.props.readOnly}
@@ -20,7 +19,11 @@ class InputField extends React.Component {
                    id={this.props.id}
                    dateFormat={this.props.dateFormat}
                    locale="nb"
-                   onChange={this.props.onChange ? date => this.props.onChange(date) : console.log("no function")}
+                   selectsStart={this.props.selectsStart}
+                   selectsEnd={this.props.selectsEnd}
+                   startDate={this.props.startDate ? new Date(this.props.startDate) : null}
+                   endDate={this.props.endDate ? new Date(this.props.endDate) : null}
+                   onChange={this.props.onChange ? date => this.props.onChange(date) : console.log(`Missing onChange handler for date picker with id: ${this.props.id}`)}
                    selected={this.props.value ? new Date(this.props.value) : null} />)
     : (<input name={this.props.name}
               readOnly={this.props.readOnly}
