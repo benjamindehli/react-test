@@ -21,7 +21,7 @@ class InputField extends React.Component {
                    dateFormat={this.props.dateFormat}
                    locale="nb"
                    onChange={this.props.onChange ? date => this.props.onChange(date) : console.log("no function")}
-                   selected={new Date(this.props.value)} />)
+                   selected={this.props.value ? new Date(this.props.value) : null} />)
     : (<input name={this.props.name}
               readOnly={this.props.readOnly}
               disabled={this.props.disabled}
