@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.6bdfe839.chunk.css",
-    "main.js": "/build/main.c7a6ee26.js",
+    "main.js": "/build/main.56c88686.js",
     "runtime-main.js": "/build/bundle.5339aa43.js",
     "static/css/2.ecffae5e.chunk.css": "/static/css/2.ecffae5e.chunk.css",
     "build/2.b9db08c4.js": "/build/2.b9db08c4.js",
     "build/2.b9db08c4.js.LICENSE.txt": "/build/2.b9db08c4.js.LICENSE.txt",
     "index.html": "/index.html",
-    "precache-manifest.f58b297645c2ef3463441f03380938ea.js": "/precache-manifest.f58b297645c2ef3463441f03380938ea.js",
+    "precache-manifest.5fe0b0453d7ce8506bf628e35e90b37b.js": "/precache-manifest.5fe0b0453d7ce8506bf628e35e90b37b.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.ecffae5e.chunk.css.map": "/static/css/2.ecffae5e.chunk.css.map",
     "static/css/main.6bdfe839.chunk.css.map": "/static/css/main.6bdfe839.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.ecffae5e.chunk.css",
     "build/2.b9db08c4.js",
     "static/css/main.6bdfe839.chunk.css",
-    "build/main.c7a6ee26.js"
+    "build/main.56c88686.js"
   ]
 }
