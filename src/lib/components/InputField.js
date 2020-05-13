@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Button from './Button';
 import DatePicker from 'react-datepicker';
 import { registerLocale } from  "react-datepicker";
+import { format } from 'date-fns';
 import nb from 'date-fns/locale/nb';
 
 import "react-datepicker/dist/react-datepicker.css";
@@ -11,6 +12,12 @@ import style from './InputField.module.scss';
 registerLocale('nb', nb)
 
 class InputField extends React.Component {
+  convertDateToString(date){
+    return date ? format(new Date(date), this.props.dateFormat, {locale: nb}) : '';
+  }
+  renderValueAsText(value) {
+    return this.props.type === 'date' ? this.convertDateToString(value) : value;
+  }
   renderInputField() {
     return this.props.type === 'date'
     ? (<DatePicker name={this.props.name}
@@ -53,7 +60,7 @@ class InputField extends React.Component {
       {
         !this.props.contentOnly
           ? this.renderInputField()
-          : <span>{this.props.value}</span>
+          : <span>{this.renderValueAsText(this.props.value)}</span>
       }
     </div>)
   }
