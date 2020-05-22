@@ -54,7 +54,7 @@
     min-width: 80px;
   }
 
-  &:local(.default):not(:disabled) {
+  &:local(.default) {
     background-color: $color-default;
     color: $color-primary;
 
@@ -63,7 +63,7 @@
     }
   }
 
-  &:local(.primary):not(:disabled) {
+  &:local(.primary) {
     background-color: $color-primary;
     color: #fff;
 
@@ -72,7 +72,7 @@
     }
   }
 
-  &:local(.success):not(:disabled) {
+  &:local(.success) {
     background-color: $color-success;
     color: #fff;
 
@@ -81,7 +81,7 @@
     }
   }
 
-  &:local(.warning):not(:disabled) {
+  &:local(.warning) {
     background-color: $color-warning;
     color: #fff;
 
@@ -91,9 +91,6 @@
   }
 
   &:disabled {
-    background-color: #008cba;
-    border-color: #007095;
-    color: #fff;
     cursor: default;
   }
 
@@ -118,7 +115,7 @@
         @include animation(pushprev 0.8s linear infinite);
       }
     }
-    &:local(.default):not(:disabled) {
+    &:local(.default) {
       &:before{
         border-color: $color-primary;
       }
