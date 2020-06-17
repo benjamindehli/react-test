@@ -9,6 +9,7 @@ Input field example:
 <InputField id="textInput6" onChange={()=>{console.log('onchange')}} disabled value="Disabled InputField with label and value" label="Disabled InputField with label and value" />
 <InputField id="numberInput1" onChange={()=>{console.log('onchange')}} value="3" label="Number InputField with label and value" type="number" />
 <InputField id="textInput7" onChange={()=>{console.log('onchange')}} value="Value for inputField" label="InputField with label, value and contentOnly set to true" contentOnly={true} />
+<InputField id="textInput8" onChange={() => {console.log('onChange')}} label="InputField without value, contentOnly set to true and defaultContent" contentOnly={true} defaultContent="Please insert a value" />
 <InputField id="fileInput1" onChange={()=>{console.log('onchange')}} type="file" label="InputField with label, value and type set to file" />
 <InputField id="fileInput1" onChange={()=>{console.log('onchange')}} type="file" label="InputField with label, value, fileName, buttonContent and type set to file" selectedFileName="file.txt" buttonContent="Legg til fil" />
 <InputField id="dateInput1" onChange={(date) => console.log("date", date)} type="date" label="Datepicker without value" value="" />
