@@ -44,7 +44,15 @@ class Select extends React.Component {
     });
   }
 
+  renderPlaceholderOption(placeholder) {
+    return placeholder ? /*#__PURE__*/React.createElement("option", {
+      value: "",
+      disabled: true
+    }, placeholder) : '';
+  }
+
   render() {
+    const value = this.props.value ? this.props.value : "";
     return /*#__PURE__*/React.createElement("div", {
       className: style.select
     }, /*#__PURE__*/React.createElement("label", {
@@ -54,10 +62,10 @@ class Select extends React.Component {
     }, /*#__PURE__*/React.createElement("select", {
       name: this.props.name,
       multiple: this.props.multiple,
-      value: this.props.value ? this.props.value : '',
+      value: value,
       onChange: this.props.onChange,
       id: this.props.id
-    }, this.renderOptionElements(this.props.options)))) : /*#__PURE__*/React.createElement("span", null, this.props.keyAsContent ? this.getKeyByValue(this.props.value, this.props.options) : this.props.value));
+    }, this.renderPlaceholderOption(this.props.placeholder), this.renderOptionElements(this.props.options)))) : /*#__PURE__*/React.createElement("span", null, this.props.value ? this.props.keyAsContent ? this.getKeyByValue(this.props.value, this.props.options) : this.props.value : this.props.defaultContent));
   }
 
 }
@@ -74,13 +82,17 @@ Select.propTypes = {
   value: PropTypes.any,
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.object]))]),
   contentOnly: PropTypes.bool,
-  keyAsContent: PropTypes.bool
+  keyAsContent: PropTypes.bool,
+  placeholder: PropTypes.string,
+  defaultContent: PropTypes.string
 };
 Select.defaultProps = {
   name: '',
   options: [],
   label: '',
   contentOnly: false,
-  keyAsContent: false
+  keyAsContent: false,
+  placeholder: null,
+  defaultContent: null
 };
 export default Select;

@@ -61,7 +61,7 @@ class InputField extends React.Component {
         document.getElementById(this.props.id).click();
       },
       content: this.props.buttonContent
-    }) : '') : ''), !this.props.contentOnly ? this.renderInputField() : /*#__PURE__*/React.createElement("span", null, this.renderValueAsText(this.props.value)));
+    }) : '') : ''), !this.props.contentOnly ? this.renderInputField() : /*#__PURE__*/React.createElement("span", null, this.renderValueAsText(this.props.value ? this.props.value : this.props.defaultContent)));
   }
 
 }
@@ -78,7 +78,8 @@ InputField.propTypes = {
   buttonColor: PropTypes.string,
   buttonContent: PropTypes.string,
   selectedFileName: PropTypes.string,
-  dateFormat: PropTypes.string
+  dateFormat: PropTypes.string,
+  defaultContent: PropTypes.string
 };
 InputField.defaultProps = {
   name: '',
@@ -86,6 +87,7 @@ InputField.defaultProps = {
   label: '',
   contentOnly: false,
   buttonColor: 'default',
-  dateFormat: 'd. MMMM, yyyy'
+  dateFormat: 'd. MMMM, yyyy',
+  defaultContent: ''
 };
 export default InputField;
