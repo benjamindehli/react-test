@@ -42,14 +42,21 @@ class Select extends React.Component {
       return <option value={optionObject.value} key={key}>{optionObject.key}</option>
     });
   }
+  renderPlaceholderOption(placeholder) {
+    return placeholder
+      ? (<option value="" disabled>{placeholder}</option>)
+      : '';
+  }
   render() {
+    const value = this.props.value ? this.props.value : "";
     return (<div className={style.select}>
       <label htmlFor={this.props.id}>{this.props.label}</label>
       {
         !this.props.contentOnly
           ? (<React.Fragment>
             <div className={style.selectContainer}>
-              <select name={this.props.name} multiple={this.props.multiple} value={this.props.value ? this.props.value : ''} onChange={this.props.onChange} id={this.props.id}>
+              <select name={this.props.name} multiple={this.props.multiple} value={value} onChange={this.props.onChange} id={this.props.id}>
+                {this.renderPlaceholderOption(this.props.placeholder)}
                 {this.renderOptionElements(this.props.options)}
               </select>
             </div>
@@ -82,13 +89,15 @@ Select.propTypes = {
     PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.object]))
   ]),
   contentOnly: PropTypes.bool,
-  keyAsContent: PropTypes.bool
+  keyAsContent: PropTypes.bool,
+  placeholder: PropTypes.string
 };
 Select.defaultProps = {
   name: '',
   options: [],
   label: '',
   contentOnly: false,
-  keyAsContent: false
+  keyAsContent: false,
+  placeholder: null
 };
 export default Select;
