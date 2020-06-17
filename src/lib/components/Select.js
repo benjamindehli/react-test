@@ -63,9 +63,11 @@ class Select extends React.Component {
           </React.Fragment>)
           : (<span>
             {
-              this.props.keyAsContent
-                ? this.getKeyByValue(this.props.value, this.props.options)
-                : this.props.value
+              this.props.value
+                ? this.props.keyAsContent
+                  ? this.getKeyByValue(this.props.value, this.props.options)
+                  : this.props.value
+                : this.props.defaultContent
             }
           </span>)
       }
@@ -90,7 +92,8 @@ Select.propTypes = {
   ]),
   contentOnly: PropTypes.bool,
   keyAsContent: PropTypes.bool,
-  placeholder: PropTypes.string
+  placeholder: PropTypes.string,
+  defaultContent: PropTypes.string
 };
 Select.defaultProps = {
   name: '',
@@ -98,6 +101,7 @@ Select.defaultProps = {
   label: '',
   contentOnly: false,
   keyAsContent: false,
-  placeholder: null
+  placeholder: null,
+  defaultContent: null
 };
 export default Select;
