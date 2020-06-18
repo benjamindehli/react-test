@@ -44,9 +44,9 @@ class Select extends React.Component {
     });
   }
 
-  renderPlaceholderOption(placeholder) {
+  renderPlaceholderOption(placeholder, placeholderValue) {
     return placeholder ? /*#__PURE__*/React.createElement("option", {
-      value: "",
+      value: placeholderValue,
       disabled: true
     }, placeholder) : '';
   }
@@ -65,7 +65,7 @@ class Select extends React.Component {
       value: value,
       onChange: this.props.onChange,
       id: this.props.id
-    }, this.renderPlaceholderOption(this.props.placeholder), this.renderOptionElements(this.props.options)))) : /*#__PURE__*/React.createElement("span", null, this.props.value ? this.props.keyAsContent ? this.getKeyByValue(this.props.value, this.props.options) : this.props.value : this.props.defaultContent));
+    }, this.renderPlaceholderOption(this.props.placeholder, this.props.placeholderValue), this.renderOptionElements(this.props.options)))) : /*#__PURE__*/React.createElement("span", null, this.props.value ? this.props.keyAsContent ? this.getKeyByValue(this.props.value, this.props.options) : this.props.value : this.props.defaultContent));
   }
 
 }
@@ -84,6 +84,7 @@ Select.propTypes = {
   contentOnly: PropTypes.bool,
   keyAsContent: PropTypes.bool,
   placeholder: PropTypes.string,
+  placeholderValue: PropTypes.string,
   defaultContent: PropTypes.string
 };
 Select.defaultProps = {
@@ -93,6 +94,7 @@ Select.defaultProps = {
   contentOnly: false,
   keyAsContent: false,
   placeholder: null,
+  placeholderValue: '',
   defaultContent: null
 };
 export default Select;
