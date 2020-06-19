@@ -15,8 +15,14 @@ class InputField extends React.Component {
   convertDateToString(date){
     return date ? format(new Date(date), this.props.dateFormat, {locale: nb}) : '';
   }
-  renderValueAsText(value) {
-    return this.props.type === 'date' ? this.convertDateToString(value) : value;
+  renderValueAsText(value, defaultContent) {
+    return this.props.type === 'date'
+      ? value
+        ? this.convertDateToString(value)
+        : defaultContent
+      : value
+        ? value
+        : defaultContent;
   }
   renderInputField() {
     return this.props.type === 'date'
@@ -60,7 +66,7 @@ class InputField extends React.Component {
       {
         !this.props.contentOnly
           ? this.renderInputField()
-          : <span>{this.renderValueAsText(this.props.value ? this.props.value : this.props.defaultContent)}</span>
+          : <span>{this.renderValueAsText(this.props.value, this.props.defaultContent)}</span>
       }
     </div>)
   }
