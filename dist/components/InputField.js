@@ -16,8 +16,8 @@ class InputField extends React.Component {
     }) : '';
   }
 
-  renderValueAsText(value) {
-    return this.props.type === 'date' ? this.convertDateToString(value) : value;
+  renderValueAsText(value, defaultContent) {
+    return this.props.type === 'date' ? value ? this.convertDateToString(value) : defaultContent : value ? value : defaultContent;
   }
 
   renderInputField() {
@@ -61,7 +61,7 @@ class InputField extends React.Component {
         document.getElementById(this.props.id).click();
       },
       content: this.props.buttonContent
-    }) : '') : ''), !this.props.contentOnly ? this.renderInputField() : /*#__PURE__*/React.createElement("span", null, this.renderValueAsText(this.props.value ? this.props.value : this.props.defaultContent)));
+    }) : '') : ''), !this.props.contentOnly ? this.renderInputField() : /*#__PURE__*/React.createElement("span", null, this.renderValueAsText(this.props.value, this.props.defaultContent)));
   }
 
 }

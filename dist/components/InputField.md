@@ -17,4 +17,5 @@ Input field example:
 <InputField id="dateInput2" onChange={(date) => console.log("date", date)} type="date" label="Datepicker with value and contentOnly set to true" value="2020-05-10T13:12:04" contentOnly={true} />
 <InputField id="dateInput3" onChange={(date) => console.log("date", date)} type="date" label="Datepicker with value for start date" value="2020-05-10T13:12:04" selectsStart startDate="2020-05-10T13:12:04" endDate="2020-05-19T13:12:04" />
 <InputField id="dateInput4" onChange={(date) => console.log("date", date)} type="date" label="Datepicker with value for end date" value="2020-05-19T13:12:04" selectsEnd startDate="2020-05-10T13:12:04" endDate="2020-05-19T13:12:04" />
+<InputField id="dateInput5" onChange={(date) => console.log("date", date)} type="date" label="Datepicker with defaultContent and contentOnly set to true" contentOnly={true} defaultContent="Please insert a value" />
 ```
