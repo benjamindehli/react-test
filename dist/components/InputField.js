@@ -33,7 +33,8 @@ class InputField extends React.Component {
       startDate: this.props.startDate ? new Date(this.props.startDate) : null,
       endDate: this.props.endDate ? new Date(this.props.endDate) : null,
       onChange: this.props.onChange ? date => this.props.onChange(date) : console.log(`Missing onChange handler for date picker with id: ${this.props.id}`),
-      selected: this.props.value ? new Date(this.props.value) : null
+      selected: this.props.value ? new Date(this.props.value) : null,
+      className: this.props.hasErrors ? style.hasErrors : ''
     }) : /*#__PURE__*/React.createElement("input", {
       name: this.props.name,
       readOnly: this.props.readOnly,
@@ -41,7 +42,8 @@ class InputField extends React.Component {
       type: this.props.type,
       id: this.props.id,
       onChange: this.props.onChange,
-      value: this.props.value ? this.props.value : ''
+      value: this.props.value ? this.props.value : '',
+      className: this.props.hasErrors ? style.hasErrors : ''
     });
   }
 
@@ -61,7 +63,9 @@ class InputField extends React.Component {
         document.getElementById(this.props.id).click();
       },
       content: this.props.buttonContent
-    }) : '') : ''), !this.props.contentOnly ? this.renderInputField() : /*#__PURE__*/React.createElement("span", null, this.renderValueAsText(this.props.value, this.props.defaultContent)));
+    }) : '') : ''), !this.props.contentOnly ? this.renderInputField() : /*#__PURE__*/React.createElement("span", null, this.renderValueAsText(this.props.value, this.props.defaultContent)), /*#__PURE__*/React.createElement("span", {
+      className: style.errorMessage
+    }, this.props.errorMessage ? this.props.errorMessage : ''));
   }
 
 }
@@ -79,7 +83,9 @@ InputField.propTypes = {
   buttonContent: PropTypes.string,
   selectedFileName: PropTypes.string,
   dateFormat: PropTypes.string,
-  defaultContent: PropTypes.string
+  defaultContent: PropTypes.string,
+  hasErrors: PropTypes.bool,
+  errorMessage: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.object]))])
 };
 InputField.defaultProps = {
   name: '',
@@ -88,6 +94,8 @@ InputField.defaultProps = {
   contentOnly: false,
   buttonColor: 'default',
   dateFormat: 'd. MMMM, yyyy',
-  defaultContent: ''
+  defaultContent: '',
+  hasErrors: false,
+  errorMessage: ''
 };
 export default InputField;

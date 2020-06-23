@@ -64,8 +64,11 @@ class Select extends React.Component {
       multiple: this.props.multiple,
       value: value,
       onChange: this.props.onChange,
-      id: this.props.id
-    }, this.renderPlaceholderOption(this.props.placeholder, this.props.placeholderValue), this.renderOptionElements(this.props.options)))) : /*#__PURE__*/React.createElement("span", null, this.props.value ? this.props.keyAsContent ? this.getKeyByValue(this.props.value, this.props.options) : this.props.value : this.props.defaultContent));
+      id: this.props.id,
+      className: this.props.hasErrors ? style.hasErrors : ''
+    }, this.renderPlaceholderOption(this.props.placeholder, this.props.placeholderValue), this.renderOptionElements(this.props.options))), /*#__PURE__*/React.createElement("span", {
+      className: style.errorMessage
+    }, this.props.errorMessage ? this.props.errorMessage : '')) : /*#__PURE__*/React.createElement("span", null, this.props.value ? this.props.keyAsContent ? this.getKeyByValue(this.props.value, this.props.options) : this.props.value : this.props.defaultContent));
   }
 
 }
@@ -85,7 +88,9 @@ Select.propTypes = {
   keyAsContent: PropTypes.bool,
   placeholder: PropTypes.string,
   placeholderValue: PropTypes.string,
-  defaultContent: PropTypes.string
+  defaultContent: PropTypes.string,
+  hasErrors: PropTypes.bool,
+  errorMessage: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.object]))])
 };
 Select.defaultProps = {
   name: '',
@@ -95,6 +100,8 @@ Select.defaultProps = {
   keyAsContent: false,
   placeholder: null,
   placeholderValue: '',
-  defaultContent: null
+  defaultContent: null,
+  hasErrors: false,
+  errorMessage: ''
 };
 export default Select;
