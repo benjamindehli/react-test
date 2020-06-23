@@ -55,11 +55,16 @@ class Select extends React.Component {
         !this.props.contentOnly
           ? (<React.Fragment>
             <div className={style.selectContainer}>
-              <select name={this.props.name} multiple={this.props.multiple} value={value} onChange={this.props.onChange} id={this.props.id}>
+              <select name={this.props.name}
+                      multiple={this.props.multiple}
+                      value={value} onChange={this.props.onChange}
+                      id={this.props.id}
+                      className={this.props.hasErrors ? style.hasErrors : ''}>
                 {this.renderPlaceholderOption(this.props.placeholder, this.props.placeholderValue)}
                 {this.renderOptionElements(this.props.options)}
               </select>
             </div>
+            <span className={style.errorMessage}>{this.props.errorMessage ? this.props.errorMessage : ''}</span>
           </React.Fragment>)
           : (<span>
             {
@@ -94,7 +99,15 @@ Select.propTypes = {
   keyAsContent: PropTypes.bool,
   placeholder: PropTypes.string,
   placeholderValue: PropTypes.string,
-  defaultContent: PropTypes.string
+  defaultContent: PropTypes.string,
+  hasErrors: PropTypes.bool,
+  errorMessage: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.object
+    ]))
+  ])
 };
 Select.defaultProps = {
   name: '',
@@ -104,6 +117,8 @@ Select.defaultProps = {
   keyAsContent: false,
   placeholder: null,
   placeholderValue: '',
-  defaultContent: null
+  defaultContent: null,
+  hasErrors: false,
+  errorMessage : ''
 };
 export default Select;
