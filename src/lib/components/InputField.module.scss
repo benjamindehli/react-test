@@ -1,6 +1,9 @@
 @import "../style/global.scss";
 
 :local(.inputField) {
+  > div {
+    display: block;
+  }
   label {
     cursor: pointer;
     font-size: 18px;
@@ -46,6 +49,25 @@
       background-color: #ddd;
       cursor: default;
     }
+
+    &:local(.hasErrors) {
+      border-color: $color-warning;
+      background-color: $color-light-warning;
+      &:hover, &:focus {
+        border-color: $color-warning-hover;
+      }
+      &:focus {
+        border-color: $color-warning-hover;
+        outline-color: #b8565d;
+
+      }
+      &[disabled],
+      &[readonly] {
+        background-color: #ddd;
+        cursor: default;
+        border-color: #afaba8;
+      }
+    }
   }
   &:local(.file){
     label {
@@ -60,5 +82,10 @@
     button {
       margin: 0 8px;
     }
+  }
+  :local(.errorMessage) {
+    color: $color-warning;
+    font-weight: 300;
+    font-style: italic;
   }
 }
