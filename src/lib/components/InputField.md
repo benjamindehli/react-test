@@ -1,7 +1,7 @@
 Input field example:
 
 ```js
-<InputField id="textInput1" onChange={()=>{console.log('onchange')}}  />
+<InputField id="textInput1" onChange={()=>{console.log('onchange')}} mandatory={true}  />
 <InputField id="textInput2" onChange={()=>{console.log('onchange')}} value="InputField with value" />
 <InputField id="textInput3" onChange={()=>{console.log('onchange')}} value="InputField with label and value" label="InputField with label and value" />
 <InputField id="textInput4" onChange={()=>{console.log('onchange')}} value="InputField with link in label" label={['InputField with ', <a key="labelLink" href="#">link</a>, ' in label']} />
