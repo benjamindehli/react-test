@@ -43,7 +43,8 @@ class InputField extends React.Component {
       id: this.props.id,
       onChange: this.props.onChange,
       value: this.props.value ? this.props.value : '',
-      className: this.props.hasErrors ? style.hasErrors : ''
+      className: this.props.hasErrors ? style.hasErrors : '',
+      "aria-required": this.props.mandatory
     });
   }
 
@@ -85,7 +86,8 @@ InputField.propTypes = {
   dateFormat: PropTypes.string,
   defaultContent: PropTypes.string,
   hasErrors: PropTypes.bool,
-  errorMessage: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.object]))])
+  errorMessage: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.object]))]),
+  mandatory: PropTypes.bool
 };
 InputField.defaultProps = {
   name: '',
@@ -96,6 +98,7 @@ InputField.defaultProps = {
   dateFormat: 'd. MMMM, yyyy',
   defaultContent: '',
   hasErrors: false,
-  errorMessage: ''
+  errorMessage: '',
+  mandatory: false
 };
 export default InputField;
