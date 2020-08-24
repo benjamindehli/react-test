@@ -5,14 +5,14 @@ import style from './CheckBoxInput.module.scss';
 
 class CheckBoxInput extends React.Component {
   render() {
-    return (<label className={style.checkBoxInput} htmlFor={this.props.id}>
+    return (<label className={`${style.checkBoxInput} ${this.props.contentOnly ? style.contentOnly : ''}`} htmlFor={this.props.id}>
       {
         !this.props.contentOnly
           ? (<React.Fragment>
             <CheckBoxIcon checked={this.props.checked}/>
             <input onChange={this.props.onChange} type="checkbox" name={this.props.name} id={this.props.id} checked={this.props.checked}/>
           </React.Fragment>)
-          : ''
+          : <CheckBoxIcon checked={this.props.checked} showBox={false}/>
       }
       <span>{this.props.children}</span>
     </label>)

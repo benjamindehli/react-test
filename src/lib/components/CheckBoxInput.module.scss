@@ -2,7 +2,10 @@
 
 :local(.checkBoxInput) {
   display: flex;
-  cursor: pointer;
+
+  &:not(:local(.contentOnly)){
+    cursor: pointer;
+  }
 
   input[type="checkbox"] {
     opacity: 0;
