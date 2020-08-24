@@ -2,7 +2,6 @@
 
 :local(.checkBoxIcon) {
   @include border-radius(0);
-  @include box-shadow(0 0 0 1px #afaba8);
   @include transition(all 0.1s ease-in-out);
   @include box-sizing(content-box);
   display: inline-block;
@@ -12,13 +11,20 @@
   height: 10px;
   min-width: 20px;
   background: white;
-  margin-right: .5em;
+  margin-right: .2em;
   line-height: 1;
   text-align: center;
 
+  &:local(.showBox) {
+    @include box-shadow(0 0 0 1px #afaba8);
+    margin-right: .4em;
+  }
+
   &:local(.checked) {
-    @include box-shadow(0 0 0 1px $color-dark-blue);
     color: $color-primary;
+    &:local(.showBox) {
+      @include box-shadow(0 0 0 1px $color-dark-blue);
+    }
   }
 
   :local(.checkmark) {

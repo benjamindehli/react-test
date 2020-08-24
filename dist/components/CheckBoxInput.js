@@ -6,7 +6,7 @@ import style from './CheckBoxInput.module.scss';
 class CheckBoxInput extends React.Component {
   render() {
     return /*#__PURE__*/React.createElement("label", {
-      className: style.checkBoxInput,
+      className: `${style.checkBoxInput} ${this.props.contentOnly ? style.contentOnly : ''}`,
       htmlFor: this.props.id
     }, !this.props.contentOnly ? /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(CheckBoxIcon, {
       checked: this.props.checked
@@ -16,7 +16,10 @@ class CheckBoxInput extends React.Component {
       name: this.props.name,
       id: this.props.id,
       checked: this.props.checked
-    })) : '', /*#__PURE__*/React.createElement("span", null, this.props.children));
+    })) : /*#__PURE__*/React.createElement(CheckBoxIcon, {
+      checked: this.props.checked,
+      showBox: false
+    }), /*#__PURE__*/React.createElement("span", null, this.props.children));
   }
 
 }

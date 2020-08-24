@@ -23,9 +23,20 @@
 
   &:local(.checked) {
     @include box-shadow(0 0 0 1px $color-dark-blue, 0 0 4px 0 $color-dark-blue);
+
   }
 
-  &:not(:local(.checked)):hover {
+  &:local(.contentOnly) {
+    @include box-shadow(none);
+    margin-top: 0px;
+
+    cursor: auto;
+    label {
+      cursor: auto;
+    }
+  }
+
+  &:not(:local(.checked)):not(:local(.contentOnly)):hover {
     @include box-shadow(0 0 6px $color-dark-blue);
   }
 

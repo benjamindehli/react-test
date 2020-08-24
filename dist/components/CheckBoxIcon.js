@@ -10,7 +10,7 @@ class CheckBoxIcon extends React.Component {
       fontSize: this.props.size
     };
     return /*#__PURE__*/React.createElement("span", {
-      className: `${style.checkBoxIcon} ${this.props.checked ? style.checked : ''}`,
+      className: `${style.checkBoxIcon} ${this.props.checked ? style.checked : ''} ${this.props.showBox ? style.showBox : ''}`,
       style: inlineStyle
     }, /*#__PURE__*/React.createElement("span", {
       className: style.checkmark
@@ -21,10 +21,12 @@ class CheckBoxIcon extends React.Component {
 
 CheckBoxIcon.propTypes = {
   size: PropTypes.string,
-  checked: PropTypes.bool
+  checked: PropTypes.bool,
+  showBox: PropTypes.bool
 };
 CheckBoxIcon.defaultProps = {
   size: '20px',
-  checked: false
+  checked: false,
+  showBox: true
 };
 export default CheckBoxIcon;
