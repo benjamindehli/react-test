@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.36ce05e2.chunk.css",
-    "main.js": "/build/main.23d13139.js",
+    "main.css": "/static/css/main.dd8d1cac.chunk.css",
+    "main.js": "/build/main.953912fc.js",
     "runtime-main.js": "/build/bundle.e4600816.js",
     "static/css/2.ecffae5e.chunk.css": "/static/css/2.ecffae5e.chunk.css",
-    "build/2.8efb9e01.js": "/build/2.8efb9e01.js",
-    "build/2.8efb9e01.js.LICENSE.txt": "/build/2.8efb9e01.js.LICENSE.txt",
+    "build/2.bde46b5b.js": "/build/2.bde46b5b.js",
+    "build/2.bde46b5b.js.LICENSE.txt": "/build/2.bde46b5b.js.LICENSE.txt",
     "index.html": "/index.html",
-    "precache-manifest.fd62ea4cc15ae798ed06e1c42f04a451.js": "/precache-manifest.fd62ea4cc15ae798ed06e1c42f04a451.js",
+    "precache-manifest.5853a489781d91945d7af70450beb8d0.js": "/precache-manifest.5853a489781d91945d7af70450beb8d0.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.ecffae5e.chunk.css.map": "/static/css/2.ecffae5e.chunk.css.map",
-    "static/css/main.36ce05e2.chunk.css.map": "/static/css/main.36ce05e2.chunk.css.map",
+    "static/css/main.dd8d1cac.chunk.css.map": "/static/css/main.dd8d1cac.chunk.css.map",
     "static/media/fonts.css": "/static/media/Altis-Light.f02874c4.eot",
     "static/media/dibk-logo-mobile.svg": "/static/media/dibk-logo-mobile.3d8cd6bf.svg",
     "static/media/NavigationBar.module.scss": "/static/media/hamburger.3e6caca9.svg",
@@ -19,8 +19,8 @@
   "entrypoints": [
     "build/bundle.e4600816.js",
     "static/css/2.ecffae5e.chunk.css",
-    "build/2.8efb9e01.js",
-    "static/css/main.36ce05e2.chunk.css",
-    "build/main.23d13139.js"
+    "build/2.bde46b5b.js",
+    "static/css/main.dd8d1cac.chunk.css",
+    "build/main.953912fc.js"
   ]
 }
