@@ -6,6 +6,7 @@ import CheckBoxIcon from './components/CheckBoxIcon';
 import CheckBoxInput from './components/CheckBoxInput';
 import CheckBoxListItem from './components/CheckBoxListItem';
 import ContentBox from './components/ContentBox';
+import DragAndDropFileInput from './components/DragAndDropFileInput';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import InputField from './components/InputField';
@@ -25,4 +26,4 @@ WebFont.load({
   }
 });
 
-export { Button, CheckBoxIcon, CheckBoxInput, CheckBoxListItem, Footer, ContentBox, Header, InputField, List, LoadingAnimation, NavigationBar, Paper, RadioButtonIcon, RadiButtonInput, RadioButtonListItem, Select };
+export { Button, CheckBoxIcon, CheckBoxInput, CheckBoxListItem, ContentBox, DragAndDropFileInput, Footer, Header, InputField, List, LoadingAnimation, NavigationBar, Paper, RadioButtonIcon, RadiButtonInput, RadioButtonListItem, Select };
