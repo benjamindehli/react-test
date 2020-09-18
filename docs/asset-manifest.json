@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.180aa1fe.chunk.css",
-    "main.js": "/build/main.1d312846.js",
-    "runtime-main.js": "/build/bundle.0cdfe123.js",
+    "main.js": "/build/main.70d8eba1.js",
+    "runtime-main.js": "/build/bundle.5807af03.js",
     "static/css/2.2a60accc.chunk.css": "/static/css/2.2a60accc.chunk.css",
-    "build/2.7ab20080.js": "/build/2.7ab20080.js",
-    "build/2.7ab20080.js.LICENSE.txt": "/build/2.7ab20080.js.LICENSE.txt",
+    "build/2.8405515c.js": "/build/2.8405515c.js",
+    "build/2.8405515c.js.LICENSE.txt": "/build/2.8405515c.js.LICENSE.txt",
     "index.html": "/index.html",
-    "precache-manifest.47b0dc033cb933b33938a78b1ae6510f.js": "/precache-manifest.47b0dc033cb933b33938a78b1ae6510f.js",
+    "precache-manifest.3235557a1e40b9000e7b1ba7ea1f4f89.js": "/precache-manifest.3235557a1e40b9000e7b1ba7ea1f4f89.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.2a60accc.chunk.css.map": "/static/css/2.2a60accc.chunk.css.map",
     "static/css/main.180aa1fe.chunk.css.map": "/static/css/main.180aa1fe.chunk.css.map",
@@ -17,10 +17,10 @@
     "static/media/LoadingAnimation.module.scss": "/static/media/spinner.4e12ad68.svg"
   },
   "entrypoints": [
-    "build/bundle.0cdfe123.js",
+    "build/bundle.5807af03.js",
     "static/css/2.2a60accc.chunk.css",
-    "build/2.7ab20080.js",
+    "build/2.8405515c.js",
     "static/css/main.180aa1fe.chunk.css",
-    "build/main.1d312846.js"
+    "build/main.70d8eba1.js"
   ]
 }
