@@ -86,10 +86,12 @@ class NavigationBar extends React.Component {
       className: style.navigationBar
     }, /*#__PURE__*/React.createElement("div", {
       className: style.logoContainer
-    }, this.renderLogo(this.props.logoLink)), /*#__PURE__*/React.createElement("button", {
+    }, this.renderLogo(this.props.logoLink)), this.props.children ? /*#__PURE__*/React.createElement("div", {
+      className: style.childElements
+    }, this.props.children) : '', this.props.primaryListItems && this.props.primaryListItems.length || this.props.secondaryListItems && this.props.secondaryListItems.length ? /*#__PURE__*/React.createElement("button", {
       className: `${style.menuToggle} ${this.state.active ? style.active : ''}`,
       onClick: () => this.toggleList()
-    })), /*#__PURE__*/React.createElement("div", {
+    }) : ''), /*#__PURE__*/React.createElement("div", {
       className: `${style.dropdownContainer} ${this.state.active ? style.active : ''}`
     }, /*#__PURE__*/React.createElement("div", {
       className: style.dropdown

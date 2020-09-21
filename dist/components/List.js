@@ -18,7 +18,7 @@ class List extends React.Component {
       });
     });
     let listType = this.props.ordered ? 'ol' : 'ul';
-    let listElement = React.createElement(listType, {
+    let listElement = /*#__PURE__*/React.createElement(listType, {
       className: style.list
     }, listItems);
     return listElement;

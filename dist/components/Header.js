@@ -4,7 +4,7 @@ import style from './Header.module.scss';
 
 class Header extends React.Component {
   render() {
-    let headerElement = React.createElement('h' + this.props.size, {
+    let headerElement = /*#__PURE__*/React.createElement('h' + this.props.size, {
       className: style.header
     }, this.props.content);
     return /*#__PURE__*/React.createElement("div", {
