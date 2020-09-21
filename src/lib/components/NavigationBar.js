@@ -68,7 +68,16 @@ class NavigationBar extends React.Component {
             <div className={style.logoContainer}>
               {this.renderLogo(this.props.logoLink)}
             </div>
-            <button className={`${style.menuToggle} ${this.state.active ? style.active : ''}`} onClick={() => this.toggleList()} />
+            {
+              this.props.children
+                ? <div className={style.childElements}>{this.props.children}</div>
+                : ''
+            }
+            {
+              (this.props.primaryListItems && this.props.primaryListItems.length) || (this.props.secondaryListItems && this.props.secondaryListItems.length)
+                ? <button className={`${style.menuToggle} ${this.state.active ? style.active : ''}`} onClick={() => this.toggleList()} />
+                : ''
+            }
           </div>
           <div className={`${style.dropdownContainer} ${this.state.active ? style.active : ''}`}>
             <div className={style.dropdown}>{this.renderPrimaryList()}{this.renderSecondaryList()}{this.props.children}</div>
