@@ -34,3 +34,15 @@ Small buttons with arrow example:
 <Button content="Click me" color="success" size="small" arrow="right" />
 <Button content="Click me" color="warning" size="small" arrow="right" />
 ```
+
+Themed buttons:
+
+```js
+import customTheme from 'data/customTheme';
+<React.Fragment>
+<Button content="Click me" color="default" size="small" theme={customTheme} />
+<Button content="Click me" color="primary" size="small" theme={customTheme} />
+<Button content="Click me" color="success" size="small" theme={customTheme} />
+<Button content="Click me" color="warning" size="small" theme={customTheme} />
+</React.Fragment>
+```
