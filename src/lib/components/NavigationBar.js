@@ -1,6 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import style from './NavigationBar.module.scss'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { getThemeAppName, getThemeLogo, getThemeNavigationBarBackgroundColor, getThemeNavigationBarTextColor } from 'lib/functions/theme';
+import style from './NavigationBar.module.scss';
+import logo from 'lib/images/dibk-logo-mobile.svg';
+import {ReactComponent as MenuIcon} from 'lib/images/hamburger.svg';
 
 class PrimaryListItem extends React.Component {
   render () {
@@ -35,6 +38,12 @@ class NavigationBar extends React.Component {
       active: !prevState.active
     }))
   }
+  getNavigationBarThemeStyle(theme){
+    return {
+      backgroundColor: getThemeNavigationBarBackgroundColor(theme),
+      color: getThemeNavigationBarTextColor(theme)
+    }
+  }
   renderPrimaryList (items = this.props.primaryListItems, iteration = 0) {
     let listItems = items.map((listItem, i) => {
       let key = iteration + '-' + i
@@ -55,16 +64,25 @@ class NavigationBar extends React.Component {
     return <ul className={style.secondaryList}>{listItems}</ul>
   }
   renderLogo(logoLink){
-    const logoElement = <img alt='DIBK logo' src={require('../images/dibk-logo-mobile.svg').default} />;
+    const themeLogo = getThemeLogo(this.props.theme);
+    const themeAppName = getThemeAppName(this.props.theme);
+
+    const logoElement = themeLogo && themeAppName
+      ? <img alt={`${themeAppName} logo`} src={themeLogo} />
+      : <img alt='DIBK logo' src={logo} />;
     return logoLink && logoLink.length
       ? (<a href={logoLink}>{logoElement}</a>)
       : logoElement
   }
   render () {
+    const navigationBarThemeStyle = this.getNavigationBarThemeStyle(this.props.theme);
+    const menuIconThemeStyle = {
+      fill: getThemeNavigationBarTextColor(this.props.theme)
+    };
     return (
       <header>
         <div className={style.isPresent}>
-          <div className={style.navigationBar}>
+          <div className={style.navigationBar} style={navigationBarThemeStyle}>
             <div className={style.logoContainer}>
               {this.renderLogo(this.props.logoLink)}
             </div>
@@ -75,7 +93,11 @@ class NavigationBar extends React.Component {
             }
             {
               (this.props.primaryListItems && this.props.primaryListItems.length) || (this.props.secondaryListItems && this.props.secondaryListItems.length)
-                ? <button className={`${style.menuToggle} ${this.state.active ? style.active : ''}`} onClick={() => this.toggleList()} />
+                ? (
+                  <button className={`${style.menuToggle} ${this.state.active ? style.active : ''}`} onClick={() => this.toggleList()}>
+                    <MenuIcon style={menuIconThemeStyle}/>
+                  </button>
+                )
                 : ''
             }
           </div>
@@ -95,7 +117,9 @@ NavigationBar.propTypes = {
   /** Secondary links in navigation bar */
   secondaryListItems: PropTypes.array,
   /** Link for logo */
-  logoLink: PropTypes.string
+  logoLink: PropTypes.string,
+  /** Theme for navigation bar */
+  theme: PropTypes.object
 }
 
 NavigationBar.defaultProps = {

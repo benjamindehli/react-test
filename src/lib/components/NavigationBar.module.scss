@@ -63,13 +63,11 @@
 		cursor: pointer;
 		position: relative;
 		background-color: transparent;
-		background: url(../images/hamburger.svg) 50% 50% no-repeat;
-		width: 30px;
-		height: 30px;
 		float: right;
 		margin: 0 12px;
-		&:local(.active) {
-			background: url(../images/hamburger-hover.svg) 50% 50% no-repeat;
+		svg{
+			width: 30px;
+			height: 30px;
 		}
 		@media only screen and (min-width: $screen-xs){
 			margin: 0 21px;
