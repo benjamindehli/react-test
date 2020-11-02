@@ -97,7 +97,8 @@
   &:local(.hasArrowLeft) {
     &:before {
       @include transform(rotate(-135deg));
-      @include calc('top', '50% - 0.3rem') content: ' ';
+      @include calc('top', '50% - 0.3rem');
+      content: ' ';
       display: inline-block;
       position: absolute;
       left: 1em;
@@ -125,7 +126,8 @@
   &:local(.hasArrowRight) {
     &:after {
       @include transform(rotate(45deg));
-      @include calc('top', '50% - 0.3rem') content: ' ';
+      @include calc('top', '50% - 0.3rem');
+      content: ' ';
       display: inline-block;
       position: absolute;
       left: auto;

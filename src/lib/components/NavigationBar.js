@@ -55,7 +55,7 @@ class NavigationBar extends React.Component {
     return <ul className={style.secondaryList}>{listItems}</ul>
   }
   renderLogo(logoLink){
-    const logoElement = <img alt='DIBK logo' src={require('../images/dibk-logo-mobile.svg')} />;
+    const logoElement = <img alt='DIBK logo' src={require('../images/dibk-logo-mobile.svg').default} />;
     return logoLink && logoLink.length
       ? (<a href={logoLink}>{logoElement}</a>)
       : logoElement

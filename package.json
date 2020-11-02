@@ -9,12 +9,11 @@
     "README.md"
   ],
   "dependencies": {
-    "node-sass": "^4.9.4",
     "prop-types": "^15.6.2",
-    "react": "^16.5.2",
-    "react-datepicker": "^2.15.0",
-    "react-dom": "^16.5.2",
-    "react-scripts": "^3.2.0",
+    "react": "^17.0.1",
+    "react-datepicker": "^3.3.0",
+    "react-dom": "^17.0.1",
+    "react-scripts": "^4.0.0",
     "webfontloader": "^1.6.28"
   },
   "scripts": {
@@ -23,7 +22,7 @@
     "windows-build": "rm -rf dist && SET NODE_ENV=production&& babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "styleguide": "styleguidist server",
+    "styleguide": "FAST_REFRESH=false styleguidist server",
     "styleguide:build": "styleguidist build"
   },
   "eslintConfig": {
@@ -37,6 +36,7 @@
   ],
   "devDependencies": {
     "@babel/cli": "^7.0.0",
-    "react-styleguidist": "^11.0.4"
+    "react-styleguidist": "^11.0.4",
+    "sass": "^1.28.0"
   }
 }
