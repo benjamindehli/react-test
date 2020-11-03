@@ -10,8 +10,12 @@ const customTheme = {
         text: "rgba(0,0,0,.85)"
       },
       primary: {
+        background: "#11c1b0",
+        text: "#fff"
+      },
+      success: {
         background: "rgba(17,193,176,.4)",
-        text: "rgba(0,0,0,.65)"
+        text: "rgba(0,0,0,.85)"
       },
       warning: {
         background: "#D13C0A",
