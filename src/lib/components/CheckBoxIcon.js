@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {  getThemePaletteBackgroundColor } from 'lib/functions/theme';
+import {  getThemePaletteBackgroundColor } from '../functions/theme';
 
 import style from './CheckBoxIcon.module.scss';
 
