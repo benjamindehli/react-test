@@ -29,7 +29,7 @@
 :local(.button) {
   @include appearance(none);
   @include border-radius(0);
-  @include transition(background-color 300ms ease-out);
+  @include transition(filter 300ms ease-out);
   font-family: $default-font;
   border-style: solid;
   border-width: 0;
@@ -44,6 +44,14 @@
   font-size: 18px;
   font-weight: normal;
 
+  &:hover, &:focus {
+    filter: brightness(90%);
+  }
+
+  &:active {
+    filter: brightness(85%);
+  }
+
   &:local(.regular) {
     padding: 15px 30px;
   }
@@ -57,37 +65,21 @@
   &:local(.default) {
     background-color: $color-default;
     color: $color-primary;
-
-    &:hover {
-      background-color: $color-default-hover;
-    }
   }
 
   &:local(.primary) {
     background-color: $color-primary;
     color: #fff;
-
-    &:hover {
-      background-color: $color-primary-hover;
-    }
   }
 
   &:local(.success) {
     background-color: $color-success;
     color: #fff;
-
-    &:hover {
-      background-color: $color-success-hover;
-    }
   }
 
   &:local(.warning) {
     background-color: $color-warning;
     color: #fff;
-
-    &:hover {
-      background-color: $color-warning-hover;
-    }
   }
 
   &:disabled {
