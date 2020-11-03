@@ -21,3 +21,11 @@ export const getThemeLogo = theme => {
 export const getThemeAppName = theme => {
   return theme && theme.appName ? theme.appName : null;
 }
+
+export const getThemeTextColor = theme => {
+  return theme && theme.colors && theme.colors.text ? theme.colors.text : null;
+}
+
+export const getThemeLinkColor = theme => {
+  return theme && theme.colors && theme.colors.link ? theme.colors.link : null;
+}

@@ -1,5 +1,18 @@
 @import "../style/global.scss";
 
+* {
+  color: $color-default-text;
+}
+
+a {
+  color: $color-link;
+}
+
+img {
+  max-width: 200px;
+  max-height: 150px;
+}
+
 :local(.colorPalette) {
   display: flex;
   flex-wrap: wrap;
