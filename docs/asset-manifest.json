@@ -1,26 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.df215d54.chunk.css",
-    "main.js": "/build/main.4fffb0fe.js",
-    "runtime-main.js": "/build/bundle.5807af03.js",
-    "static/css/2.2a60accc.chunk.css": "/static/css/2.2a60accc.chunk.css",
-    "build/2.9e70b9c4.js": "/build/2.9e70b9c4.js",
-    "build/2.9e70b9c4.js.LICENSE.txt": "/build/2.9e70b9c4.js.LICENSE.txt",
+    "main.css": "/static/css/main.79053b11.chunk.css",
+    "main.js": "/build/main.37289ad7.js",
+    "runtime-main.js": "/build/bundle.153ee7bb.js",
+    "static/css/2.95456d05.chunk.css": "/static/css/2.95456d05.chunk.css",
+    "build/2.eb3b2644.js": "/build/2.eb3b2644.js",
+    "build/2.eb3b2644.js.LICENSE.txt": "/build/2.eb3b2644.js.LICENSE.txt",
     "index.html": "/index.html",
-    "precache-manifest.5d865cd1bb3dabd61a75978f783051d6.js": "/precache-manifest.5d865cd1bb3dabd61a75978f783051d6.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.2a60accc.chunk.css.map": "/static/css/2.2a60accc.chunk.css.map",
-    "static/css/main.df215d54.chunk.css.map": "/static/css/main.df215d54.chunk.css.map",
-    "static/media/fonts.css": "/static/media/Altis-Light.f02874c4.eot",
-    "static/media/dibk-logo-mobile.svg": "/static/media/dibk-logo-mobile.3d8cd6bf.svg",
-    "static/media/NavigationBar.module.scss": "/static/media/hamburger.3e6caca9.svg",
-    "static/media/LoadingAnimation.module.scss": "/static/media/spinner.4e12ad68.svg"
+    "static/css/2.95456d05.chunk.css.map": "/static/css/2.95456d05.chunk.css.map",
+    "static/css/main.79053b11.chunk.css.map": "/static/css/main.79053b11.chunk.css.map",
+    "static/media/fonts.css": "/static/media/Altis-Light.eb742adc.eot",
+    "static/media/dibk-logo-mobile.120629cc.svg": "/static/media/dibk-logo-mobile.120629cc.svg",
+    "static/media/dibk-logo.972e244e.svg": "/static/media/dibk-logo.972e244e.svg",
+    "static/media/hamburger.1ff53c56.svg": "/static/media/hamburger.1ff53c56.svg",
+    "static/media/LoadingAnimation.module.scss": "/static/media/spinner.9d4e5e9c.svg"
   },
   "entrypoints": [
-    "build/bundle.5807af03.js",
-    "static/css/2.2a60accc.chunk.css",
-    "build/2.9e70b9c4.js",
-    "static/css/main.df215d54.chunk.css",
-    "build/main.4fffb0fe.js"
+    "build/bundle.153ee7bb.js",
+    "static/css/2.95456d05.chunk.css",
+    "build/2.eb3b2644.js",
+    "static/css/main.79053b11.chunk.css",
+    "build/main.37289ad7.js"
   ]
 }

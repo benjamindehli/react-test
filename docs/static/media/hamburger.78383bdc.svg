@@ -93,15 +93,15 @@
 				</g>
 			</g>
 		</g>
-		<g id="hamburgermeny" display="none">
-			<rect id="XMLID_94_" x="8" y="8.5" display="inline" fill="#FFFFFF" width="60" height="6"/>
-			<rect id="XMLID_95_" x="8" y="45.5" display="inline" fill="#FFFFFF" width="60" height="6"/>
-			<rect id="XMLID_96_" x="8" y="27.5" display="inline" fill="#FFFFFF" width="60" height="6"/>
+		<g id="hamburgermeny">
+			<rect id="XMLID_94_" x="8" y="8.5" fill="#FFFFFF" width="60" height="6"/>
+			<rect id="XMLID_95_" x="8" y="45.5" fill="#FFFFFF" width="60" height="6"/>
+			<rect id="XMLID_96_" x="8" y="27.5" fill="#FFFFFF" width="60" height="6"/>
 		</g>
-		<g id="hamburgermeny__hover">
-			<rect id="XMLID_97_" x="8" y="8.5" fill="#D7D4D1" width="60" height="6"/>
-			<rect id="XMLID_93_" x="8" y="45.5" fill="#D7D4D1" width="60" height="6"/>
-			<rect id="XMLID_91_" x="8" y="27.5" fill="#D7D4D1" width="60" height="6"/>
+		<g id="hamburgermeny__hover" display="none">
+			<rect id="XMLID_97_" x="8" y="8.5" display="inline" fill="#D7D4D1" width="60" height="6"/>
+			<rect id="XMLID_93_" x="8" y="45.5" display="inline" fill="#D7D4D1" width="60" height="6"/>
+			<rect id="XMLID_91_" x="8" y="27.5" display="inline" fill="#D7D4D1" width="60" height="6"/>
 		</g>
 	</g>
 </switch>
