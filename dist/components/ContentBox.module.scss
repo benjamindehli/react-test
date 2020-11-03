@@ -37,7 +37,7 @@
         }
         :local(.content){
             color: #fff;
-        }   
+        }
     }
     &:local(.warning) {
         background-color: $color-warning;
@@ -50,10 +50,10 @@
         }
     }
 
-    &:local(.cyan) {
-        background-color: $color-cyan;
+    &:local(.info) {
+        background-color: $color-info;
         &:local(.link):hover {
-            background-color: $color-cyan-hover;
+            background-color: $color-info-hover;
         }
         :local(.content){
             color: #000;
@@ -107,9 +107,9 @@
         }
     }
 
-    :local(.title){        
+    :local(.title){
         &:local(.regular) {
-            font-family: "Open Sans";            
+            font-family: "Open Sans";
             font-weight: bold;
             font-size: 21px;
             font-style: normal;

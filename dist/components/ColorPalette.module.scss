@@ -1,0 +1,63 @@
+@import "../style/global.scss";
+
+:local(.colorPalette) {
+  display: flex;
+  flex-wrap: wrap;
+
+  :local(.color) {
+    width: 20%;
+    min-width: 120px;
+    text-align: center;
+    line-height: 3em;
+
+    &:local(.default) {
+      background-color: $color-default;
+      color: #000;
+    }
+
+    &:local(.primary) {
+      background-color: $color-primary;
+      color: #fff;
+    }
+
+    &:local(.success) {
+      background-color: $color-success;
+      color: #fff;
+    }
+
+    &:local(.warning) {
+      background-color: $color-warning;
+      color: #fff;
+    }
+
+    &:local(.info) {
+      background-color: $color-info;
+      color: #000;
+    }
+
+    &:local(.lightCyan) {
+      background-color: $color-light-cyan;
+      color: #000;
+    }
+
+    &:local(.orange) {
+      background-color: $color-orange;
+      color: #fff;
+    }
+
+    &:local(.lightOrange) {
+      background-color: $color-light-orange;
+      color: #000;
+    }
+
+    &:local(.lime) {
+      background-color: $color-lime;
+      color: #fff;
+    }
+
+    &:local(.lightLime) {
+      background-color: $color-light-lime;
+      color: #000;
+    }
+  }
+}

@@ -1,5 +1,3 @@
-'use strict';
-
 import WebFont from 'webfontloader';
 import Button from './components/Button';
 import CheckBoxIcon from './components/CheckBoxIcon';

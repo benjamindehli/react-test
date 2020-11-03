@@ -9,7 +9,8 @@ class RadioButtonInput extends React.Component {
       htmlFor: this.props.id,
       className: `${style.radioButtonInput} ${this.props.checked ? style.checked : ''}`
     }, !this.props.contentOnly ? /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(RadioButtonIcon, {
-      checked: this.props.checked
+      checked: this.props.checked,
+      theme: this.props.theme
     }), /*#__PURE__*/React.createElement("input", {
       type: "radio",
       onChange: this.props.onChange,
@@ -28,7 +29,8 @@ RadioButtonInput.propTypes = {
   name: PropTypes.string,
   id: PropTypes.string.isRequired,
   onChange: PropTypes.func,
-  contentOnly: PropTypes.bool
+  contentOnly: PropTypes.bool,
+  theme: PropTypes.object
 };
 RadioButtonInput.defaultProps = {
   name: '',
