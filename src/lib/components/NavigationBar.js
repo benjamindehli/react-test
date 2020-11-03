@@ -6,14 +6,23 @@ import logo from 'lib/images/dibk-logo-mobile.svg';
 import {ReactComponent as MenuIcon} from 'lib/images/hamburger.svg';
 
 class PrimaryListItem extends React.Component {
+  getListItemThemeStyle(theme){
+    return {
+      color: getThemeNavigationBarTextColor(theme),
+      borderBottomColor: getThemeNavigationBarTextColor(theme)
+    }
+  }
+
   render () {
+    const listItemThemeStyle = this.getListItemThemeStyle(this.props.theme);
+
     if (typeof (this.props.listItem) === 'string') {
       return (
-        <li><span>{ this.props.listItem }</span></li>
+        <li><span style={listItemThemeStyle}>{ this.props.listItem }</span></li>
       )
     } else if (typeof (this.props.listItem) === 'object') {
       return (
-        <li><a href={this.props.listItem.href}>{ this.props.listItem.name }</a></li>
+        <li><a href={this.props.listItem.href} style={listItemThemeStyle}>{ this.props.listItem.name }</a></li>
       )
     } else {
       return null
@@ -44,22 +53,29 @@ class NavigationBar extends React.Component {
       color: getThemeNavigationBarTextColor(theme)
     }
   }
+  getListItemThemeStyle(theme){
+    return {
+      color: getThemeNavigationBarTextColor(theme),
+      borderBottomColor: getThemeNavigationBarTextColor(theme)
+    }
+  }
   renderPrimaryList (items = this.props.primaryListItems, iteration = 0) {
+    const listItemThemeStyle = this.getListItemThemeStyle(this.props.theme);
     let listItems = items.map((listItem, i) => {
       let key = iteration + '-' + i
       if (listItem.listItems !== undefined) {
         return (
-          <li key={key}><span>{ listItem.name }</span>{ this.renderPrimaryList(listItem.listItems, iteration + 1) }</li>
+          <li key={key}><span style={listItemThemeStyle}>{ listItem.name }</span>{ this.renderPrimaryList(listItem.listItems, iteration + 1) }</li>
         )
       } else {
-        return <PrimaryListItem listItem={listItem} key={key} />
+        return <PrimaryListItem listItem={listItem} key={key} theme={this.props.theme} />
       }
     })
     return <ul className={style.primaryList}>{listItems}</ul>
   }
   renderSecondaryList () {
-    let listItems = this.props.secondaryListItems.map(function (listItem, i) {
-      return <PrimaryListItem listItem={listItem} key={i} />
+    let listItems = this.props.secondaryListItems.map((listItem, i) => {
+      return <PrimaryListItem listItem={listItem} key={i} theme={this.props.theme} />
     })
     return <ul className={style.secondaryList}>{listItems}</ul>
   }
@@ -102,7 +118,7 @@ class NavigationBar extends React.Component {
             }
           </div>
           <div className={`${style.dropdownContainer} ${this.state.active ? style.active : ''}`}>
-            <div className={style.dropdown}>{this.renderPrimaryList()}{this.renderSecondaryList()}{this.props.children}</div>
+            <div className={style.dropdown} style={navigationBarThemeStyle}>{this.renderPrimaryList()}{this.renderSecondaryList()}{this.props.children}</div>
           </div>
           <div className={`${style.dropdownOverlay} ${this.state.active ? style.active : ''}`} />
         </div>
