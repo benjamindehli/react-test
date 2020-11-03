@@ -11,7 +11,7 @@ class RadioButtonInput extends React.Component {
         {
           !this.props.contentOnly
             ? (<React.Fragment>
-              <RadioButtonIcon checked={this.props.checked}/>
+              <RadioButtonIcon checked={this.props.checked} theme={this.props.theme}/>
               <input type="radio" onChange={this.props.onChange} id={this.props.id} name={this.props.name} value={this.props.inputValue} checked={this.props.checked} />
             </React.Fragment>)
             : ''
@@ -27,7 +27,8 @@ RadioButtonInput.propTypes = {
   name: PropTypes.string,
   id: PropTypes.string.isRequired,
   onChange: PropTypes.func,
-  contentOnly: PropTypes.bool
+  contentOnly: PropTypes.bool,
+  theme: PropTypes.object
 }
 
 RadioButtonInput.defaultProps = {

@@ -6,7 +6,7 @@ import style from './RadioButtonListItem.module.scss';
 class RadioButtonListItem extends React.Component {
   render() {
     return (<div  className={style.radioButtonListItem}>
-    <RadioButtonInput onChange={this.props.onChange} inputValue={this.props.inputValue} checked={this.props.checked} contentOnly={this.props.contentOnly} id={this.props.id}>{this.props.children}</RadioButtonInput>
+    <RadioButtonInput onChange={this.props.onChange} inputValue={this.props.inputValue} checked={this.props.checked} contentOnly={this.props.contentOnly} id={this.props.id} theme={this.props.theme}>{this.props.children}</RadioButtonInput>
     </div>)
   }
 }
@@ -18,7 +18,8 @@ RadioButtonListItem.propTypes = {
   name: PropTypes.string,
   id: PropTypes.string.isRequired,
   onChange: PropTypes.func,
-  contentOnly: PropTypes.bool
+  contentOnly: PropTypes.bool,
+  theme: PropTypes.object
 }
 
 RadioButtonListItem.defaultProps = {
