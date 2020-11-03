@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { getThemePaletteBackgroundColor, getThemePaletteTextColor } from 'lib/functions/theme';
 import style from './ColorPalette.module.scss';
 
-class ColorPalette extends React.Component {
+class Theme extends React.Component {
   getThemeStyle(theme, color){
     return {
       backgroundColor: getThemePaletteBackgroundColor(theme, color),
@@ -29,12 +29,11 @@ class ColorPalette extends React.Component {
 		}
 	}
 
-ColorPalette.propTypes = {
+Theme.propTypes = {
 	theme: PropTypes.object
 }
 
-ColorPalette.defaultProps = {
-	content: '',
+Theme.defaultProps = {
 }
 
-export default ColorPalette;
+export default Theme;
