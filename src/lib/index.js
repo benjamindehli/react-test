@@ -5,17 +5,18 @@ import CheckBoxInput from './components/CheckBoxInput';
 import CheckBoxListItem from './components/CheckBoxListItem';
 import ContentBox from './components/ContentBox';
 import DragAndDropFileInput from './components/DragAndDropFileInput';
-import Footer from './components/Footer';
 import Header from './components/Header';
-import InputField from './components/InputField';
 import List from './components/List';
 import LoadingAnimation from './components/LoadingAnimation';
 import NavigationBar from './components/NavigationBar';
+import Select from './components/Select';
+import Footer from './components/Footer';
+import InputField from './components/InputField';
 import Paper from './components/Paper';
 import RadioButtonIcon from './components/RadioButtonIcon';
 import RadiButtonInput from './components/RadioButtonInput';
 import RadioButtonListItem from './components/RadioButtonListItem';
-import Select from './components/Select';
+import Theme from '.components/Theme';
 import './style/base/fonts.css';
 
 WebFont.load({
@@ -24,4 +25,23 @@ WebFont.load({
   }
 });
 
-export { Button, CheckBoxIcon, CheckBoxInput, CheckBoxListItem, ContentBox, DragAndDropFileInput, Footer, Header, InputField, List, LoadingAnimation, NavigationBar, Paper, RadioButtonIcon, RadiButtonInput, RadioButtonListItem, Select };
+export {
+  Button,
+  CheckBoxIcon,
+  CheckBoxInput,
+  CheckBoxListItem,
+  ContentBox,
+  DragAndDropFileInput,
+  Header,
+  List,
+  LoadingAnimation,
+  NavigationBar,
+  Select,
+  Footer,
+  InputField,
+  Paper,
+  RadioButtonIcon,
+  RadiButtonInput,
+  RadioButtonListItem,
+  Theme
+};
