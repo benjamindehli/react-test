@@ -1,11 +1,22 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import style from './Paper.module.scss';
+"use strict";
 
-class Paper extends React.Component {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+var _PaperModule = _interopRequireDefault(require("./Paper.module.scss"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+class Paper extends _react.default.Component {
   render() {
-    return /*#__PURE__*/React.createElement("div", {
-      className: `${style.paper} ${this.props.noMargin ? style.noMargin : ''} ${this.props.noPadding ? style.noPadding : ''}`
+    return /*#__PURE__*/_react.default.createElement("div", {
+      className: "".concat(_PaperModule.default.paper, " ").concat(this.props.noMargin ? _PaperModule.default.noMargin : '', " ").concat(this.props.noPadding ? _PaperModule.default.noPadding : '')
     }, this.props.children);
   }
 
@@ -13,11 +24,12 @@ class Paper extends React.Component {
 
 ;
 Paper.propTypes = {
-  noMargin: PropTypes.bool,
-  noPadding: PropTypes.bool
+  noMargin: _propTypes.default.bool,
+  noPadding: _propTypes.default.bool
 };
 Paper.defaultProps = {
   noMargin: false,
   noPadding: false
 };
-export default Paper;
+var _default = Paper;
+exports.default = _default;

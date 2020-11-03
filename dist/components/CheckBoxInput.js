@@ -1,42 +1,55 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import CheckBoxIcon from './CheckBoxIcon';
-import style from './CheckBoxInput.module.scss';
+"use strict";
 
-class CheckBoxInput extends React.Component {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+var _CheckBoxIcon = _interopRequireDefault(require("./CheckBoxIcon"));
+
+var _CheckBoxInputModule = _interopRequireDefault(require("./CheckBoxInput.module.scss"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+class CheckBoxInput extends _react.default.Component {
   render() {
-    return /*#__PURE__*/React.createElement("label", {
-      className: `${style.checkBoxInput} ${this.props.contentOnly ? style.contentOnly : ''}`,
+    return /*#__PURE__*/_react.default.createElement("label", {
+      className: "".concat(_CheckBoxInputModule.default.checkBoxInput, " ").concat(this.props.contentOnly ? _CheckBoxInputModule.default.contentOnly : ''),
       htmlFor: this.props.id
-    }, !this.props.contentOnly ? /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(CheckBoxIcon, {
+    }, !this.props.contentOnly ? /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_CheckBoxIcon.default, {
       checked: this.props.checked,
       theme: this.props.theme
-    }), /*#__PURE__*/React.createElement("input", {
+    }), /*#__PURE__*/_react.default.createElement("input", {
       onChange: this.props.onChange,
       type: "checkbox",
       name: this.props.name,
       id: this.props.id,
       checked: this.props.checked
-    })) : /*#__PURE__*/React.createElement(CheckBoxIcon, {
+    })) : /*#__PURE__*/_react.default.createElement(_CheckBoxIcon.default, {
       checked: this.props.checked,
       showBox: false,
       theme: this.props.theme
-    }), /*#__PURE__*/React.createElement("span", null, this.props.children));
+    }), /*#__PURE__*/_react.default.createElement("span", null, this.props.children));
   }
 
 }
 
 CheckBoxInput.propTypes = {
-  checked: PropTypes.bool,
-  id: PropTypes.string.isRequired,
-  name: PropTypes.string,
-  onChange: PropTypes.func.isRequired,
-  contentOnly: PropTypes.bool,
-  theme: PropTypes.object
+  checked: _propTypes.default.bool,
+  id: _propTypes.default.string.isRequired,
+  name: _propTypes.default.string,
+  onChange: _propTypes.default.func.isRequired,
+  contentOnly: _propTypes.default.bool,
+  theme: _propTypes.default.object
 };
 CheckBoxInput.defaultProps = {
   checked: false,
   name: '',
   contentOnly: false
 };
-export default CheckBoxInput;
+var _default = CheckBoxInput;
+exports.default = _default;

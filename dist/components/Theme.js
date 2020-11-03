@@ -1,65 +1,78 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { getThemePaletteBackgroundColor, getThemePaletteTextColor, getThemeTextColor, getThemeLinkColor, getThemeLogo, getThemeAppName } from '../functions/theme';
-import logo from '../images/dibk-logo-mobile.svg';
-import style from './Theme.module.scss';
+"use strict";
 
-class Theme extends React.Component {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+var _theme = require("../functions/theme");
+
+var _dibkLogoMobile = _interopRequireDefault(require("../images/dibk-logo-mobile.svg"));
+
+var _ThemeModule = _interopRequireDefault(require("./Theme.module.scss"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+class Theme extends _react.default.Component {
   getThemeColorPaletteStyle(theme, color) {
     return {
-      backgroundColor: getThemePaletteBackgroundColor(theme, color),
-      color: getThemePaletteTextColor(theme, color)
+      backgroundColor: (0, _theme.getThemePaletteBackgroundColor)(theme, color),
+      color: (0, _theme.getThemePaletteTextColor)(theme, color)
     };
   }
 
   getThemeTextStyle(theme) {
     return {
-      color: getThemeTextColor(theme)
+      color: (0, _theme.getThemeTextColor)(theme)
     };
   }
 
   getThemeLinkStyle(theme) {
     return {
-      color: getThemeLinkColor(theme)
+      color: (0, _theme.getThemeLinkColor)(theme)
     };
   }
 
   renderColors(theme) {
-    const colors = ['default', 'primary', 'success', 'warning', 'info', 'lightCyan', 'orange', 'lightOrange', 'lime', 'lightLime'];
+    var colors = ['default', 'primary', 'success', 'warning', 'info', 'lightCyan', 'orange', 'lightOrange', 'lime', 'lightLime'];
     return colors.map(color => {
-      const colorClassName = style[color];
-      const colorPaletteStyle = this.props.theme ? this.getThemeColorPaletteStyle(this.props.theme, color) : null;
-      return /*#__PURE__*/React.createElement("div", {
+      var colorClassName = _ThemeModule.default[color];
+      var colorPaletteStyle = this.props.theme ? this.getThemeColorPaletteStyle(this.props.theme, color) : null;
+      return /*#__PURE__*/_react.default.createElement("div", {
         key: color,
-        className: `${style.color} ${colorClassName}`,
+        className: "".concat(_ThemeModule.default.color, " ").concat(colorClassName),
         style: colorPaletteStyle
       }, color);
     });
   }
 
   renderLogo(logoLink) {
-    const themeLogo = getThemeLogo(this.props.theme);
-    const themeAppName = getThemeAppName(this.props.theme);
-    const logoElement = themeLogo && themeAppName ? /*#__PURE__*/React.createElement("img", {
-      alt: `${themeAppName} logo`,
+    var themeLogo = (0, _theme.getThemeLogo)(this.props.theme);
+    var themeAppName = (0, _theme.getThemeAppName)(this.props.theme);
+    var logoElement = themeLogo && themeAppName ? /*#__PURE__*/_react.default.createElement("img", {
+      alt: "".concat(themeAppName, " logo"),
       src: themeLogo
-    }) : /*#__PURE__*/React.createElement("img", {
+    }) : /*#__PURE__*/_react.default.createElement("img", {
       alt: "DIBK logo",
-      src: logo
+      src: _dibkLogoMobile.default
     });
-    return logoLink && logoLink.length ? /*#__PURE__*/React.createElement("a", {
+    return logoLink && logoLink.length ? /*#__PURE__*/_react.default.createElement("a", {
       href: logoLink
     }, logoElement) : logoElement;
   }
 
   render() {
-    const themeTextStyle = this.props.theme ? this.getThemeTextStyle(this.props.theme) : null;
-    const themeLinkStyle = this.props.theme ? this.getThemeLinkStyle(this.props.theme) : null;
-    return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
-      className: style.colorPalette
-    }, this.renderColors(this.props.theme)), /*#__PURE__*/React.createElement("p", {
+    var themeTextStyle = this.props.theme ? this.getThemeTextStyle(this.props.theme) : null;
+    var themeLinkStyle = this.props.theme ? this.getThemeLinkStyle(this.props.theme) : null;
+    return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
+      className: _ThemeModule.default.colorPalette
+    }, this.renderColors(this.props.theme)), /*#__PURE__*/_react.default.createElement("p", {
       style: themeTextStyle
-    }, "The is default text"), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("a", {
+    }, "The is default text"), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement("a", {
       style: themeLinkStyle,
       href: "#theme"
     }, "This is a hyperlink")), this.renderLogo(this.props.theme));
@@ -68,7 +81,8 @@ class Theme extends React.Component {
 }
 
 Theme.propTypes = {
-  theme: PropTypes.object
+  theme: _propTypes.default.object
 };
 Theme.defaultProps = {};
-export default Theme;
+var _default = Theme;
+exports.default = _default;

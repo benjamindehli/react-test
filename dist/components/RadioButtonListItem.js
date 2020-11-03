@@ -1,13 +1,25 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import RadioButtonInput from './RadioButtonInput';
-import style from './RadioButtonListItem.module.scss';
+"use strict";
 
-class RadioButtonListItem extends React.Component {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+var _RadioButtonInput = _interopRequireDefault(require("./RadioButtonInput"));
+
+var _RadioButtonListItemModule = _interopRequireDefault(require("./RadioButtonListItem.module.scss"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+class RadioButtonListItem extends _react.default.Component {
   render() {
-    return /*#__PURE__*/React.createElement("div", {
-      className: style.radioButtonListItem
-    }, /*#__PURE__*/React.createElement(RadioButtonInput, {
+    return /*#__PURE__*/_react.default.createElement("div", {
+      className: _RadioButtonListItemModule.default.radioButtonListItem
+    }, /*#__PURE__*/_react.default.createElement(_RadioButtonInput.default, {
       onChange: this.props.onChange,
       inputValue: this.props.inputValue,
       checked: this.props.checked,
@@ -21,17 +33,18 @@ class RadioButtonListItem extends React.Component {
 
 RadioButtonListItem.propTypes = {
   /** Text content inside list item */
-  inputValue: PropTypes.string.isRequired,
-  checked: PropTypes.bool,
-  name: PropTypes.string,
-  id: PropTypes.string.isRequired,
-  onChange: PropTypes.func,
-  contentOnly: PropTypes.bool,
-  theme: PropTypes.object
+  inputValue: _propTypes.default.string.isRequired,
+  checked: _propTypes.default.bool,
+  name: _propTypes.default.string,
+  id: _propTypes.default.string.isRequired,
+  onChange: _propTypes.default.func,
+  contentOnly: _propTypes.default.bool,
+  theme: _propTypes.default.object
 };
 RadioButtonListItem.defaultProps = {
   name: '',
   checked: false,
   contentOnly: false
 };
-export default RadioButtonListItem;
+var _default = RadioButtonListItem;
+exports.default = _default;

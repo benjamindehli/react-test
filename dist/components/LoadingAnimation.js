@@ -1,26 +1,38 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import style from './LoadingAnimation.module.scss';
+"use strict";
 
-class LoadingAnimation extends React.Component {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+var _LoadingAnimationModule = _interopRequireDefault(require("./LoadingAnimation.module.scss"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+class LoadingAnimation extends _react.default.Component {
   render() {
-    return /*#__PURE__*/React.createElement("div", {
-      className: this.props.fixed ? style.loadingAnimation + ' ' + style.fixed : style.loadingAnimation
+    return /*#__PURE__*/_react.default.createElement("div", {
+      className: this.props.fixed ? _LoadingAnimationModule.default.loadingAnimation + ' ' + _LoadingAnimationModule.default.fixed : _LoadingAnimationModule.default.loadingAnimation
     }, this.props.message);
   }
 
 }
 
 LoadingAnimation.propTypes = {
-  fixed: PropTypes.bool,
-  active: PropTypes.bool,
+  fixed: _propTypes.default.bool,
+  active: _propTypes.default.bool,
 
   /** Text content inside button */
-  message: PropTypes.string
+  message: _propTypes.default.string
 };
 LoadingAnimation.defaultProps = {
   fixed: false,
   active: true,
   message: ''
 };
-export default LoadingAnimation;
+var _default = LoadingAnimation;
+exports.default = _default;

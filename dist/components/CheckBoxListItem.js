@@ -1,13 +1,25 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import style from './CheckBoxListItem.module.scss';
-import CheckBoxInput from './CheckBoxInput';
+"use strict";
 
-class CheckBoxListItem extends React.Component {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+var _CheckBoxListItemModule = _interopRequireDefault(require("./CheckBoxListItem.module.scss"));
+
+var _CheckBoxInput = _interopRequireDefault(require("./CheckBoxInput"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+class CheckBoxListItem extends _react.default.Component {
   render() {
-    return /*#__PURE__*/React.createElement("div", {
-      className: `${style.checkBoxListItem} ${this.props.checked ? style.checked : ''} ${this.props.contentOnly ? style.contentOnly : ''}`
-    }, /*#__PURE__*/React.createElement(CheckBoxInput, {
+    return /*#__PURE__*/_react.default.createElement("div", {
+      className: "".concat(_CheckBoxListItemModule.default.checkBoxListItem, " ").concat(this.props.checked ? _CheckBoxListItemModule.default.checked : '', " ").concat(this.props.contentOnly ? _CheckBoxListItemModule.default.contentOnly : '')
+    }, /*#__PURE__*/_react.default.createElement(_CheckBoxInput.default, {
       onChange: this.props.onChange,
       checked: this.props.checked,
       contentOnly: this.props.contentOnly,
@@ -20,12 +32,12 @@ class CheckBoxListItem extends React.Component {
 
 CheckBoxListItem.propTypes = {
   /** Text content inside list item */
-  checked: PropTypes.bool,
-  id: PropTypes.string.isRequired,
-  name: PropTypes.string,
-  onChange: PropTypes.func.isRequired,
-  contentOnly: PropTypes.bool,
-  theme: PropTypes.object
+  checked: _propTypes.default.bool,
+  id: _propTypes.default.string.isRequired,
+  name: _propTypes.default.string,
+  onChange: _propTypes.default.func.isRequired,
+  contentOnly: _propTypes.default.bool,
+  theme: _propTypes.default.object
 };
 CheckBoxListItem.defaultProps = {
   checked: false,
@@ -33,4 +45,5 @@ CheckBoxListItem.defaultProps = {
   name: '',
   contentOnly: false
 };
-export default CheckBoxListItem;
+var _default = CheckBoxListItem;
+exports.default = _default;
