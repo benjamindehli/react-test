@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { getThemeAppName, getThemeLogo, getThemeNavigationBarBackgroundColor, getThemeNavigationBarTextColor } from 'lib/functions/theme';
+import { getThemeAppName, getThemeLogo, getThemeNavigationBarBackgroundColor, getThemeNavigationBarTextColor } from '../functions/theme';
+import logo from '../images/dibk-logo-mobile.svg';
+import { ReactComponent as MenuIcon } from '../images/hamburger.svg';
 import style from './NavigationBar.module.scss';
-import logo from 'lib/images/dibk-logo-mobile.svg';
-import { ReactComponent as MenuIcon } from 'lib/images/hamburger.svg';
 
 class PrimaryListItem extends React.Component {
   getListItemThemeStyle(theme) {

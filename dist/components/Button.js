@@ -2,7 +2,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { getThemePaletteBackgroundColor, getThemePaletteTextColor } from 'lib/functions/theme';
+import { getThemePaletteBackgroundColor, getThemePaletteTextColor } from '../functions/theme';
 import style from './Button.module.scss';
 
 class Button extends React.Component {

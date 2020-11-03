@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { getThemePaletteBackgroundColor, getThemePaletteTextColor, getThemeTextColor, getThemeLinkColor, getThemeLogo, getThemeAppName } from 'lib/functions/theme';
-import logo from 'lib/images/dibk-logo-mobile.svg';
+import { getThemePaletteBackgroundColor, getThemePaletteTextColor, getThemeTextColor, getThemeLinkColor, getThemeLogo, getThemeAppName } from '../functions/theme';
+import logo from '../images/dibk-logo-mobile.svg';
 import style from './Theme.module.scss';
 
 class Theme extends React.Component {
