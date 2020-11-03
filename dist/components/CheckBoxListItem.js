@@ -11,7 +11,8 @@ class CheckBoxListItem extends React.Component {
       onChange: this.props.onChange,
       checked: this.props.checked,
       contentOnly: this.props.contentOnly,
-      id: this.props.id
+      id: this.props.id,
+      theme: this.props.theme
     }, this.props.children));
   }
 
@@ -23,7 +24,8 @@ CheckBoxListItem.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string,
   onChange: PropTypes.func.isRequired,
-  contentOnly: PropTypes.bool
+  contentOnly: PropTypes.bool,
+  theme: PropTypes.object
 };
 CheckBoxListItem.defaultProps = {
   checked: false,

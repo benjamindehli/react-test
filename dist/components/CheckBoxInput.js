@@ -9,7 +9,8 @@ class CheckBoxInput extends React.Component {
       className: `${style.checkBoxInput} ${this.props.contentOnly ? style.contentOnly : ''}`,
       htmlFor: this.props.id
     }, !this.props.contentOnly ? /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(CheckBoxIcon, {
-      checked: this.props.checked
+      checked: this.props.checked,
+      theme: this.props.theme
     }), /*#__PURE__*/React.createElement("input", {
       onChange: this.props.onChange,
       type: "checkbox",
@@ -18,7 +19,8 @@ class CheckBoxInput extends React.Component {
       checked: this.props.checked
     })) : /*#__PURE__*/React.createElement(CheckBoxIcon, {
       checked: this.props.checked,
-      showBox: false
+      showBox: false,
+      theme: this.props.theme
     }), /*#__PURE__*/React.createElement("span", null, this.props.children));
   }
 
@@ -29,7 +31,8 @@ CheckBoxInput.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string,
   onChange: PropTypes.func.isRequired,
-  contentOnly: PropTypes.bool
+  contentOnly: PropTypes.bool,
+  theme: PropTypes.object
 };
 CheckBoxInput.defaultProps = {
   checked: false,
