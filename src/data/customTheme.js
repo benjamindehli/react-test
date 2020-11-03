@@ -21,7 +21,7 @@ const customTheme = {
         background: "#D13C0A",
         text: "#fff"
       },
-      cyan: {
+      info: {
         background: "#abd6ef",
         text: "rgba(0,0,0,.85)"
       }

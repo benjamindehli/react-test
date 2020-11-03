@@ -12,7 +12,7 @@ class ColorPalette extends React.Component {
   }
 
 	renderColors(theme) {
-    const colors = ['default', 'primary', 'success', 'warning', 'cyan', 'lightCyan', 'orange', 'lightOrange', 'lime', 'lightLime'];
+    const colors = ['default', 'primary', 'success', 'warning', 'info', 'lightCyan', 'orange', 'lightOrange', 'lime', 'lightLime'];
     return colors.map(color => {
       const colorClassName = style[color];
       const themeStyle =  this.props.theme ? this.getThemeStyle(this.props.theme, color) : null;
