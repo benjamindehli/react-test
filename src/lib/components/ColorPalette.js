@@ -16,7 +16,7 @@ class ColorPalette extends React.Component {
     return colors.map(color => {
       const colorClassName = style[color];
       const themeStyle =  this.props.theme ? this.getThemeStyle(this.props.theme, color) : null;
-      return <div className={`${style.color} ${colorClassName}`} style={themeStyle}>{ color }</div>;
+      return <div key={color} className={`${style.color} ${colorClassName}`} style={themeStyle}>{ color }</div>;
     });
 	}
 
