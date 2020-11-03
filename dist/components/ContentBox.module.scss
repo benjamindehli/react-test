@@ -8,13 +8,16 @@
     display: block;
     &:local(.link){
         color: $color-primary;
-        @include transition(background-color .3s);
+        @include transition(filter .3s);
+        &:hover, &:focus {
+            filter: brightness(90%);
+        }
+        &:active {
+          filter: brightness(85%);
+        }
     }
     &:local(.default) {
         background-color: $color-default;
-        &:local(.link):hover {
-            background-color: $color-default-hover;
-        }
         :local(.content){
             color: #000;
         }
@@ -22,9 +25,6 @@
     &:local(.primary) {
         background-color: $color-primary;
         color: #fff;
-        &:local(.link):hover {
-            background-color: $color-primary-hover;
-        }
         :local(.content){
             color: #fff;
         }
@@ -32,9 +32,6 @@
     &:local(.success) {
         background-color: $color-success;
         color: #fff;
-        &:local(.link):hover {
-            background-color: $color-success-hover;
-        }
         :local(.content){
             color: #fff;
         }
@@ -42,9 +39,6 @@
     &:local(.warning) {
         background-color: $color-warning;
         color: #fff;
-        &:local(.link):hover {
-            background-color: $color-warning-hover;
-        }
         :local(.content){
             color: #fff;
         }
@@ -52,18 +46,12 @@
 
     &:local(.info) {
         background-color: $color-info;
-        &:local(.link):hover {
-            background-color: $color-info-hover;
-        }
         :local(.content){
             color: #000;
         }
     }
     &:local(.lightCyan) {
         background-color: $color-light-cyan;
-        &:local(.link):hover {
-            background-color: $color-light-cyan-hover;
-        }
         :local(.content){
             color: #000;
         }
@@ -71,18 +59,12 @@
     &:local(.orange) {
         background-color: $color-orange;
         color: #fff;
-        &:local(.link):hover {
-            background-color: $color-orange-hover;
-        }
         :local(.content){
             color: #fff;
         }
     }
     &:local(.lightOrange) {
         background-color: $color-light-orange;
-        &:local(.link):hover {
-            background-color: $color-light-orange-hover;
-        }
         :local(.content){
             color: #000;
         }
@@ -90,18 +72,12 @@
     &:local(.lime) {
         background-color: $color-lime;
         color: #fff;
-        &:local(.link):hover {
-            background-color: $color-lime-hover;
-        }
         :local(.content){
             color: #fff;
         }
     }
     &:local(.lightLime) {
         background-color: $color-light-lime;
-        &:local(.link):hover {
-            background-color: $color-light-lime-hover;
-        }
         :local(.content){
             color: #000;
         }

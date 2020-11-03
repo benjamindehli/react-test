@@ -45,7 +45,7 @@ ContentBox.propTypes = {
 
   /** Text content inside box */
   content: PropTypes.string,
-  color: PropTypes.oneOf(['default', 'primary', 'success', 'warning', 'cyan', 'lightCyan', 'orange', 'lightOrange', 'lime', 'lightLime'])
+  color: PropTypes.oneOf(['default', 'primary', 'success', 'warning', 'info', 'lightCyan', 'orange', 'lightOrange', 'lime', 'lightLime'])
 };
 ContentBox.defaultProps = {
   title: null,
