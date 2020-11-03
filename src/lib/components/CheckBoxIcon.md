@@ -2,7 +2,17 @@ Regular check box icons example:
 
 ```js
 <CheckBoxIcon  />
-<CheckBoxIcon  checked={true} />
+<CheckBoxIcon checked={true} />
+```
+
+Themed Regular check box icons example:
+
+```js
+import customTheme from 'data/customTheme';
+<React.Fragment>
+<CheckBoxIcon theme={customTheme} />
+<CheckBoxIcon checked={true} theme={customTheme} />
+</React.Fragment>
 ```
 
 Check box icons with custom size example:
