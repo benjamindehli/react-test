@@ -16,7 +16,7 @@ import Paper from './components/Paper';
 import RadioButtonIcon from './components/RadioButtonIcon';
 import RadiButtonInput from './components/RadioButtonInput';
 import RadioButtonListItem from './components/RadioButtonListItem';
-import Theme from '.components/Theme';
+import Theme from './components/Theme';
 import './style/base/fonts.css';
 
 WebFont.load({
