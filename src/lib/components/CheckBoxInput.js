@@ -9,10 +9,10 @@ class CheckBoxInput extends React.Component {
       {
         !this.props.contentOnly
           ? (<React.Fragment>
-            <CheckBoxIcon checked={this.props.checked}/>
+            <CheckBoxIcon checked={this.props.checked} theme={this.props.theme}/>
             <input onChange={this.props.onChange} type="checkbox" name={this.props.name} id={this.props.id} checked={this.props.checked}/>
           </React.Fragment>)
-          : <CheckBoxIcon checked={this.props.checked} showBox={false}/>
+          : <CheckBoxIcon checked={this.props.checked} showBox={false} theme={this.props.theme}/>
       }
       <span>{this.props.children}</span>
     </label>)
@@ -24,8 +24,8 @@ CheckBoxInput.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string,
   onChange: PropTypes.func.isRequired,
-  contentOnly: PropTypes.bool
-
+  contentOnly: PropTypes.bool,
+  theme: PropTypes.object
 };
 CheckBoxInput.defaultProps = {
   checked: false,
