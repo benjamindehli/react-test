@@ -13,76 +13,113 @@ var _SelectModule = _interopRequireDefault(require("./Select.module.scss"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-class Select extends _react.default.Component {
-  getKeyByValue(value, options) {
-    var selectedOption = options && options.length ? options.find(option => {
-      if (typeof option === 'object') {
-        return option.value === value;
-      } else {
-        return option === value;
-      }
-    }) : null;
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-    if (selectedOption && selectedOption.key) {
-      return selectedOption.key;
-    } else if (selectedOption && selectedOption.value) {
-      return selectedOption.value;
-    } else {
-      return selectedOption;
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (typeof call === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var Select = /*#__PURE__*/function (_React$Component) {
+  _inherits(Select, _React$Component);
+
+  var _super = _createSuper(Select);
+
+  function Select() {
+    _classCallCheck(this, Select);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(Select, [{
+    key: "getKeyByValue",
+    value: function getKeyByValue(value, options) {
+      var selectedOption = options && options.length ? options.find(function (option) {
+        if (typeof option === 'object') {
+          return option.value === value;
+        } else {
+          return option === value;
+        }
+      }) : null;
+
+      if (selectedOption && selectedOption.key) {
+        return selectedOption.key;
+      } else if (selectedOption && selectedOption.value) {
+        return selectedOption.value;
+      } else {
+        return selectedOption;
+      }
     }
-  }
+  }, {
+    key: "renderOptionElements",
+    value: function renderOptionElements(options) {
+      return options.map(function (option, key) {
+        var optionObject = null;
 
-  renderOptionElements(options) {
-    return options.map((option, key) => {
-      var optionObject = null;
+        if (typeof option === 'object') {
+          optionObject = {
+            key: option.key ? option.key : '',
+            value: option.value ? option.value : ''
+          };
+        } else {
+          optionObject = {
+            key: option,
+            value: option
+          };
+        }
 
-      if (typeof option === 'object') {
-        optionObject = {
-          key: option.key ? option.key : '',
-          value: option.value ? option.value : ''
-        };
-      } else {
-        optionObject = {
-          key: option,
-          value: option
-        };
-      }
+        return /*#__PURE__*/_react.default.createElement("option", {
+          value: optionObject.value,
+          key: key
+        }, optionObject.key);
+      });
+    }
+  }, {
+    key: "renderPlaceholderOption",
+    value: function renderPlaceholderOption(placeholder, placeholderValue) {
+      return placeholder ? /*#__PURE__*/_react.default.createElement("option", {
+        value: placeholderValue,
+        disabled: true
+      }, placeholder) : '';
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var value = this.props.value ? this.props.value : "";
+      return /*#__PURE__*/_react.default.createElement("div", {
+        className: _SelectModule.default.select
+      }, /*#__PURE__*/_react.default.createElement("label", {
+        htmlFor: this.props.id
+      }, this.props.label), !this.props.contentOnly ? /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
+        className: _SelectModule.default.selectContainer
+      }, /*#__PURE__*/_react.default.createElement("select", {
+        name: this.props.name,
+        multiple: this.props.multiple,
+        value: value,
+        onChange: this.props.onChange,
+        id: this.props.id,
+        className: this.props.hasErrors ? _SelectModule.default.hasErrors : ''
+      }, this.renderPlaceholderOption(this.props.placeholder, this.props.placeholderValue), this.renderOptionElements(this.props.options))), /*#__PURE__*/_react.default.createElement("span", {
+        className: _SelectModule.default.errorMessage
+      }, this.props.errorMessage ? this.props.errorMessage : '')) : /*#__PURE__*/_react.default.createElement("span", null, this.props.value ? this.props.keyAsContent ? this.getKeyByValue(this.props.value, this.props.options) : this.props.value : this.props.defaultContent));
+    }
+  }]);
 
-      return /*#__PURE__*/_react.default.createElement("option", {
-        value: optionObject.value,
-        key: key
-      }, optionObject.key);
-    });
-  }
-
-  renderPlaceholderOption(placeholder, placeholderValue) {
-    return placeholder ? /*#__PURE__*/_react.default.createElement("option", {
-      value: placeholderValue,
-      disabled: true
-    }, placeholder) : '';
-  }
-
-  render() {
-    var value = this.props.value ? this.props.value : "";
-    return /*#__PURE__*/_react.default.createElement("div", {
-      className: _SelectModule.default.select
-    }, /*#__PURE__*/_react.default.createElement("label", {
-      htmlFor: this.props.id
-    }, this.props.label), !this.props.contentOnly ? /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
-      className: _SelectModule.default.selectContainer
-    }, /*#__PURE__*/_react.default.createElement("select", {
-      name: this.props.name,
-      multiple: this.props.multiple,
-      value: value,
-      onChange: this.props.onChange,
-      id: this.props.id,
-      className: this.props.hasErrors ? _SelectModule.default.hasErrors : ''
-    }, this.renderPlaceholderOption(this.props.placeholder, this.props.placeholderValue), this.renderOptionElements(this.props.options))), /*#__PURE__*/_react.default.createElement("span", {
-      className: _SelectModule.default.errorMessage
-    }, this.props.errorMessage ? this.props.errorMessage : '')) : /*#__PURE__*/_react.default.createElement("span", null, this.props.value ? this.props.keyAsContent ? this.getKeyByValue(this.props.value, this.props.options) : this.props.value : this.props.defaultContent));
-  }
-
-}
+  return Select;
+}(_react.default.Component);
 
 Select.propTypes = {
   id: _propTypes.default.string.isRequired,

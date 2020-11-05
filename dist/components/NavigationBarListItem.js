@@ -11,11 +11,7 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _theme = require("../functions/theme");
 
-var _ButtonModule = _interopRequireDefault(require("./Button.module.scss"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -37,66 +33,51 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-var Button = /*#__PURE__*/function (_React$Component) {
-  _inherits(Button, _React$Component);
+var NavigationBarListItem = /*#__PURE__*/function (_React$Component) {
+  _inherits(NavigationBarListItem, _React$Component);
 
-  var _super = _createSuper(Button);
+  var _super = _createSuper(NavigationBarListItem);
 
-  function Button() {
-    _classCallCheck(this, Button);
+  function NavigationBarListItem() {
+    _classCallCheck(this, NavigationBarListItem);
 
     return _super.apply(this, arguments);
   }
 
-  _createClass(Button, [{
-    key: "getArrowClass",
-    value: function getArrowClass() {
-      switch (this.props.arrow) {
-        case 'left':
-          return _ButtonModule.default.hasArrowLeft;
-
-        case 'right':
-          return _ButtonModule.default.hasArrowRight;
-
-        default:
-          return '';
-      }
-    }
-  }, {
-    key: "getThemeStyle",
-    value: function getThemeStyle(theme, color) {
+  _createClass(NavigationBarListItem, [{
+    key: "getListItemThemeStyle",
+    value: function getListItemThemeStyle(theme) {
       return {
-        backgroundColor: (0, _theme.getThemePaletteBackgroundColor)(theme, color),
-        color: (0, _theme.getThemePaletteTextColor)(theme, color)
+        color: (0, _theme.getThemeNavigationBarTextColor)(theme),
+        borderBottomColor: (0, _theme.getThemeNavigationBarTextColor)(theme)
       };
     }
   }, {
     key: "render",
     value: function render() {
-      var themeStyle = this.props.theme ? this.getThemeStyle(this.props.theme, this.props.color) : null;
-      var className = "".concat(_ButtonModule.default.button, " ").concat(_ButtonModule.default[this.props.color], " ").concat(_ButtonModule.default[this.props.size], " ").concat(this.getArrowClass());
-      return /*#__PURE__*/_react.default.createElement("button", _extends({}, this.props, {
-        className: className,
-        style: themeStyle
-      }), this.props.content);
+      var listItemThemeStyle = this.getListItemThemeStyle(this.props.theme);
+
+      if (typeof this.props.listItem === 'string') {
+        return /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("span", {
+          style: listItemThemeStyle
+        }, this.props.listItem));
+      } else if (typeof this.props.listItem === 'object') {
+        return /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
+          href: this.props.listItem.href,
+          style: listItemThemeStyle
+        }, this.props.listItem.name));
+      } else {
+        return null;
+      }
     }
   }]);
 
-  return Button;
+  return NavigationBarListItem;
 }(_react.default.Component);
 
-Button.propTypes = {
-  /** Text content inside button */
-  content: _propTypes.default.string,
-  color: _propTypes.default.oneOf(['default', 'primary', 'success', 'warning']),
-  size: _propTypes.default.oneOf(['small', 'regular']),
-  arrow: _propTypes.default.oneOf(['left', 'right']),
+NavigationBarListItem.propTypes = {
+  listItem: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.object]),
   theme: _propTypes.default.object
 };
-Button.defaultProps = {
-  content: 'button',
-  color: 'default',
-  size: 'regular'
-};
-var _default = Button;
+var _default = NavigationBarListItem;
 exports.default = _default;
