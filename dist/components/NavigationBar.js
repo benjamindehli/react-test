@@ -15,8 +15,6 @@ var _dibkLogoMobile = _interopRequireDefault(require("../images/dibk-logo-mobile
 
 var _NavigationBarListItem = _interopRequireDefault(require("./NavigationBarListItem"));
 
-var _hamburger = require("../images/hamburger.svg");
-
 var _NavigationBarModule = _interopRequireDefault(require("./NavigationBar.module.scss"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -157,8 +155,8 @@ var NavigationBar = /*#__PURE__*/function (_React$Component) {
       var _this4 = this;
 
       var navigationBarThemeStyle = this.getNavigationBarThemeStyle(this.props.theme);
-      var menuIconThemeStyle = {
-        fill: (0, _theme.getThemeNavigationBarTextColor)(this.props.theme)
+      var hamburgerIconLineStyle = {
+        backgroundColor: (0, _theme.getThemeNavigationBarTextColor)(this.props.theme)
       };
       return /*#__PURE__*/_react.default.createElement("header", null, /*#__PURE__*/_react.default.createElement("div", {
         className: _NavigationBarModule.default.isPresent
@@ -174,9 +172,18 @@ var NavigationBar = /*#__PURE__*/function (_React$Component) {
         onClick: function onClick() {
           return _this4.toggleList();
         }
-      }, /*#__PURE__*/_react.default.createElement(_hamburger.ReactComponent, {
-        style: menuIconThemeStyle
-      })) : ''), /*#__PURE__*/_react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("span", {
+        className: _NavigationBarModule.default.hamburgerIcon
+      }, /*#__PURE__*/_react.default.createElement("span", {
+        className: _NavigationBarModule.default.line,
+        style: hamburgerIconLineStyle
+      }), /*#__PURE__*/_react.default.createElement("span", {
+        className: _NavigationBarModule.default.line,
+        style: hamburgerIconLineStyle
+      }), /*#__PURE__*/_react.default.createElement("span", {
+        className: _NavigationBarModule.default.line,
+        style: hamburgerIconLineStyle
+      }))) : ''), /*#__PURE__*/_react.default.createElement("div", {
         className: "".concat(_NavigationBarModule.default.dropdownContainer, " ").concat(this.state.active ? _NavigationBarModule.default.active : '')
       }, /*#__PURE__*/_react.default.createElement("div", {
         className: _NavigationBarModule.default.dropdown,
