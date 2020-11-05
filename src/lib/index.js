@@ -9,6 +9,7 @@ import Header from './components/Header';
 import List from './components/List';
 import LoadingAnimation from './components/LoadingAnimation';
 import NavigationBar from './components/NavigationBar';
+import NavigationBarListItem from './components/NavigationBarListItem';
 import Select from './components/Select';
 import Footer from './components/Footer';
 import InputField from './components/InputField';
@@ -36,6 +37,7 @@ export {
   List,
   LoadingAnimation,
   NavigationBar,
+  NavigationBarListItem,
   Select,
   Footer,
   InputField,

@@ -2,33 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { getThemeAppName, getThemeLogo, getThemeNavigationBarBackgroundColor, getThemeNavigationBarTextColor } from '../functions/theme';
 import logo from '../images/dibk-logo-mobile.svg';
+import NavigationBarListItem from './NavigationBarListItem';
 import {ReactComponent as MenuIcon} from '../images/hamburger.svg';
 import style from './NavigationBar.module.scss';
 
-class PrimaryListItem extends React.Component {
-  getListItemThemeStyle(theme){
-    return {
-      color: getThemeNavigationBarTextColor(theme),
-      borderBottomColor: getThemeNavigationBarTextColor(theme)
-    }
-  }
-
-  render () {
-    const listItemThemeStyle = this.getListItemThemeStyle(this.props.theme);
-
-    if (typeof (this.props.listItem) === 'string') {
-      return (
-        <li><span style={listItemThemeStyle}>{ this.props.listItem }</span></li>
-      )
-    } else if (typeof (this.props.listItem) === 'object') {
-      return (
-        <li><a href={this.props.listItem.href} style={listItemThemeStyle}>{ this.props.listItem.name }</a></li>
-      )
-    } else {
-      return null
-    }
-  }
-}
 
 class NavigationBar extends React.Component {
   constructor (props) {
@@ -68,14 +45,14 @@ class NavigationBar extends React.Component {
           <li key={key}><span style={listItemThemeStyle}>{ listItem.name }</span>{ this.renderPrimaryList(listItem.listItems, iteration + 1) }</li>
         )
       } else {
-        return <PrimaryListItem listItem={listItem} key={key} theme={this.props.theme} />
+        return <NavigationBarListItem listItem={listItem} key={key} theme={this.props.theme} />
       }
     })
     return <ul className={style.primaryList}>{listItems}</ul>
   }
   renderSecondaryList () {
     let listItems = this.props.secondaryListItems.map((listItem, i) => {
-      return <PrimaryListItem listItem={listItem} key={i} theme={this.props.theme} />
+      return <NavigationBarListItem listItem={listItem} key={i} theme={this.props.theme} />
     })
     return <ul className={style.secondaryList}>{listItems}</ul>
   }
