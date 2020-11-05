@@ -18,6 +18,10 @@ export const getThemeLogo = theme => {
   return theme && theme.logo ? theme.logo : null;
 }
 
+export const getThemeLogoPadding = theme => {
+  return theme && theme.logoPadding ? theme.logoPadding : null;
+}
+
 export const getThemeAppName = theme => {
   return theme && theme.appName ? theme.appName : null;
 }

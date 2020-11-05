@@ -3,6 +3,7 @@ import logo from 'lib/images/dibk-logo.svg';
 const customTheme = {
   appName: 'Custom theme',
   logo,
+  logoPadding: "10px 30px",
   colors: {
     palette: {
       default: {
@@ -31,7 +32,8 @@ const customTheme = {
       text: "#323232"
     },
     text: "#333",
-    link: "#CC3C10"
+    link: "#CC3C10",
+    background: "#FCFCFC"
   }
 }
 

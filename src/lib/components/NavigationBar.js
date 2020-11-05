@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { getThemeAppName, getThemeLogo, getThemeNavigationBarBackgroundColor, getThemeNavigationBarTextColor } from '../functions/theme';
+import { getThemeAppName, getThemeLogo, getThemeLogoPadding, getThemeNavigationBarBackgroundColor, getThemeNavigationBarTextColor } from '../functions/theme';
 import logo from '../images/dibk-logo-mobile.svg';
 import NavigationBarListItem from './NavigationBarListItem';
 import style from './NavigationBar.module.scss';
@@ -35,6 +35,11 @@ class NavigationBar extends React.Component {
       borderBottomColor: getThemeNavigationBarTextColor(theme)
     }
   }
+  getLogoThemeStyle(theme){
+    return {
+      padding: getThemeLogoPadding(theme)
+    }
+  }
   renderPrimaryList (items = this.props.primaryListItems, iteration = 0) {
     const listItemThemeStyle = this.getListItemThemeStyle(this.props.theme);
     let listItems = items.map((listItem, i) => {
@@ -60,7 +65,7 @@ class NavigationBar extends React.Component {
     const themeAppName = getThemeAppName(this.props.theme);
 
     const logoElement = themeLogo && themeAppName
-      ? <img alt={`${themeAppName} logo`} src={themeLogo} />
+      ? <img alt={`${themeAppName} logo`} src={themeLogo} style={this.getLogoThemeStyle(this.props.theme)} />
       : <img alt='DIBK logo' src={logo} />;
     return logoLink && logoLink.length
       ? (<a href={logoLink}>{logoElement}</a>)
