@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { getThemeAppName, getThemeLogo, getThemeNavigationBarBackgroundColor, getThemeNavigationBarTextColor } from '../functions/theme';
 import logo from '../images/dibk-logo-mobile.svg';
 import NavigationBarListItem from './NavigationBarListItem';
-import {ReactComponent as MenuIcon} from '../images/hamburger.svg';
 import style from './NavigationBar.module.scss';
 
 
@@ -69,8 +68,8 @@ class NavigationBar extends React.Component {
   }
   render () {
     const navigationBarThemeStyle = this.getNavigationBarThemeStyle(this.props.theme);
-    const menuIconThemeStyle = {
-      fill: getThemeNavigationBarTextColor(this.props.theme)
+    const hamburgerIconLineStyle = {
+      backgroundColor: getThemeNavigationBarTextColor(this.props.theme)
     };
     return (
       <header>
@@ -88,7 +87,11 @@ class NavigationBar extends React.Component {
               (this.props.primaryListItems && this.props.primaryListItems.length) || (this.props.secondaryListItems && this.props.secondaryListItems.length)
                 ? (
                   <button className={`${style.menuToggle} ${this.state.active ? style.active : ''}`} onClick={() => this.toggleList()}>
-                    <MenuIcon style={menuIconThemeStyle}/>
+                    <span className={style.hamburgerIcon}>
+                      <span className={style.line} style={hamburgerIconLineStyle}></span>
+                      <span className={style.line} style={hamburgerIconLineStyle}></span>
+                      <span className={style.line} style={hamburgerIconLineStyle}></span>
+                    </span>
                   </button>
                 )
                 : ''

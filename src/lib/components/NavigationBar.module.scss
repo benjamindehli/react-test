@@ -1,8 +1,7 @@
 @import "../style/global.scss";
 
-:local(.isPresent){
-
-	:local(.navigationBar){
+:local(.isPresent) {
+	:local(.navigationBar) {
 		background-color: $color-dark-blue;
 		height: 54px;
 		display: flex;
@@ -13,12 +12,13 @@
 		}
 	}
 
-	:local(.logoContainer){
+	:local(.logoContainer) {
 		width: 200px;
 		height: 54px;
 		display: inline-block;
 		img {
 			height: 54px;
+			max-width: none;
 		}
 		@media only screen and (min-width: $screen-xs) {
 			width: 270px;
@@ -29,16 +29,16 @@
 		}
 	}
 
-	:local(.childElements){
+	:local(.childElements) {
 		display: block;
 		color: #fff;
 		flex: 1;
 	}
 
-	:local(.dropdownOverlay){
+	:local(.dropdownOverlay) {
 		@media only screen and (max-width: $screen-md) and (min-width: $screen-xs) {
-			@include transition(all .1s ease-out);
-			content: '';
+			@include transition(all 0.1s ease-out);
+			content: "";
 			position: absolute;
 			top: 73px;
 			right: 0;
@@ -48,15 +48,15 @@
 			visibility: hidden;
 			opacity: 0;
 			background: transparent;
-			&:local(.active){
+			&:local(.active) {
 				opacity: 1;
-				background: rgba(0,0,0,.5);
+				background: rgba(0, 0, 0, 0.5);
 				visibility: visible;
 			}
 		}
 	}
 
-	:local(.menuToggle){
+	:local(.menuToggle) {
 		@include appearance(none);
 		@include transition(background-color 300ms ease-out);
 		border: none;
@@ -65,34 +65,41 @@
 		background-color: transparent;
 		float: right;
 		margin: 0 12px;
-		svg{
+		:local(.hamburgerIcon) {
 			width: 30px;
-			height: 30px;
+			display: block;
+			:local(.line) {
+				background-color: #fff;
+				height: 2px;
+				margin: 6px 0;
+				display: block;
+			}
 		}
-		@media only screen and (min-width: $screen-xs){
+		@media only screen and (min-width: $screen-xs) {
 			margin: 0 21px;
 		}
 	}
 
-	:local(.dropdownContainer){
+	:local(.dropdownContainer) {
 		@include transition(max-height 0.15s ease-out);
 		max-height: 0;
 		overflow: hidden;
-		&:local(.active){
+		&:local(.active) {
 			@include transition(max-height 0.15s ease-out);
 			max-height: 500px;
 		}
 	}
 
-	:local(.dropdown){
+	:local(.dropdown) {
 		background-color: $color-dark-blue;
 		z-index: 2;
-		>:local(ul.primaryList){
+		> :local(ul.primaryList) {
 			list-style: none;
 			padding: 20px;
 			margin: 0;
-			li{
-				a, span{
+			li {
+				a,
+				span {
 					color: #fff;
 					text-transform: uppercase;
 					text-decoration: none;
@@ -103,11 +110,12 @@
 					font-size: 14px;
 					line-height: 1.6;
 				}
-				>:local(ul.primaryList){
+				> :local(ul.primaryList) {
 					list-style: none;
 					padding: 0;
-					li{
-						a, span{
+					li {
+						a,
+						span {
 							color: #fff;
 							text-transform: none;
 							text-decoration: none;
@@ -121,16 +129,16 @@
 						}
 					}
 				}
-
 			}
 		}
-		>:local(ul.secondaryList){
+		> :local(ul.secondaryList) {
 			list-style: none;
 			padding: 20px;
 			margin: 0;
 
 			li {
-				a, span{
+				a,
+				span {
 					color: #fff;
 					text-decoration: underline;
 					font-family: "Arial";
@@ -143,10 +151,10 @@
 	}
 
 	@media only screen and (min-width: $screen-xs) {
-		:local(.dropdownContainer){
+		:local(.dropdownContainer) {
 			position: relative;
 			overflow: visible;
-			:local(.dropdown){
+			:local(.dropdown) {
 				@include transition(max-height 0.15s ease-out);
 				width: 300px;
 				position: absolute;
@@ -154,12 +162,11 @@
 				max-height: 0;
 				overflow: hidden;
 			}
-			&:local(.active){
-				:local(.dropdown){
+			&:local(.active) {
+				:local(.dropdown) {
 					max-height: 500px;
 				}
 			}
-
 		}
 	}
 }
