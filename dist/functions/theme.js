@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.getThemeLinkColor = exports.getThemeTextColor = exports.getThemeAppName = exports.getThemeLogo = exports.getThemeNavigationBarTextColor = exports.getThemeNavigationBarBackgroundColor = exports.getThemePaletteTextColor = exports.getThemePaletteBackgroundColor = void 0;
+exports.getThemeLinkColor = exports.getThemeTextColor = exports.getThemeAppName = exports.getThemeLogoPadding = exports.getThemeLogo = exports.getThemeNavigationBarTextColor = exports.getThemeNavigationBarBackgroundColor = exports.getThemePaletteTextColor = exports.getThemePaletteBackgroundColor = void 0;
 
 var getThemePaletteBackgroundColor = function getThemePaletteBackgroundColor(theme, color) {
   return theme && theme.colors && theme.colors.palette && theme.colors.palette[color] && theme.colors.palette[color].background ? theme.colors.palette[color].background : null;
@@ -34,6 +34,12 @@ var getThemeLogo = function getThemeLogo(theme) {
 };
 
 exports.getThemeLogo = getThemeLogo;
+
+var getThemeLogoPadding = function getThemeLogoPadding(theme) {
+  return theme && theme.logoPadding ? theme.logoPadding : null;
+};
+
+exports.getThemeLogoPadding = getThemeLogoPadding;
 
 var getThemeAppName = function getThemeAppName(theme) {
   return theme && theme.appName ? theme.appName : null;

@@ -89,6 +89,13 @@ var NavigationBar = /*#__PURE__*/function (_React$Component) {
       };
     }
   }, {
+    key: "getLogoThemeStyle",
+    value: function getLogoThemeStyle(theme) {
+      return {
+        padding: (0, _theme.getThemeLogoPadding)(theme)
+      };
+    }
+  }, {
     key: "renderPrimaryList",
     value: function renderPrimaryList() {
       var _this2 = this;
@@ -140,7 +147,8 @@ var NavigationBar = /*#__PURE__*/function (_React$Component) {
       var themeAppName = (0, _theme.getThemeAppName)(this.props.theme);
       var logoElement = themeLogo && themeAppName ? /*#__PURE__*/_react.default.createElement("img", {
         alt: "".concat(themeAppName, " logo"),
-        src: themeLogo
+        src: themeLogo,
+        style: this.getLogoThemeStyle(this.props.theme)
       }) : /*#__PURE__*/_react.default.createElement("img", {
         alt: "DIBK logo",
         src: _dibkLogoMobile.default
