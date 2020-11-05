@@ -1,25 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.16c68cf2.chunk.css",
-    "main.js": "/build/main.08ba2dec.js",
+    "main.css": "/static/css/main.05d88f9f.chunk.css",
+    "main.js": "/build/main.4f0b555a.js",
     "runtime-main.js": "/build/bundle.153ee7bb.js",
     "static/css/2.95456d05.chunk.css": "/static/css/2.95456d05.chunk.css",
-    "build/2.4b7993ba.js": "/build/2.4b7993ba.js",
-    "build/2.4b7993ba.js.LICENSE.txt": "/build/2.4b7993ba.js.LICENSE.txt",
+    "build/2.45a3a968.js": "/build/2.45a3a968.js",
+    "build/2.45a3a968.js.LICENSE.txt": "/build/2.45a3a968.js.LICENSE.txt",
     "index.html": "/index.html",
     "static/css/2.95456d05.chunk.css.map": "/static/css/2.95456d05.chunk.css.map",
-    "static/css/main.16c68cf2.chunk.css.map": "/static/css/main.16c68cf2.chunk.css.map",
+    "static/css/main.05d88f9f.chunk.css.map": "/static/css/main.05d88f9f.chunk.css.map",
     "static/media/fonts.css": "/static/media/Altis-Light.eb742adc.eot",
     "static/media/dibk-logo-mobile.svg": "/static/media/dibk-logo-mobile.120629cc.svg",
     "static/media/dibk-logo.972e244e.svg": "/static/media/dibk-logo.972e244e.svg",
-    "static/media/hamburger.1ff53c56.svg": "/static/media/hamburger.1ff53c56.svg",
     "static/media/LoadingAnimation.module.scss": "/static/media/spinner.9d4e5e9c.svg"
   },
   "entrypoints": [
     "build/bundle.153ee7bb.js",
     "static/css/2.95456d05.chunk.css",
-    "build/2.4b7993ba.js",
-    "static/css/main.16c68cf2.chunk.css",
-    "build/main.08ba2dec.js"
+    "build/2.45a3a968.js",
+    "static/css/main.05d88f9f.chunk.css",
+    "build/main.4f0b555a.js"
   ]
 }
