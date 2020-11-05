@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.14c59739.chunk.css",
-    "main.js": "/build/main.f0469be7.js",
+    "main.css": "/static/css/main.16c68cf2.chunk.css",
+    "main.js": "/build/main.08ba2dec.js",
     "runtime-main.js": "/build/bundle.153ee7bb.js",
     "static/css/2.95456d05.chunk.css": "/static/css/2.95456d05.chunk.css",
-    "build/2.3c36c273.js": "/build/2.3c36c273.js",
-    "build/2.3c36c273.js.LICENSE.txt": "/build/2.3c36c273.js.LICENSE.txt",
+    "build/2.4b7993ba.js": "/build/2.4b7993ba.js",
+    "build/2.4b7993ba.js.LICENSE.txt": "/build/2.4b7993ba.js.LICENSE.txt",
     "index.html": "/index.html",
     "static/css/2.95456d05.chunk.css.map": "/static/css/2.95456d05.chunk.css.map",
-    "static/css/main.14c59739.chunk.css.map": "/static/css/main.14c59739.chunk.css.map",
+    "static/css/main.16c68cf2.chunk.css.map": "/static/css/main.16c68cf2.chunk.css.map",
     "static/media/fonts.css": "/static/media/Altis-Light.eb742adc.eot",
     "static/media/dibk-logo-mobile.svg": "/static/media/dibk-logo-mobile.120629cc.svg",
     "static/media/dibk-logo.972e244e.svg": "/static/media/dibk-logo.972e244e.svg",
@@ -18,8 +18,8 @@
   "entrypoints": [
     "build/bundle.153ee7bb.js",
     "static/css/2.95456d05.chunk.css",
-    "build/2.3c36c273.js",
-    "static/css/main.14c59739.chunk.css",
-    "build/main.f0469be7.js"
+    "build/2.4b7993ba.js",
+    "static/css/main.16c68cf2.chunk.css",
+    "build/main.08ba2dec.js"
   ]
 }
