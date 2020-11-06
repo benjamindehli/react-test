@@ -111,12 +111,6 @@ Object.defineProperty(exports, "RadioButtonListItem", {
     return _RadioButtonListItem.default;
   }
 });
-Object.defineProperty(exports, "Theme", {
-  enumerable: true,
-  get: function get() {
-    return _Theme.default;
-  }
-});
 
 var _webfontloader = _interopRequireDefault(require("webfontloader"));
 
@@ -155,8 +149,6 @@ var _RadioButtonIcon = _interopRequireDefault(require("./components/RadioButtonI
 var _RadioButtonInput = _interopRequireDefault(require("./components/RadioButtonInput"));
 
 var _RadioButtonListItem = _interopRequireDefault(require("./components/RadioButtonListItem"));
-
-var _Theme = _interopRequireDefault(require("./components/Theme"));
 
 require("./style/base/fonts.css");
 
