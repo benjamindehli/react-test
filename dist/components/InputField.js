@@ -17,6 +17,8 @@ var _dateFns = require("date-fns");
 
 var _nb = _interopRequireDefault(require("date-fns/locale/nb"));
 
+var _theme = require("../functions/theme");
+
 require("react-datepicker/dist/react-datepicker.css");
 
 var _InputFieldModule = _interopRequireDefault(require("./InputField.module.scss"));
@@ -61,6 +63,21 @@ var InputField = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(InputField, [{
+    key: "getThemeErrorInputStyle",
+    value: function getThemeErrorInputStyle(theme) {
+      return {
+        boxShadow: "0 0 3px ".concat((0, _theme.getThemePaletteBackgroundColor)(theme, 'warning')),
+        borderColor: (0, _theme.getThemePaletteBackgroundColor)(theme, 'warning')
+      };
+    }
+  }, {
+    key: "getThemeErrorMessageStyle",
+    value: function getThemeErrorMessageStyle(theme) {
+      return {
+        color: (0, _theme.getThemePaletteBackgroundColor)(theme, 'warning')
+      };
+    }
+  }, {
     key: "convertDateToString",
     value: function convertDateToString(date) {
       return date ? (0, _dateFns.format)(new Date(date), this.props.dateFormat, {
@@ -92,7 +109,8 @@ var InputField = /*#__PURE__*/function (_React$Component) {
           return _this.props.onChange(date);
         } : console.log("Missing onChange handler for date picker with id: ".concat(this.props.id)),
         selected: this.props.value ? new Date(this.props.value) : null,
-        className: this.props.hasErrors ? _InputFieldModule.default.hasErrors : ''
+        className: this.props.hasErrors ? _InputFieldModule.default.hasErrors : '',
+        style: this.props.hasErrors ? this.getThemeErrorInputStyle(this.props.theme) : null
       }) : /*#__PURE__*/_react.default.createElement("input", {
         name: this.props.name,
         readOnly: this.props.readOnly,
@@ -102,7 +120,8 @@ var InputField = /*#__PURE__*/function (_React$Component) {
         onChange: this.props.onChange,
         value: this.props.value ? this.props.value : '',
         className: this.props.hasErrors ? _InputFieldModule.default.hasErrors : '',
-        "aria-required": this.props.mandatory
+        "aria-required": this.props.mandatory,
+        style: this.props.hasErrors ? this.getThemeErrorInputStyle(this.props.theme) : null
       });
     }
   }, {
@@ -124,9 +143,11 @@ var InputField = /*#__PURE__*/function (_React$Component) {
         onClick: function onClick() {
           document.getElementById(_this2.props.id).click();
         },
-        content: this.props.buttonContent
+        content: this.props.buttonContent,
+        theme: this.props.theme
       }) : '') : ''), !this.props.contentOnly ? this.renderInputField() : /*#__PURE__*/_react.default.createElement("span", null, this.renderValueAsText(this.props.value, this.props.defaultContent)), /*#__PURE__*/_react.default.createElement("span", {
-        className: _InputFieldModule.default.errorMessage
+        className: _InputFieldModule.default.errorMessage,
+        style: this.getThemeErrorMessageStyle(this.props.theme)
       }, this.props.errorMessage ? this.props.errorMessage : ''));
     }
   }]);
@@ -150,7 +171,8 @@ InputField.propTypes = {
   defaultContent: _propTypes.default.string,
   hasErrors: _propTypes.default.bool,
   errorMessage: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.arrayOf(_propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.object]))]),
-  mandatory: _propTypes.default.bool
+  mandatory: _propTypes.default.bool,
+  theme: _propTypes.default.object
 };
 InputField.defaultProps = {
   name: '',

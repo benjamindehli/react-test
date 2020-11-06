@@ -52,14 +52,10 @@
 
     &:local(.hasErrors) {
       border-color: $color-warning;
-      background-color: $color-light-warning;
-      &:hover, &:focus {
-        border-color: $color-warning-hover;
-      }
+      @include box-shadow(0 0 3px $color-warning);
       &:focus {
         border-color: $color-warning-hover;
         outline-color: #b8565d;
-
       }
       &[disabled],
       &[readonly] {

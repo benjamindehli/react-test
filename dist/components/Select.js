@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _theme = require("../functions/theme");
+
 var _SelectModule = _interopRequireDefault(require("./Select.module.scss"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -45,6 +47,28 @@ var Select = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(Select, [{
+    key: "getThemeErrorInputStyle",
+    value: function getThemeErrorInputStyle(theme) {
+      return {
+        boxShadow: "0 0 3px ".concat((0, _theme.getThemePaletteBackgroundColor)(theme, 'warning')),
+        borderColor: (0, _theme.getThemePaletteBackgroundColor)(theme, 'warning')
+      };
+    }
+  }, {
+    key: "getThemeErrorMessageStyle",
+    value: function getThemeErrorMessageStyle(theme) {
+      return {
+        color: (0, _theme.getThemePaletteBackgroundColor)(theme, 'warning')
+      };
+    }
+  }, {
+    key: "getThemeArrowStyle",
+    value: function getThemeArrowStyle(theme) {
+      return {
+        borderTopColor: (0, _theme.getThemePaletteBackgroundColor)(theme, 'primary')
+      };
+    }
+  }, {
     key: "getKeyByValue",
     value: function getKeyByValue(value, options) {
       var selectedOption = options && options.length ? options.find(function (option) {
@@ -105,15 +129,20 @@ var Select = /*#__PURE__*/function (_React$Component) {
         htmlFor: this.props.id
       }, this.props.label), !this.props.contentOnly ? /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
         className: _SelectModule.default.selectContainer
-      }, /*#__PURE__*/_react.default.createElement("select", {
+      }, /*#__PURE__*/_react.default.createElement("span", {
+        className: _SelectModule.default.selectListArrow,
+        style: this.getThemeArrowStyle(this.props.theme)
+      }), /*#__PURE__*/_react.default.createElement("select", {
         name: this.props.name,
         multiple: this.props.multiple,
         value: value,
         onChange: this.props.onChange,
         id: this.props.id,
-        className: this.props.hasErrors ? _SelectModule.default.hasErrors : ''
+        className: this.props.hasErrors ? _SelectModule.default.hasErrors : '',
+        style: this.props.hasErrors ? this.getThemeErrorInputStyle(this.props.theme) : null
       }, this.renderPlaceholderOption(this.props.placeholder, this.props.placeholderValue), this.renderOptionElements(this.props.options))), /*#__PURE__*/_react.default.createElement("span", {
-        className: _SelectModule.default.errorMessage
+        className: _SelectModule.default.errorMessage,
+        style: this.getThemeErrorMessageStyle(this.props.theme)
       }, this.props.errorMessage ? this.props.errorMessage : '')) : /*#__PURE__*/_react.default.createElement("span", null, this.props.value ? this.props.keyAsContent ? this.getKeyByValue(this.props.value, this.props.options) : this.props.value : this.props.defaultContent));
     }
   }]);
@@ -138,7 +167,8 @@ Select.propTypes = {
   placeholderValue: _propTypes.default.string,
   defaultContent: _propTypes.default.string,
   hasErrors: _propTypes.default.bool,
-  errorMessage: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.arrayOf(_propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.object]))])
+  errorMessage: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.arrayOf(_propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.object]))]),
+  theme: _propTypes.default.object
 };
 Select.defaultProps = {
   name: '',

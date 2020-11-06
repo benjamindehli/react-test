@@ -5,7 +5,7 @@
 		cursor: pointer;
 		font-size: 18px;
 		margin: 0 0 4px;
-		font-family: "Open Sans",arial,sans-serif;
+		font-family: "Open Sans", arial, sans-serif;
 		line-height: 1.3;
 		font-weight: bold;
 		font-style: normal;
@@ -15,7 +15,7 @@
 	:local(.selectContainer) {
 		position: relative;
 
-		&:before {
+		:local(.selectListArrow) {
 			position: absolute;
 			display: block;
 			content: "";
@@ -34,7 +34,7 @@
 			@include transition(border-color 0.15s linear);
 			@include appearance(none);
 			@include box-shadow(none);
-			color: rgba(0,0,0,.75);
+			color: rgba(0, 0, 0, 0.75);
 			width: 100%;
 			font-family: inherit;
 			font-size: 1.125rem;
@@ -55,34 +55,30 @@
 			}
 
 			&[disabled],
-	    &[readonly] {
-	      background-color: #ddd;
-	      cursor: default;
-	    }
+			&[readonly] {
+				background-color: #ddd;
+				cursor: default;
+			}
 
 			&:local(.hasErrors) {
-	      border-color: $color-warning;
-	      background-color: $color-light-warning;
-	      &:hover, &:focus {
-	        border-color: $color-warning-hover;
-	      }
-	      &:focus {
-	        border-color: $color-warning-hover;
-	        outline-color: #b8565d;
-
-	      }
-	      &[disabled],
-	      &[readonly] {
-	        background-color: #ddd;
-	        cursor: default;
-	        border-color: #afaba8;
-	      }
-	    }
+				border-color: $color-warning;
+      			@include box-shadow(0 0 3px $color-warning);
+				&:focus {
+					border-color: $color-warning-hover;
+					outline-color: #b8565d;
+				}
+				&[disabled],
+				&[readonly] {
+					background-color: #ddd;
+					cursor: default;
+					border-color: #afaba8;
+				}
+			}
 		}
 	}
 	:local(.errorMessage) {
-    color: $color-warning;
-    font-weight: 300;
-    font-style: italic;
-  }
+		color: $color-warning;
+		font-weight: 300;
+		font-style: italic;
+	}
 }

@@ -13,3 +13,14 @@ Select example:
 <Select id="select10" onChange={()=>{console.log('onchange')}} label="Select with label, selected value is string, contentOnly set to true and keyAsContent set to true" value="option 2" options={['option 1', 'option 2', {key: 'option 3', value: 'value 3'}]} contentOnly={true} keyAsContent={true} />
 <Select id="select11" onChange={()=>{console.log('onchange')}} label="Select with label, contentOnly set to true, no value and defaultContent" contentOnly={true} defaultContent="No value selected" options={['option 1', 'option 2', {key: 'option 3', value: 'value 3'}]} />
 ```
+
+Themed select example:
+
+```js
+import customTheme from 'data/customTheme';
+<React.Fragment>
+    <Select id="themedSelect3" onChange={()=>{console.log('onchange')}} label="Select with label and selected value" value="value 3" options={['option 1', 'option 2', {key: 'option 3', value: 'value 3'}]} theme={customTheme} />
+    <Select id="themedSelect4" onChange={()=>{console.log('onchange')}} label="Select with label, selected value, errors and error message" value="value 3" options={['option 1', 'option 2', {key: 'option 3', value: 'value 3'}]} hasErrors={true} errorMessage="Wrong value selected" theme={customTheme} />
+    <Select id="themedSelect5" onChange={()=>{console.log('onchange')}} label={['Select with ', <a key="labelLink" href="#">link</a>, ' in label']} value="value 3" options={['option 1', 'option 2', {key: 'option 3', value: 'value 3'}]} theme={customTheme} />
+</React.Fragment>
+```
