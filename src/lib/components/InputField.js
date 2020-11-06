@@ -5,13 +5,24 @@ import DatePicker from 'react-datepicker';
 import { registerLocale } from  "react-datepicker";
 import { format } from 'date-fns';
 import nb from 'date-fns/locale/nb';
-
+import { getThemePaletteBackgroundColor } from '../functions/theme';
 import "react-datepicker/dist/react-datepicker.css";
 import style from './InputField.module.scss';
 
 registerLocale('nb', nb)
 
 class InputField extends React.Component {
+  getThemeErrorInputStyle(theme){
+    return {
+      boxShadow: `0 0 3px ${getThemePaletteBackgroundColor(theme, 'warning')}`,
+      borderColor: getThemePaletteBackgroundColor(theme, 'warning')
+    }
+  }
+  getThemeErrorMessageStyle(theme){
+    return {
+      color: getThemePaletteBackgroundColor(theme, 'warning')
+    }
+  }
   convertDateToString(date){
     return date ? format(new Date(date), this.props.dateFormat, {locale: nb}) : '';
   }
@@ -38,7 +49,8 @@ class InputField extends React.Component {
                    endDate={this.props.endDate ? new Date(this.props.endDate) : null}
                    onChange={this.props.onChange ? date => this.props.onChange(date) : console.log(`Missing onChange handler for date picker with id: ${this.props.id}`)}
                    selected={this.props.value ? new Date(this.props.value) : null}
-                   className={this.props.hasErrors ? style.hasErrors : ''}/>)
+                   className={this.props.hasErrors ? style.hasErrors : ''}
+                   style={this.props.hasErrors ? this.getThemeErrorInputStyle(this.props.theme) : null }/>)
     : (<input name={this.props.name}
               readOnly={this.props.readOnly}
               disabled={this.props.disabled}
@@ -47,7 +59,8 @@ class InputField extends React.Component {
               onChange={this.props.onChange}
               value={this.props.value ? this.props.value : ''}
               className={this.props.hasErrors ? style.hasErrors : ''}
-              aria-required={this.props.mandatory}/>)
+              aria-required={this.props.mandatory}
+              style={this.props.hasErrors ? this.getThemeErrorInputStyle(this.props.theme) : null }/>)
   }
   render() {
     return (<div className={`${style.inputField} ${style[this.props.type]}`}>
@@ -59,7 +72,7 @@ class InputField extends React.Component {
                 <span className={style.input}>{this.props.selectedFileName}</span>
                 {
                   this.props.buttonContent
-                    ? <Button size='small' color={this.props.buttonColor} onClick={() => {document.getElementById(this.props.id).click()}} content={this.props.buttonContent}/>
+                    ? <Button size='small' color={this.props.buttonColor} onClick={() => {document.getElementById(this.props.id).click()}} content={this.props.buttonContent} theme={this.props.theme}/>
                     : ''
                 }
               </div>)
@@ -71,7 +84,7 @@ class InputField extends React.Component {
           ? this.renderInputField()
           : <span>{this.renderValueAsText(this.props.value, this.props.defaultContent)}</span>
       }
-      <span className={style.errorMessage}>{this.props.errorMessage ? this.props.errorMessage : ''}</span>
+      <span className={style.errorMessage} style={this.getThemeErrorMessageStyle(this.props.theme)}>{this.props.errorMessage ? this.props.errorMessage : ''}</span>
     </div>)
   }
 }
@@ -104,7 +117,8 @@ InputField.propTypes = {
       PropTypes.object
     ]))
   ]),
-  mandatory: PropTypes.bool
+  mandatory: PropTypes.bool,
+  theme: PropTypes.object
 };
 
 InputField.defaultProps = {

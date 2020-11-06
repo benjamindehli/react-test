@@ -22,3 +22,15 @@ Input field example:
 <InputField id="dateInput6" onChange={(date) => console.log("date", date)} type="date" label="Datepicker with value for end date" value="2020-05-19T13:12:04" selectsEnd startDate="2020-05-10T13:12:04" endDate="2020-05-19T13:12:04" />
 <InputField id="dateInput7" onChange={(date) => console.log("date", date)} type="date" label="Datepicker with defaultContent and contentOnly set to true" contentOnly={true} defaultContent="Please insert a value" />
 ```
+
+Themed Input field example:
+
+```js
+import customTheme from 'data/customTheme';
+<React.Fragment>
+    <InputField id="themedTextInput4" onChange={()=>{console.log('onchange')}} value="InputField with link in label" label={['InputField with ', <a key="labelLink" href="#">link</a>, ' in label']} theme={customTheme} />
+    <InputField id="themedTextInput5" onChange={()=>{console.log('onchange')}} value="InputField with label, value, errors and error message" label="InputField with label, value, errors and error message" hasErrors={true} errorMessage="Wrong value" theme={customTheme} />
+    <InputField id="themedFileInput1" onChange={()=>{console.log('onchange')}} type="file" label="InputField with label, value, fileName, buttonContent and type set to file" selectedFileName="file.txt" buttonContent="Legg til fil" theme={customTheme} />
+    <InputField id="themedDateInput3" onChange={(date) => console.log("date", date)} type="date" label="Datepicker with value, errors and error message" value="2020-05-10T13:12:04" hasErrors={true} errorMessage="Wrong date value" theme={customTheme} />
+</React.Fragment>
+```
