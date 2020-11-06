@@ -1,8 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { getThemePaletteBackgroundColor } from '../functions/theme';
 import style from './Select.module.scss';
 
 class Select extends React.Component {
+  getThemeErrorInputStyle(theme){
+    return {
+      boxShadow: `0 0 3px ${getThemePaletteBackgroundColor(theme, 'warning')}`,
+      borderColor: getThemePaletteBackgroundColor(theme, 'warning')
+    }
+  }
+  getThemeErrorMessageStyle(theme){
+    return {
+      color: getThemePaletteBackgroundColor(theme, 'warning')
+    }
+  }
+  getThemeArrowStyle(theme){
+    return {
+      borderTopColor: getThemePaletteBackgroundColor(theme, 'primary')
+    }
+  }
   getKeyByValue(value, options) {
     const selectedOption = options && options.length
       ? options.find(option => {
@@ -55,16 +72,18 @@ class Select extends React.Component {
         !this.props.contentOnly
           ? (<React.Fragment>
             <div className={style.selectContainer}>
+              <span className={style.selectListArrow} style={this.getThemeArrowStyle(this.props.theme)}></span>
               <select name={this.props.name}
                       multiple={this.props.multiple}
                       value={value} onChange={this.props.onChange}
                       id={this.props.id}
-                      className={this.props.hasErrors ? style.hasErrors : ''}>
+                      className={this.props.hasErrors ? style.hasErrors : ''}
+                      style={this.props.hasErrors ? this.getThemeErrorInputStyle(this.props.theme) : null}>
                 {this.renderPlaceholderOption(this.props.placeholder, this.props.placeholderValue)}
                 {this.renderOptionElements(this.props.options)}
               </select>
             </div>
-            <span className={style.errorMessage}>{this.props.errorMessage ? this.props.errorMessage : ''}</span>
+            <span className={style.errorMessage} style={this.getThemeErrorMessageStyle(this.props.theme)}>{this.props.errorMessage ? this.props.errorMessage : ''}</span>
           </React.Fragment>)
           : (<span>
             {
@@ -107,7 +126,8 @@ Select.propTypes = {
       PropTypes.string,
       PropTypes.object
     ]))
-  ])
+  ]),
+  theme: PropTypes.object
 };
 Select.defaultProps = {
   name: '',
