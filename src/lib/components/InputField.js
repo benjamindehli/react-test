@@ -49,6 +49,7 @@ class InputField extends React.Component {
                    endDate={this.props.endDate ? new Date(this.props.endDate) : null}
                    onChange={this.props.onChange ? date => this.props.onChange(date) : console.log(`Missing onChange handler for date picker with id: ${this.props.id}`)}
                    selected={this.props.value ? new Date(this.props.value) : null}
+                   placeholderText={this.props.placeholder}
                    className={this.props.hasErrors ? style.hasErrors : ''}
                    style={this.props.hasErrors ? this.getThemeErrorInputStyle(this.props.theme) : null }/>)
     : (<input name={this.props.name}
@@ -58,6 +59,7 @@ class InputField extends React.Component {
               id={this.props.id}
               onChange={this.props.onChange}
               value={this.props.value ? this.props.value : ''}
+              placeholder={this.props.placeholder}
               className={this.props.hasErrors ? style.hasErrors : ''}
               aria-required={this.props.mandatory}
               style={this.props.hasErrors ? this.getThemeErrorInputStyle(this.props.theme) : null }/>)
@@ -108,6 +110,7 @@ InputField.propTypes = {
   buttonContent: PropTypes.string,
   selectedFileName: PropTypes.string,
   dateFormat: PropTypes.string,
+  placeholder: PropTypes.string,
   defaultContent: PropTypes.string,
   hasErrors: PropTypes.bool,
   errorMessage: PropTypes.oneOfType([
@@ -128,6 +131,7 @@ InputField.defaultProps = {
   contentOnly: false,
   buttonColor: 'default',
   dateFormat: 'd. MMMM, yyyy',
+  placeholder: '',
   defaultContent: '',
   hasErrors: false,
   errorMessage : '',
