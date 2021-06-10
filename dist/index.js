@@ -99,7 +99,7 @@ Object.defineProperty(exports, "RadioButtonIcon", {
     return _RadioButtonIcon.default;
   }
 });
-Object.defineProperty(exports, "RadiButtonInput", {
+Object.defineProperty(exports, "RadioButtonInput", {
   enumerable: true,
   get: function get() {
     return _RadioButtonInput.default;
