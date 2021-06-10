@@ -11,7 +11,7 @@
   "dependencies": {
     "prop-types": "^15.6.2",
     "react": "^17.0.1",
-    "react-datepicker": "^3.3.0",
+    "react-datepicker": "^4.1.1",
     "react-dom": "^17.0.1",
     "react-scripts": "^4.0.0",
     "webfontloader": "^1.6.28"
