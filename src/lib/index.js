@@ -15,7 +15,7 @@ import Footer from './components/Footer';
 import InputField from './components/InputField';
 import Paper from './components/Paper';
 import RadioButtonIcon from './components/RadioButtonIcon';
-import RadiButtonInput from './components/RadioButtonInput';
+import RadioButtonInput from './components/RadioButtonInput';
 import RadioButtonListItem from './components/RadioButtonListItem';
 import './style/base/fonts.css';
 
@@ -42,6 +42,6 @@ export {
   InputField,
   Paper,
   RadioButtonIcon,
-  RadiButtonInput,
+  RadioButtonInput,
   RadioButtonListItem
 };
