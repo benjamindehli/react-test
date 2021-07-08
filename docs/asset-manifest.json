@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.4ac3a5d1.chunk.css",
-    "main.js": "/build/main.4b2d8529.js",
-    "runtime-main.js": "/build/bundle.3527ec54.js",
-    "static/css/2.20291397.chunk.css": "/static/css/2.20291397.chunk.css",
-    "build/2.b5b6ab01.js": "/build/2.b5b6ab01.js",
-    "build/2.b5b6ab01.js.LICENSE.txt": "/build/2.b5b6ab01.js.LICENSE.txt",
+    "main.css": "/static/css/main.1b9cdf1a.chunk.css",
+    "main.js": "/build/main.7be7890c.js",
+    "runtime-main.js": "/build/bundle.b50e26a4.js",
+    "static/css/2.6f095bb7.chunk.css": "/static/css/2.6f095bb7.chunk.css",
+    "build/2.caa422e7.js": "/build/2.caa422e7.js",
+    "build/2.caa422e7.js.LICENSE.txt": "/build/2.caa422e7.js.LICENSE.txt",
     "index.html": "/index.html",
-    "static/css/2.20291397.chunk.css.map": "/static/css/2.20291397.chunk.css.map",
-    "static/css/main.4ac3a5d1.chunk.css.map": "/static/css/main.4ac3a5d1.chunk.css.map",
+    "static/css/2.6f095bb7.chunk.css.map": "/static/css/2.6f095bb7.chunk.css.map",
+    "static/css/main.1b9cdf1a.chunk.css.map": "/static/css/main.1b9cdf1a.chunk.css.map",
     "static/media/fonts.css": "/static/media/Altis-Light.eb742adc.eot",
     "static/media/dibk-logo-mobile.svg": "/static/media/dibk-logo-mobile.120629cc.svg",
     "static/media/dibk-logo.972e244e.svg": "/static/media/dibk-logo.972e244e.svg",
     "static/media/LoadingAnimation.module.scss": "/static/media/spinner.9d4e5e9c.svg"
   },
   "entrypoints": [
-    "build/bundle.3527ec54.js",
-    "static/css/2.20291397.chunk.css",
-    "build/2.b5b6ab01.js",
-    "static/css/main.4ac3a5d1.chunk.css",
-    "build/main.4b2d8529.js"
+    "build/bundle.b50e26a4.js",
+    "static/css/2.6f095bb7.chunk.css",
+    "build/2.caa422e7.js",
+    "static/css/main.1b9cdf1a.chunk.css",
+    "build/main.7be7890c.js"
   ]
 }
