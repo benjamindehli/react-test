@@ -10,14 +10,14 @@
   width: 10px;
   height: 10px;
   min-width: 20px;
-  background: white;
-  margin-right: .2em;
+  margin-right: 0.2em;
   line-height: 1;
   text-align: center;
 
   &:local(.showBox) {
     @include box-shadow(0 0 0 1px #afaba8);
-    margin-right: .4em;
+    margin-right: 0.4em;
+    background: white;
   }
 
   &:local(.checked) {
@@ -30,5 +30,10 @@
   :local(.checkmark) {
     font-size: 1em;
     line-height: 0.75em;
+  }
+  :not(:local(.showBox)) {
+    &:local(.checkmark) {
+      line-height: 1.05em;
+    }
   }
 }
