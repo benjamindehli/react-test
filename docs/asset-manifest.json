@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.1b9cdf1a.chunk.css",
-    "main.js": "/build/main.7be7890c.js",
+    "main.css": "/static/css/main.8c65a685.chunk.css",
+    "main.js": "/build/main.3f2c3ec7.js",
     "runtime-main.js": "/build/bundle.b50e26a4.js",
     "static/css/2.6f095bb7.chunk.css": "/static/css/2.6f095bb7.chunk.css",
     "build/2.caa422e7.js": "/build/2.caa422e7.js",
     "build/2.caa422e7.js.LICENSE.txt": "/build/2.caa422e7.js.LICENSE.txt",
     "index.html": "/index.html",
     "static/css/2.6f095bb7.chunk.css.map": "/static/css/2.6f095bb7.chunk.css.map",
-    "static/css/main.1b9cdf1a.chunk.css.map": "/static/css/main.1b9cdf1a.chunk.css.map",
+    "static/css/main.8c65a685.chunk.css.map": "/static/css/main.8c65a685.chunk.css.map",
     "static/media/fonts.css": "/static/media/Altis-Light.eb742adc.eot",
     "static/media/dibk-logo-mobile.svg": "/static/media/dibk-logo-mobile.120629cc.svg",
     "static/media/dibk-logo.972e244e.svg": "/static/media/dibk-logo.972e244e.svg",
@@ -18,7 +18,7 @@
     "build/bundle.b50e26a4.js",
     "static/css/2.6f095bb7.chunk.css",
     "build/2.caa422e7.js",
-    "static/css/main.1b9cdf1a.chunk.css",
-    "build/main.7be7890c.js"
+    "static/css/main.8c65a685.chunk.css",
+    "build/main.3f2c3ec7.js"
   ]
 }
