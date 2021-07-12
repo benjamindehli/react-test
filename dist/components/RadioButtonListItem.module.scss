@@ -16,16 +16,28 @@
   cursor: pointer;
   font-family: $default-font;
   position: relative;
-  margin-top: 10px;
-  background: white;
   font-size: 1rem;
   color: #000;
 
-  &:local(.checked) {
+  &:not(:local(.contentOnly)) {
+    background: white;
+    margin-bottom: 10px;
+  }
+
+  &:local(.contentOnly) {
+    @include box-shadow(none);
+    cursor: auto;
+    label {
+      cursor: auto;
+      padding: 5px 10px;
+    }
+  }
+
+  &:local(.checked):not(:local(.contentOnly)) {
     @include box-shadow(0 0 0 1px $color-dark-blue, 0 0 4px 0 $color-dark-blue);
   }
 
-  &:not(:local(.checked)):hover {
+  &:not(:local(.checked)):not(:local(.contentOnly)):hover {
     @include box-shadow(0 0 6px $color-dark-blue);
   }
 
