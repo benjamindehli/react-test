@@ -11,7 +11,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _Step = _interopRequireDefault(require("lib/components/WizardNavigation/Step"));
+var _Step = _interopRequireDefault(require("./WizardNavigation/Step"));
 
 var _WizardNavigationModule = _interopRequireDefault(require("./WizardNavigation.module.scss"));
 
