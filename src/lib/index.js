@@ -17,6 +17,8 @@ import Paper from './components/Paper';
 import RadioButtonIcon from './components/RadioButtonIcon';
 import RadioButtonInput from './components/RadioButtonInput';
 import RadioButtonListItem from './components/RadioButtonListItem';
+import WizardNavigation from './components/WizardNavigation';
+import WizardNavigationStep from './components/WizardNavigation/Step';
 import './style/base/fonts.css';
 
 WebFont.load({
@@ -43,5 +45,7 @@ export {
   Paper,
   RadioButtonIcon,
   RadioButtonInput,
-  RadioButtonListItem
+  RadioButtonListItem,
+  WizardNavigation,
+  WizardNavigationStep
 };
