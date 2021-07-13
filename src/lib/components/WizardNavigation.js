@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 // Components
-import Step from 'lib/components/WizardNavigation/Step';
+import Step from './WizardNavigation/Step';
 
 // Stylesheets
 import style from './WizardNavigation.module.scss';
