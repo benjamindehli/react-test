@@ -1,0 +1,71 @@
+.wizard-topnav .wizard-topnav-item.finished .wizard-topnav-item-content:before {
+    background-color: #00757f;
+  }
+  
+  :local(.wizardTopnavItem) {
+    flex: 1;
+    :local(.wizardTopnavItemContent) {
+      &:before {
+        display: inline-block;
+        content: " ";
+        height: 15px;
+        background-color: #e2e1e0;
+        width: 100%;
+        left: 50%;
+        position: relative;
+        margin-bottom: -30px;
+      }
+      :local(.stepNumber) {
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        display: block;
+        text-align: center;
+        background-color: #e2e1e0;
+        margin: auto;
+        position: relative;
+        font-size: 20px;
+        line-height: 1.75em;
+      }
+      :local(.stepName) {
+        display: block;
+        text-align: center;
+      }
+    }
+    &:local(.active) {
+      :local(.stepNumber) {
+        background-color: #072938;
+        color: #fff;
+      }
+    }
+    &:local(.finished) {
+      :local(.wizardTopnavItemContent) {
+        &:before {
+          background-color: #00757f;
+        }
+        :local(.stepNumber) {
+          background-color: #00757f;
+          color: #fff;
+        }
+      }
+    }
+    &:local(.hasErrors) {
+      :local(.wizardTopnavItemContent) {
+        &:before {
+          background-color: #c1272d;
+        }
+        :local(.stepNumber) {
+          background-color: #c1272d;
+          color: #fff;
+        }
+      }
+    }
+    &:last-child {
+      :local(.wizardTopnavItemContent) {
+        &:before {
+          width: 0;
+        }
+      }
+    }
+  }
+  
