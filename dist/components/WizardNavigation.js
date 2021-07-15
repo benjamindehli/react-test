@@ -83,7 +83,11 @@ WizardNavigation.propTypes = {
     id: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.number]),
     name: _propTypes.default.string,
     finished: _propTypes.default.bool,
-    hasErrors: _propTypes.default.bool
+    hasErrors: _propTypes.default.bool,
+    link: _propTypes.default.shape({
+      to: _propTypes.default.object,
+      reactLink: _propTypes.default.bool
+    })
   }).isRequired,
   activeStepId: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.number]).isRequired
 };

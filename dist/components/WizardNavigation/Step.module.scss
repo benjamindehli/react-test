@@ -4,6 +4,7 @@
   
   :local(.wizardTopnavItem) {
     flex: 1;
+    text-decoration: none;
     :local(.wizardTopnavItemContent) {
       &:before {
         display: inline-block;

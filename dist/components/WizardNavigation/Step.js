@@ -11,6 +11,8 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _reactRouterDom = require("react-router-dom");
+
 var _StepModule = _interopRequireDefault(require("./Step.module.scss"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -68,7 +70,17 @@ var Step = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react.default.createElement("div", {
+      var step = this.props.step;
+      return step.link && Object.keys(step.link).length ? /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        to: step.link,
+        className: "".concat(_StepModule.default.wizardTopnavItem, " ").concat(this.getActiveClass(), " ").concat(this.getFinishedClass(), " ").concat(this.getErrorClass())
+      }, /*#__PURE__*/_react.default.createElement("span", {
+        className: _StepModule.default.wizardTopnavItemContent
+      }, /*#__PURE__*/_react.default.createElement("span", {
+        className: _StepModule.default.stepNumber
+      }, this.props.index + 1), /*#__PURE__*/_react.default.createElement("span", {
+        className: _StepModule.default.stepName
+      }, this.props.step.name))) : /*#__PURE__*/_react.default.createElement("div", {
         className: "".concat(_StepModule.default.wizardTopnavItem, " ").concat(this.getActiveClass(), " ").concat(this.getFinishedClass(), " ").concat(this.getErrorClass())
       }, /*#__PURE__*/_react.default.createElement("span", {
         className: _StepModule.default.wizardTopnavItemContent
