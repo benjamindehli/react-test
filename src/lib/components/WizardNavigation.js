@@ -30,7 +30,11 @@ WizardNavigation.propTypes = {
     id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     name: PropTypes.string,
     finished: PropTypes.bool,
-    hasErrors: PropTypes.bool
+    hasErrors: PropTypes.bool,
+    link: PropTypes.shape({
+      to: PropTypes.object,
+      reactLink: PropTypes.bool
+    })
   }).isRequired,
   activeStepId: PropTypes.oneOfType([
     PropTypes.string,
